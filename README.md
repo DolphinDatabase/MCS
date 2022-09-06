@@ -23,16 +23,19 @@
  * [Licença](#licença)
 
 ## Descrição
+
 <p align="justify">
 A MCS (Management and Control System) é uma aplicação web que visa gerenciar e controlar dados, afim de reduzir custos, facilitar tomadas de decisão, otimizar o tempo de atendimento de chamados e aprimorar o solucionamento destes.
 </p>
 
 ## Documentação
+
 ![ALERTA](Imagens/Alerta.svg) Para acessar a documentação completa do projeto, clique [aqui](#).
 
 ## Pré-requisitos e como executar a aplicação
 
 ## Funcionalidades desenvolvidas
+
 - [ ] Cadastro de Usuários
 - [ ] Visualização de Usuários
 - [ ] Edição de Usuários
@@ -46,6 +49,16 @@ A MCS (Management and Control System) é uma aplicação web que visa gerenciar 
 
 
 ![ALERTA](Imagens/Alerta.svg) Para mais informações das funcionalidades entregues, acesse as [releases](#).
+
+## Ilustração das Funcionalidades
+
+Para acessar nossos *wireframes*, clique [aqui](https://www.figma.com/file/OL07HIxLkiXBkHdiCrxey5/MCS?node-id=0%3A1).
+
+## Demonstração
+
+Para acessar o vídeo[^1] de demonstração da aplicação em uso, clique [aqui](#):
+
+[<img src="Imagens/MSC (youtube).png" width="60%" height="70%">](# "MCS vídeo Demonstração")
 
 ## Team
 
