@@ -48,7 +48,7 @@ A MCS (Management and Control System) é uma aplicação web que visa gerenciar 
 <a href="https://github.com/Borgarelli" target="_blank"><img src="Imagens/Team/KauãBorgarelli.png" height="65" width="65" align="left" target="_blank" ></a>
 <br/>
 <br></br>
-Para mais informações[^2], clique [aqui](https://github.com/DolphinDatabase/API3/wiki/Development-Team).
+Para mais informações[^2], clique [aqui](https://github.com/DolphinDatabase/MCS/wiki/Development-Team).
 <br></br>
 
 ## Licença  
