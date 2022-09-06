@@ -53,7 +53,7 @@ Para mais informações[^2], clique [aqui](https://github.com/DolphinDatabase/MC
 
 ## Licença  
 
-Este projeto esta sob licença [MIT](LICENSE.md).<br/>
+Este projeto esta sob licença [MIT](LICENSE).<br/>
 
 [^1]: Vídeo produzido e editado pelos integrantes do grupo.
 [^2]: Equipe responsável pelo desenvolvimento do Projeto Integrador.
