@@ -39,6 +39,8 @@ A MCS (Management and Control System) é uma aplicação web que visa gerenciar 
 - [ ] Exclusão de Usuários
 
 
+![ALERTA](Imagens/Alerta.svg) Para mais informações das funcionalidades entregues, acesse as [releases](#).
+
 ## Team
 
 <a href="https://github.com/beamedeiros" target="_blank"><img src="Imagens/Team/BeatrizMedeiros.png" height="65" width="65" align="left" target="_blank" ></a>
