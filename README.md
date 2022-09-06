@@ -58,7 +58,7 @@ Para acessar nossos *wireframes*, clique [aqui](https://www.figma.com/file/OL07H
 
 Para acessar o vídeo[^1] de demonstração da aplicação em uso, clique [aqui](#):
 
-[<img src="Imagens/MSC (youtube).png" width="60%" height="70%">](# "MCS vídeo Demonstração")
+[<img src="Imagens/MSC (youtube).png" width="65%" height="65%">](# "MCS vídeo Demonstração")
 
 ## Team
 
