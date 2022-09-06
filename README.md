@@ -60,6 +60,23 @@ Para acessar o vídeo[^1] de demonstração da aplicação em uso, clique [aqui]
 
 [<img src="Imagens/MSC (youtube).png" width="65%" height="65%">](# "MCS vídeo Demonstração")
 
+## Manual do Usuário
+
+![ALERTA](Imagens/Alerta.svg) Para acessar o manual do usuário, clique [aqui](#).
+
+## Backlog do Produto
+
+- [x] ![EPIC](Imagens/Epic.svg) **SPRINT 1:**  Base da ferrramenta
+- [ ] ![STORY](Imagens/Story.svg) Cadastro de usuários
+- [ ] ![STORY](Imagens/Story.svg) Edição de usuários
+- [ ] ![STORY](Imagens/Story.svg) Exclusão de usuários
+- [ ] ![STORY](Imagens/Story.svg) Visualização de usuários
+- [ ] ![STORY](Imagens/Story.svg) Chamados
+- [ ] ![STORY](Imagens/Story.svg) Problemas do Chamado
+- [ ] ![STORY](Imagens/Story.svg) Gerenciamento do orçamento
+- [ ] ![STORY](Imagens/Story.svg) Soluções
+- [ ] ![STORY](Imagens/Story.svg) Relatório
+
 ## Team
 
 <a href="https://github.com/beamedeiros" target="_blank"><img src="Imagens/Team/BeatrizMedeiros.png" height="65" width="65" align="left" target="_blank" ></a>
