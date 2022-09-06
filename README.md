@@ -44,8 +44,9 @@ A MCS (Management and Control System) é uma aplicação web que visa gerenciar 
 ## Team
 
 <a href="https://github.com/beamedeiros" target="_blank"><img src="Imagens/Team/BeatrizMedeiros.png" height="65" width="65" align="left" target="_blank" ></a>
+<a href="https://github.com/pdrMottaS" target="_blank"><img src="Imagens/Team/PedroMotta.png" height="65" width="65" align="left" target="_blank" ></a>
 <a href="https://github.com/Borgarelli" target="_blank"><img src="Imagens/Team/KauãBorgarelli.png" height="65" width="65" align="left" target="_blank" ></a>
-<a href="https://github.com/pdrMottaS" target="_blank"><img src="Imagens/Team/PedroMotta.png" height="65" width="65" align="left" target="_blank" ></a> <br/>
+<br/>
 <br></br>
 Para mais informações[^2], clique [aqui](https://github.com/DolphinDatabase/API3/wiki/Development-Team).
 <br></br>
