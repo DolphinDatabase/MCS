@@ -24,6 +24,20 @@
 
 ## Descrição
 <p align="justify">
+A MCS (Management and Control System) é uma aplicação web que visa gerenciar e controlar dados, afim de reduzir custos, facilitar tomadas de decisão, otimizar o tempo de atendimento de chamados e aprimorar o solucionamento destes.
+</p>
+
+## Documentação
+![ALERTA](Imagens/Alerta.svg) Para acessar a documentação completa do projeto, clique [aqui](#).
+
+## Pré-requisitos e como executar a aplicação
+
+## Funcionalidades desenvolvidas
+- [ ] Cadastro de Usuários
+- [ ] Visualização de Usuários
+- [ ] Edição de Usuários
+- [ ] Exclusão de Usuários
+
 
 ## Team
 
