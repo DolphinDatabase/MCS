@@ -95,78 +95,78 @@ Para acessar o manual do usuário, clique [aqui](#).
 
 ## User Story
   
-<details><summary>Story 1 - Cadastro de Produtos</summary>
+<details><summary>Story 1 - Cadastro de Usuários</summary>
 
 | Como | Eu quero | Para que |
 | ------- | ------- | ------- |
-| Assistente de cadastro de um E-commerce. | Visualizar os produtos que foram cadastrados em uma lista. | Seja possível conferir as informações do produto e adicioná-los na sacola. |
+| Usuário administrador do sistema. | Cadastrar usuários. | Seja possivel identificar o seu nível e o que faz. |
   
 </details>
 
-<details><summary>Story 2 - Listagem de Produtos</summary>
+<details><summary>Story 2 - Edição de Usuários</summary>
   
 | Como | Eu quero | Para que |
 | ------- | ------- | ------- |
-| Assistente de cadastro de um E-commerce. | Adicionar produtos no meu carrinho de compras. | Seja possível listar os itens escolhidos para conferir e ajustar a quantidade, subtotal e os descontos que refletirão no valor final. |
-  
-</details>
-
-
-<details><summary>Story 3 - Sacola de Compras</summary>
-  
-| Como | Eu quero | Para que |
-| ------- | ------- | ------- |
-| Usuário de um E-commerce. | Adicionar produtos no meu carrinho de compras. | Seja possível listar os itens escolhidos para conferir e ajustar a quantidade, subtotal e os descontos que refletirão no valor final. |
+| Usuário dministrador do sistema. | Editar usuários já cadastrados. | Seja possível atualizar seus dados. |
   
 </details>
 
 
-<details><summary>Story 4 - Alterar a Quantidade de Produtos na Sacola</summary>
+<details><summary>Story 3 - Exclusão de Usuário</summary>
   
 | Como | Eu quero | Para que |
 | ------- | ------- | ------- |
-| Usuário de um E-commerce. | Alterar a quantidade de produtos na sacola. | Seja possível comprar mais itens sem precisar retornar a lista de produtos. |
-  
-</details>
-
-<details><summary>Story 5 - Finalizar uma Compra</summary>
-  
-| Como | Eu quero | Para que |
-| ------- | ------- | ------- |
-| Usuário de um E-commerce. | Finalizar uma compra. | Seja possível efetuar seu fechamento. |
-  
-</details>
-
-<details><summary>Story 6 - Remover um Item da Sacola</summary>
-  
-| Como | Eu quero | Para que |
-| ------- | ------- | ------- |
-| Usuário de um E-commerce. | Remover um item da sacola. | Exista a possibilidade de exclusão, caso não deseje mais comprar determinado produto. |
-  
-</details>
-
-<details><summary>Story 7 - Remover um Produto Cadastrado</summary>
-  
-| Como | Eu quero | Para que |
-| ------- | ------- | ------- |
-| Assistente de cadastro de um E-commerce. | Remover um item cadastrado. | Exista a possibilidade de exclusão, caso as informações do produto estejam erradas ou não  seja mais vendido. |
+| Usuário administrador do sistema. | Excluir usuários. | Exista a possibilidade de retirar do sistema usuários que não fazem mais uso da ferramenta. |
   
 </details>
 
 
-<details><summary>Story 8 - Editar um Produto Cadastrado</summary>
+<details><summary>Story 4 - Visualização de Usuários</summary>
   
 | Como | Eu quero | Para que |
 | ------- | ------- | ------- |
-| Assistente de cadastro de um E-commerce. | Editar um produto cadastrado. | Seja possível alterar as informações do produto, como nome e valor. |
+| Usuário administrador do sistema. | Visualizar os usuários. | haja um gerenciamento. |
+  
+</details>
+
+<details><summary>Story 5 - Chamados</summary>
+  
+| Como | Eu quero | Para que |
+| ------- | ------- | ------- |
+| Usuário do sistema. | Adicionar um novo chamado. | Seja possível dar andamento às necessidades dos clientes. |
+  
+</details>
+
+<details><summary>Story 6 - Problemas do Chamado</summary>
+  
+| Como | Eu quero | Para que |
+| ------- | ------- | ------- |
+| Usuário suporte/ administrador do sistema. | Adicionar problemas encontrados em um chamado. | Seja possível identificar soluções. |
+  
+</details>
+
+<details><summary>Story 7 - Gerenciamento de Orçamento</summary>
+  
+| Como | Eu quero | Para que |
+| ------- | ------- | ------- |
+| Usuário financeiro do sistema. | Criar um orçamento baseado nos chamados e seus requisitos. | O orçamento possa ser encaminhado para o cliente. |
+  
+</details>
+
+
+<details><summary>Story 8 - Soluções</summary>
+  
+| Como | Eu quero | Para que |
+| ------- | ------- | ------- |
+| Usuário suporte/ administrador do sistema. | Adicionar soluções para problemas. | As soluções de prolemas conhecidos fiquem salvas. |
 
 </details>
 
-<details><summary>Story 9 - Filtrar Produtos Disponíveis e Arquivados</summary>
+<details><summary>Story 9 - Relatório</summary>
   
 | Como | Eu quero | Para que |
 | ------- | ------- | ------- |
-| Assistente de cadastro de um E-commerce. |  filtrar os produtos disponíveis ou arquivados.|  seja possível visualizar quais produtos estão disponíveis e quais produtos estão arquivados. |
+| Usuário suporte/ administrador do sistema. | Poder registrar soluções para os problemas encontrados durante os chamados. | Seja possível facilitar e agilizar possíveis futuros chamados. |
   
 </details>
 
