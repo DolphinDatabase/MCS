@@ -25,8 +25,10 @@
 ## Descrição
 
 <p align="justify">
-A MCS (Management and Control System) é uma aplicação web que visa gerenciar e controlar dados, afim de reduzir custos, facilitar tomadas de decisão, otimizar o tempo de atendimento de chamados e aprimorar o solucionamento destes.
-</p>
+A MCS (Management and Control System) é um sistema ERP que visa gerenciar e controlar dados, afim de reduzir custos, facilitar tomadas de decisão, otimizar o tempo de atendimento de chamados e aprimorar o solucionamento destes. 
+É composta por níveis de usuários, onde o administrador terá controle sobre todas as funcionalidades existentes, dentre elas o cadastro, edição e exclusão de outros usuários; o cliente trará o problema para o suporte e, este ficará responsável por gerenciar chamados e resolvê-los.
+<br/>
+Sua interface web facilita a gestão de dados e dá autonomia aos usuários dessa aplicação para que possam atuar com desenvoltura dentro das permissões concedidas.
 
 ## Documentação
 
@@ -37,7 +39,7 @@ A MCS (Management and Control System) é uma aplicação web que visa gerenciar 
 ## Funcionalidades desenvolvidas
 
 - [ ] Cadastro de Usuários
-- [ ] Visualização de Usuários
+- [X] Visualização de Usuários
 - [ ] Edição de Usuários
 - [ ] Exclusão de Usuários
 - [ ] Criação de Chamados
@@ -70,7 +72,7 @@ Para acessar o vídeo[^1] de demonstração da aplicação em uso, clique [aqui]
 - [ ] ![STORY](Imagens/Story.svg) Cadastro de usuários
 - [ ] ![STORY](Imagens/Story.svg) Edição de usuários
 - [ ] ![STORY](Imagens/Story.svg) Exclusão de usuários
-- [ ] ![STORY](Imagens/Story.svg) Visualização de usuários
+- [X] ![STORY](Imagens/Story.svg) Visualização de usuários
 - [ ] ![STORY](Imagens/Story.svg) Chamados
 - [ ] ![STORY](Imagens/Story.svg) Problemas do Chamado
 - [ ] ![STORY](Imagens/Story.svg) Gerenciamento do orçamento
@@ -99,7 +101,7 @@ Para acessar nosso *Burndown*, clique [aqui](https://dolphin-database.atlassian.
 
 <details><summary>Organização e Comunicação</summary>
   
-<a href="https://dolphin-database.atlassian.net/jira/software/projects/API/boards/1" target="_blank">![Jira](https://img.shields.io/badge/Jira-blue?style=flat-square&logo=jira) </a>
+<a href="https://dolphin-database.atlassian.net/jira/software/projects/MCS/boards/4/backlog" target="_blank">![Jira](https://img.shields.io/badge/Jira-blue?style=flat-square&logo=jira) </a>
 <a href="https://slack.com/intl/pt-br/" target="_blank"><img src="https://img.shields.io/badge/-Slack-E01563?style=flat-square&logo=Slack&logoColor=white"/></a>
 <a href="https://www.notion.so/pt-br" target="_blank"><img src="https://img.shields.io/badge/-Notion-000000?style=flat-square&logo=Notion&logoColor=white"/></a><br/>
 <a href="https://www.figma.com" target="_blank">![Figma](https://img.shields.io/badge/Figma-lightgray?style=flat-square&logo=figma)
@@ -119,18 +121,12 @@ Para acessar nosso *Burndown*, clique [aqui](https://dolphin-database.atlassian.
 
 <details><summary>Framework</summary>
 
-<a href="https://boxicons.com" target="_blank">![Boxicons](https://img.shields.io/badge/Boxicons-brown?style=flat-square&logo=hackthebox)</a>
-<a href="https://www.thymeleaf.org" target="_blank">![Thymeleaf](https://img.shields.io/badge/Thymeleaf-darkgreen?style=flat-square&logo=thymeleaf)</a>
-<a href="https://getbootstrap.com" target="_blank"><img src="https://img.shields.io/badge/Bootstrap-563D7C?style=flat-square&logo=bootstrap&logoColor=white"/></a><br/>
+<a href="https://element-plus.org/en-US/" target="_blank">![Element+](https://img.shields.io/badge/Element+-blue?style=flat-square&logo=element+)</a>
+<a href="https://br.vuejs.org/" target="_blank">![Vue](https://img.shields.io/badge/Vue-darkgreen?style=flat-square&logo=vue)</a>
 <a href="https://spring.io/projects/spring-boot" target="_blank"><img src="https://img.shields.io/badge/Spring-6DB33F?style=flat-square&logo=spring&logoColor=white"/></a>
 
 </details>
 
-<details><summary>Bibliotecas</summary>
-
-<a href="https://jquery.com" target="_blank"><img width="65" height="20" src="https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white"/></a>
-
-</details>
 
 <details><summary>SGBD</summary>
 
@@ -148,7 +144,7 @@ Para acessar nosso *Burndown*, clique [aqui](https://dolphin-database.atlassian.
 
 Para acessar nosso Board escaneie o *QR Code* abaixo:
 <p align="left">
-  <img src="https://github.com/DolphinDatabase/DescontOn/blob/4d4fa096757fc676386f115b4d18f4a2106f5464/Imagens/QR%20CODE.png" height="150" width="150"/>
+  <img src="" height="150" width="150"/>
 </p>
 
 </details>
