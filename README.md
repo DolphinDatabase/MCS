@@ -91,8 +91,8 @@ Para acessar nosso *Burndown*, clique [aqui](https://dolphin-database.atlassian.
  
 | Data | Evento |
 | -------| --------- |
-| 28/08 a 18/09 | [Sprint 1](#). |
-| 19/09 a 09/10 | [Sprint 2]($). |
+| 28/08 a 18/09 | [Sprint 1](#Sprints/SPRINT1). |
+| 19/09 a 09/10 | [Sprint 2](#). |
 | 13/10 a 06/11 | [Sprint 3](#). |
 | 07/11 a 27/11 | [Sprint 4](#). |
 | 08/12 às 19h | Feira de Soluções. |
