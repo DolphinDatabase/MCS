@@ -1,9 +1,8 @@
 <p align="center">
-  <img src="https://github.com/DolphinDatabase/DescontOn/blob/ae0723a5cdc64e651feb224440760adb710a2965/Imagens/DescontOn.png" height="90" width="380" />
+  <img src="https://github.com/DolphinDatabase/MCS/blob/sprint-1/Imagens/MCS(logo).png" />
 </p>
-<p align="center"> Ferramenta flexível para criações de promoções em E-commerce. </p>
 
-![Badge](https://img.shields.io/badge/STATUS-CONCLUÍDO-green?style=flat-square&logo=)
+![Badge](https://img.shields.io/badge/STATUS-EM_ANDAMENTO-yellow?style=flat-square&logo=)
 
 
 ## Tabela de Conteúdos
@@ -24,82 +23,74 @@
 
 ## Descrição
 <p align="justify">
-Ferramenta para criar promoções de E-commerce, onde as mecânicas de promoções são feitas de forma flexível e de rápida atualização no sistema. As regras de promoções são cadastradas e posteriormente aplicadas no momento em que os itens sao adicionados ao carrinho. 
-Atualmente implementamos e apresentaremos o cadastro dos produtos no servidor/ banco de dados e também como são adicionados na sacola de compras, para conferência e ajuste das quantidades e valores. Além da autonomia fornecida ao usuário para editar, remover, arquivar ou desarquivar seus produtos e da visualização prática e intuitiva dos produtos cadastrados através da listagem que possui um filtro para que seja possível diferenciar quais produtos estão disponíveis e quais produtos estão arquivados.
-
-
-### Model Canvas do Projeto
-
-<img src="https://github.com/DolphinDatabase/DescontOn/blob/2150c484a7e586030e4dc9295ae02cd5bdad2e86/Documenta%C3%A7%C3%A3o/SPRINT1/Imagens/CANVAS.png">
-
+A MCS (Management and Control System) é um sistema ERP que visa gerenciar e controlar dados, afim de reduzir custos, facilitar tomadas de decisão, otimizar o tempo de atendimento de chamados e aprimorar o solucionamento destes. 
+É composta por níveis de usuários, onde o administrador terá controle sobre todas as funcionalidades existentes, dentre elas o cadastro, edição e exclusão de outros usuários; o cliente trará o problema para o suporte e, este ficará responsável por gerenciar chamados e resolvê-los.
+<br/>
+Sua interface web facilita a gestão de dados e dá autonomia aos usuários dessa aplicação para que possam atuar com desenvoltura dentro das permissões concedidas.
+  
 ## Documentação
   
   <details><summary>Modelo Conceitual</summary>
   
-  <img src="https://github.com/DolphinDatabase/DescontOn/blob/2150c484a7e586030e4dc9295ae02cd5bdad2e86/Documenta%C3%A7%C3%A3o/SPRINT1/Imagens/Modelo_Conceitual.png">
+  <img src="">
  
   </details>
   
   <details><summary>Modelo Relacional</summary>
   
-  <img src="https://github.com/DolphinDatabase/DescontOn/blob/2150c484a7e586030e4dc9295ae02cd5bdad2e86/Documenta%C3%A7%C3%A3o/SPRINT1/Imagens/Modelo_Relacional.png">
+  <img src="">
   
   </details>
   
-  <details><summary>Diagrama de Classes</summary>
-  
-  <img src="https://github.com/DolphinDatabase/DescontOn/blob/2150c484a7e586030e4dc9295ae02cd5bdad2e86/Documenta%C3%A7%C3%A3o/SPRINT1/Imagens/Diagrama%20de%20Classes.png">
-  
-  </details>
-  
-![ALERTA](https://github.com/DolphinDatabase/DescontOn/blob/7a4ebd6388cc21faa5963f4bd59ef15fd880fbc0/Imagens/alerta.svg) 
-Para acessar a documentação completa do projeto, clique [aqui](https://github.com/DolphinDatabase/DescontOn/blob/f2761f3a935a74591ae9f62dddee51fb2a7748aa/Documenta%C3%A7%C3%A3o/SPRINT1/Documenta%C3%A7%C3%A3oDolphinDatabase.pdf).
+![ALERTA](https://github.com/DolphinDatabase/MCS/blob/sprint-1/Imagens/Alerta.svg) 
+Para acessar a documentação completa do projeto, clique [aqui](#).
 
 ## Funcionalidades desenvolvidas 
-- [x] Cadastro de Produtos
-- [x] Listar Produtos
-- [x] Remover Produtos Cadastrados
-- [x] Arquivar e Desarquivar Produtos Cadastrados (para armazenar dados dos produtos que já foram comprados)
-- [x] Filtrar a Listagem de Produtos (produtos disponíveis ou arquivados)
-- [x] Editar um Produto Cadastrado
-- [x] Adicionar Produtos na Sacola
-- [x] Alterar a Quantidade de Produtos na Sacola
-- [x] Remover Produtos da Sacola
-- [x] Finalizar Compra
 
-![ALERTA](https://github.com/DolphinDatabase/DescontOn/blob/7a4ebd6388cc21faa5963f4bd59ef15fd880fbc0/Imagens/alerta.svg) Para mais informações das funcionalidades entregues, acesse a [release](https://github.com/DolphinDatabase/DescontOn/releases/tag/sprint1).
+- [ ] Cadastro de Usuários
+- [X] Visualização de Usuários
+- [ ] Edição de Usuários
+- [ ] Exclusão de Usuários
+- [ ] Criação de Chamados
+- [ ] Adição de Problemas
+- [ ] Adição de Soluções
+- [ ] Identificação de Soluções
+- [ ] Gerar Orçamentos
+- [ ] Criar Relatórios
+
+![ALERTA](https://github.com/DolphinDatabase/MCS/blob/sprint-1/Imagens/Alerta.svg) Para mais informações das funcionalidades entregues, acesse a [release](#).
 
 ## Ilustração das funcionalidades
 
-Para acessar nossos *wireframes*, clique [aqui](https://www.figma.com/file/DfQM30USXikeDM0jaHwQ9T/Untitled?node-id=17%3A24).
+Para acessar nossos *Wireframes*, clique [aqui](https://www.figma.com/file/OL07HIxLkiXBkHdiCrxey5/MCS?node-id=0%3A1).
  
 ## Demonstração
  
-Para acessar o vídeo[^1] de demonstração da aplicação em uso, clique [aqui](https://www.youtube.com/watch?v=n5GK4uJpNkk&t=1s):
+Para acessar o vídeo[^1] de demonstração da aplicação em uso, clique [aqui](#):
 
-[<img src="https://github.com/DolphinDatabase/DescontOn/blob/47f0f23ee3d7710b472fc1ff26d06da50237681e/Imagens/imagem_2022-04-15_155641874.png" width="40%">](https://www.youtube.com/watch?v=n5GK4uJpNkk&t=1s "DescontOn vídeo Demonstração")
+[<img src="https://github.com/DolphinDatabase/MCS/blob/sprint-1/Imagens/MCS(youtube).png" width="65%" height="65%">](# "MCS vídeo Demonstração")
 
 ## Manual do Usuário
 
-Para acessar o manual do usuário, clique [aqui](https://github.com/DolphinDatabase/DescontOn/blob/main/Manual/ManualdoUsuario_sprint1-DescontOn.pdf).
+Para acessar o manual do usuário, clique [aqui](#).
 
 ## Backlog da Sprint 1
 
-- [x] ![EPIC](https://github.com/DolphinDatabase/DescontOn/blob/4502e6020cfe3e2e89c17adb2fa5473c842d215d/Imagens/EPIC%20(1).svg) **SPRINT 1:**  Base da ferrramenta
-- [x] ![STORY](https://github.com/DolphinDatabase/DescontOn/blob/7ccc37184d9e7dda6469c7420ca16ba0b2337816/Imagens/STORY%20(1).svg) Cadastro de Produtos
-- [x] ![STORY](https://github.com/DolphinDatabase/DescontOn/blob/7ccc37184d9e7dda6469c7420ca16ba0b2337816/Imagens/STORY%20(1).svg) Listagem de Produtos
-- [x] ![STORY](https://github.com/DolphinDatabase/DescontOn/blob/7ccc37184d9e7dda6469c7420ca16ba0b2337816/Imagens/STORY%20(1).svg) Sacola de Compras
-- [x] ![STORY](https://github.com/DolphinDatabase/DescontOn/blob/7ccc37184d9e7dda6469c7420ca16ba0b2337816/Imagens/STORY%20(1).svg) Alterar a Quantidade de Produtos na Sacola
-- [x] ![STORY](https://github.com/DolphinDatabase/DescontOn/blob/7ccc37184d9e7dda6469c7420ca16ba0b2337816/Imagens/STORY%20(1).svg) Finalizar uma Compra
-- [x] ![STORY](https://github.com/DolphinDatabase/DescontOn/blob/7ccc37184d9e7dda6469c7420ca16ba0b2337816/Imagens/STORY%20(1).svg) Remover um Item da Sacola
-- [x] ![STORY](https://github.com/DolphinDatabase/DescontOn/blob/7ccc37184d9e7dda6469c7420ca16ba0b2337816/Imagens/STORY%20(1).svg) Remover um Produto Cadastrado
-- [x] ![STORY](https://github.com/DolphinDatabase/DescontOn/blob/7ccc37184d9e7dda6469c7420ca16ba0b2337816/Imagens/STORY%20(1).svg) Editar um Produto Cadastrado
-- [x] ![STORY](https://github.com/DolphinDatabase/DescontOn/blob/7ccc37184d9e7dda6469c7420ca16ba0b2337816/Imagens/STORY%20(1).svg) Filtrar Produtos Disponíveis e Arquivados
+- [x] ![EPIC](https://github.com/DolphinDatabase/MCS/blob/sprint-1/Imagens/Epic.svg) **SPRINT 1:**  Base da ferrramenta
+- [ ] ![STORY](https://github.com/DolphinDatabase/MCS/blob/sprint-1/Imagens/Story.svg) Cadastro de usuários
+- [ ] ![STORY](https://github.com/DolphinDatabase/MCS/blob/sprint-1/Imagens/Story.svg) Edição de usuários
+- [ ] ![STORY](https://github.com/DolphinDatabase/MCS/blob/sprint-1/Imagens/Story.svg) Exclusão de usuários
+- [X] ![STORY](https://github.com/DolphinDatabase/MCS/blob/sprint-1/Imagens/Story.svg) Visualização de usuários
+- [ ] ![STORY](https://github.com/DolphinDatabase/MCS/blob/sprint-1/Imagens/Story.svg) Chamados
+- [ ] ![STORY](https://github.com/DolphinDatabase/MCS/blob/sprint-1/Imagens/Story.svg) Problemas do Chamado
+- [ ] ![STORY](https://github.com/DolphinDatabase/MCS/blob/sprint-1/Imagens/Story.svg) Gerenciamento do orçamento
+- [ ] ![STORY](https://github.com/DolphinDatabase/MCS/blob/sprint-1/Imagens/Story.svg) Soluções
+- [ ] ![STORY](https://github.com/DolphinDatabase/MCS/blob/sprint-1/Imagens/Story.svg) Relatório
 
 ## Story Cards
 
 <p align="center">
-  <img src="https://github.com/DolphinDatabase/DescontOn/blob/9cb582cc8f6c3b45ee10f3f4c440fbec791258b8/Imagens/StoryCards/StoryCards1.gif"/>
+  <img src="https://github.com/DolphinDatabase/MCS/blob/sprint-1/Documenta%C3%A7%C3%A3o/SPRINT1/StoryCards/StoryCards1.gif"/>
 </p>
 
 ## User Story
@@ -201,7 +192,6 @@ Para mais informações[^2], clique [aqui](https://github.com/DolphinDatabase/AP
 ## Licença  
 
 Este projeto esta sob licença [MIT](https://github.com/DolphinDatabase/SGBD_Health/blob/main/LICENSE).<br/>
-<a href="https://github.com/dolphindatabase" target="_blank" align="center">![Badge](https://img.shields.io/badge/MADE&nbsp;by&nbsp;DolphinDatabase-grey?style=for-the-badge&logo=dev.to)</a>
 
 [^1]: Vídeo produzido e editado pelos integrantes do grupo.
 [^2]: Equipe responsável pelo desenvolvimento do Projeto Integrador.
