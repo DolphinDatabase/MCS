@@ -190,7 +190,7 @@ Para mais informações[^2], clique [aqui](https://github.com/DolphinDatabase/MC
 
 ## Licença  
 
-Este projeto esta sob licença [MIT](https://github.com/DolphinDatabase/SGBD_Health/blob/main/LICENSE).<br/>
+Este projeto esta sob licença [MIT](https://github.com/DolphinDatabase/MCS/blob/sprint-1/LICENSE).<br/>
 
 [^1]: Vídeo produzido e editado pelos integrantes do grupo.
 [^2]: Equipe responsável pelo desenvolvimento do Projeto Integrador.
