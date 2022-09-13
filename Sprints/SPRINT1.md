@@ -180,14 +180,13 @@ Para acessar nosso *Burndown*, clique [aqui](https://dolphin-database.atlassian.
  
 ## Team
 
-<a href="https://github.com/beamedeiros" target="_blank"><img src="https://github.com/DolphinDatabase/DescontOn/blob/7c2c3004a0b81c5232b0d5b0929eae8ffcb4c6ed/Imagens/Team/BeatrizMedeiros.png" height="65" width="65" align="left" target="_blank" ></a>
-<a href="https://github.com/stephani-ss" target="_blank"><img src="https://github.com/DolphinDatabase/DescontOn/blob/30b6ebe8706a4ed9424e32da5fcf4ed6574e3fe3/Imagens/Team/StephaniSoares.png" height="65" width="65" align="left" target="_blank" ></a>
-<a href="https://github.com/Borgarelli" target="_blank"><img src="https://github.com/DolphinDatabase/DescontOn/blob/30b6ebe8706a4ed9424e32da5fcf4ed6574e3fe3/Imagens/Team/KauaBorgarelli.png" height="65" width="65" align="left" target="_blank" ></a>
-<a href="https://github.com/camilaffpacheco" target="_blank"><img src="https://github.com/DolphinDatabase/DescontOn/blob/24d29d4cdb3e00acc447f5a3cc9bb67f1934867c/Imagens/Team/CamilaPacheco.png" height="65" width="65" align="left" target="_blank" ></a>
-<a href="https://github.com/pdrMottaS" target="_blank"><img src="https://github.com/DolphinDatabase/DescontOn/blob/24d29d4cdb3e00acc447f5a3cc9bb67f1934867c/Imagens/Team/PedroMotta.png" height="65" width="65" align="left" target="_blank" ></a> <br/>
+<a href="https://github.com/beamedeiros" target="_blank"><img src="https://github.com/DolphinDatabase/MCS/blob/sprint-1/Imagens/Team/BeatrizMedeiros.png" height="65" width="65" align="left" target="_blank" ></a>
+<a href="https://github.com/pdrMottaS" target="_blank"><img src="https://github.com/DolphinDatabase/MCS/blob/sprint-1/Imagens/Team/PedroMotta.png" height="65" width="65" align="left" target="_blank" ></a>
+<a href="https://github.com/Borgarelli" target="_blank"><img src="https://github.com/DolphinDatabase/MCS/blob/sprint-1/Imagens/Team/Kau%C3%A3Borgarelli.png" height="65" width="65" align="left" target="_blank" ></a>
+ <br/>
 <br></br>
-Para mais informações[^2], clique [aqui](https://github.com/DolphinDatabase/API3/wiki/Development-Team).
-<br></br>
+Para mais informações[^2], clique [aqui](https://github.com/DolphinDatabase/MCS/wiki/Development-Team).
+
 
 ## Licença  
 
