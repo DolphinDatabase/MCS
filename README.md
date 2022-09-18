@@ -37,7 +37,7 @@ Sua interface web facilita a gestão de dados e dá autonomia aos usuários dess
 ## Pré-requisitos e como executar a aplicação
 
 ![ALERTA](Imagens/Alerta.svg) 
-Para acessar o manual do usuário, clique [aqui](Manual do Usuário/ManualUsuario_MCS.pdf).
+Para acessar o manual do usuário, clique [aqui](Manual/ManualUsuario_MCS.pdf).
 
 ## Funcionalidades desenvolvidas
 
@@ -67,7 +67,7 @@ Para acessar o vídeo[^1] de demonstração da aplicação em uso, clique [aqui]
 
 ## Manual do Usuário
 
-![ALERTA](Imagens/Alerta.svg) Para acessar o manual do usuário, clique [aqui](Manual do Usuário/ManualUsuario_MCS.pdf).
+![ALERTA](Imagens/Alerta.svg) Para acessar o manual do usuário, clique [aqui](Manual/ManualUsuario_MCS.pdf).
 
 ## Backlog do Produto
 
