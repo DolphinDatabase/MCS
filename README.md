@@ -38,16 +38,16 @@ Sua interface web facilita a gestão de dados e dá autonomia aos usuários dess
 
 ## Funcionalidades desenvolvidas
 
-- [ ] Cadastro de Usuários
+- [X] Cadastro de Usuários
 - [X] Visualização de Usuários
-- [ ] Edição de Usuários
-- [ ] Exclusão de Usuários
-- [ ] Criação de Chamados
-- [ ] Adição de Problemas
-- [ ] Adição de Soluções
-- [ ] Identificação de Soluções
-- [ ] Gerar Orçamentos
-- [ ] Criar Relatórios
+- [X] Edição de Usuários
+- [X] Exclusão de Usuários
+- [X] Criação de Chamados
+- [X] Adição de Problemas
+- [X] Adição de Soluções
+- [X] Identificação de Soluções
+- [X] Gerar Orçamentos
+- [X] Criar Relatórios
 
 
 ![ALERTA](Imagens/Alerta.svg) Para mais informações das funcionalidades entregues, acesse as [releases](#).
@@ -69,15 +69,15 @@ Para acessar o vídeo[^1] de demonstração da aplicação em uso, clique [aqui]
 ## Backlog do Produto
 
 - [x] ![EPIC](Imagens/Epic.svg) **SPRINT 1:**  Base da ferrramenta
-- [ ] ![STORY](Imagens/Story.svg) Cadastro de usuários
-- [ ] ![STORY](Imagens/Story.svg) Edição de usuários
-- [ ] ![STORY](Imagens/Story.svg) Exclusão de usuários
+- [X] ![STORY](Imagens/Story.svg) Cadastro de usuários
+- [X] ![STORY](Imagens/Story.svg) Edição de usuários
+- [X] ![STORY](Imagens/Story.svg) Exclusão de usuários
 - [X] ![STORY](Imagens/Story.svg) Visualização de usuários
-- [ ] ![STORY](Imagens/Story.svg) Chamados
-- [ ] ![STORY](Imagens/Story.svg) Problemas do Chamado
-- [ ] ![STORY](Imagens/Story.svg) Gerenciamento do orçamento
-- [ ] ![STORY](Imagens/Story.svg) Soluções
-- [ ] ![STORY](Imagens/Story.svg) Relatório
+- [X] ![STORY](Imagens/Story.svg) Chamados
+- [X] ![STORY](Imagens/Story.svg) Problemas do Chamado
+- [X] ![STORY](Imagens/Story.svg) Gerenciamento do orçamento
+- [X] ![STORY](Imagens/Story.svg) Soluções
+- [X] ![STORY](Imagens/Story.svg) Relatório
 
 ## Roadmap
 
@@ -91,6 +91,7 @@ Para acessar nosso *Burndown*, clique [aqui](https://dolphin-database.atlassian.
  
 | Data | Evento |
 | -------| --------- |
+| 15/08 a 19/08 | Kick-off. |
 | 28/08 a 18/09 | [Sprint 1](Sprints/SPRINT1.md). |
 | 19/09 a 09/10 | [Sprint 2](#). |
 | 13/10 a 06/11 | [Sprint 3](#). |
