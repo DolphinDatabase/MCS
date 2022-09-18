@@ -127,16 +127,16 @@ Para acessar a documentação completa do projeto, clique [aqui](#).
 
 ## Funcionalidades desenvolvidas 
 
-- [ ] Cadastro de Usuários
+- [X] Cadastro de Usuários
 - [X] Visualização de Usuários
-- [ ] Edição de Usuários
-- [ ] Exclusão de Usuários
-- [ ] Criação de Chamados
-- [ ] Adição de Problemas
-- [ ] Adição de Soluções
-- [ ] Identificação de Soluções
-- [ ] Gerar Orçamentos
-- [ ] Criar Relatórios
+- [X] Edição de Usuários
+- [X] Exclusão de Usuários
+- [X] Criação de Chamados
+- [X] Adição de Problemas
+- [X] Adição de Soluções
+- [X] Identificação de Soluções
+- [X] Gerar Orçamentos
+- [X] Criar Relatórios
 
 ![ALERTA](https://github.com/DolphinDatabase/MCS/blob/sprint-1/Imagens/Alerta.svg) Para mais informações das funcionalidades entregues, acesse a [release](#).
 
@@ -157,15 +157,15 @@ Para acessar o manual do usuário, clique [aqui](#).
 ## Backlog da Sprint 1
 
 - [x] ![EPIC](https://github.com/DolphinDatabase/MCS/blob/sprint-1/Imagens/Epic.svg) **SPRINT 1:**  Base da ferrramenta
-- [ ] ![STORY](https://github.com/DolphinDatabase/MCS/blob/sprint-1/Imagens/Story.svg) Cadastro de usuários
-- [ ] ![STORY](https://github.com/DolphinDatabase/MCS/blob/sprint-1/Imagens/Story.svg) Edição de usuários
-- [ ] ![STORY](https://github.com/DolphinDatabase/MCS/blob/sprint-1/Imagens/Story.svg) Exclusão de usuários
+- [X] ![STORY](https://github.com/DolphinDatabase/MCS/blob/sprint-1/Imagens/Story.svg) Cadastro de usuários
+- [X] ![STORY](https://github.com/DolphinDatabase/MCS/blob/sprint-1/Imagens/Story.svg) Edição de usuários
+- [X] ![STORY](https://github.com/DolphinDatabase/MCS/blob/sprint-1/Imagens/Story.svg) Exclusão de usuários
 - [X] ![STORY](https://github.com/DolphinDatabase/MCS/blob/sprint-1/Imagens/Story.svg) Visualização de usuários
-- [ ] ![STORY](https://github.com/DolphinDatabase/MCS/blob/sprint-1/Imagens/Story.svg) Chamados
-- [ ] ![STORY](https://github.com/DolphinDatabase/MCS/blob/sprint-1/Imagens/Story.svg) Problemas do Chamado
-- [ ] ![STORY](https://github.com/DolphinDatabase/MCS/blob/sprint-1/Imagens/Story.svg) Gerenciamento do orçamento
-- [ ] ![STORY](https://github.com/DolphinDatabase/MCS/blob/sprint-1/Imagens/Story.svg) Soluções
-- [ ] ![STORY](https://github.com/DolphinDatabase/MCS/blob/sprint-1/Imagens/Story.svg) Relatório
+- [X] ![STORY](https://github.com/DolphinDatabase/MCS/blob/sprint-1/Imagens/Story.svg) Chamados
+- [X] ![STORY](https://github.com/DolphinDatabase/MCS/blob/sprint-1/Imagens/Story.svg) Problemas do Chamado
+- [X] ![STORY](https://github.com/DolphinDatabase/MCS/blob/sprint-1/Imagens/Story.svg) Gerenciamento do orçamento
+- [X] ![STORY](https://github.com/DolphinDatabase/MCS/blob/sprint-1/Imagens/Story.svg) Soluções
+- [X] ![STORY](https://github.com/DolphinDatabase/MCS/blob/sprint-1/Imagens/Story.svg) Relatório
 
 ## Story Cards
 
