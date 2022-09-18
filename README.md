@@ -141,14 +141,6 @@ Para acessar nosso *Burndown*, clique [aqui](https://dolphin-database.atlassian.
 
 </details>
 
-<details><summary>Board</summary>
-
-Para acessar nosso Board escaneie o *QR Code* abaixo:
-<p align="left">
-  <img src="" height="150" width="150"/>
-</p>
-
-</details>
 
 ## Team
 
