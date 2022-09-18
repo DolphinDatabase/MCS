@@ -71,7 +71,7 @@ Para acessar o vídeo[^1] de demonstração da aplicação em uso, clique [aqui]
 
 ## Backlog do Produto
 
-- [x] ![EPIC](Imagens/Epic.svg) **SPRINT 1:**  Base da ferrramenta
+- [X] ![EPIC](Imagens/Epic.svg) **SPRINT 1:**  Base da ferrramenta
 - [X] ![STORY](Imagens/Story.svg) Cadastro de usuários
 - [X] ![STORY](Imagens/Story.svg) Edição de usuários
 - [X] ![STORY](Imagens/Story.svg) Exclusão de usuários
@@ -81,6 +81,7 @@ Para acessar o vídeo[^1] de demonstração da aplicação em uso, clique [aqui]
 - [X] ![STORY](Imagens/Story.svg) Gerenciamento do orçamento
 - [X] ![STORY](Imagens/Story.svg) Soluções
 - [X] ![STORY](Imagens/Story.svg) Relatório
+- [ ] ![EPIC](Imagens/Epic.svg) **SPRINT 2:**  NOME
 
 ## Roadmap
 
