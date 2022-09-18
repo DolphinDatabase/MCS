@@ -152,7 +152,7 @@ Para acessar o vídeo[^1] de demonstração da aplicação em uso, clique [aqui]
 
 ## Manual do Usuário
 
-Para acessar o manual do usuário, clique [aqui](#).
+Para acessar o manual do usuário, clique [aqui](https://github.com/DolphinDatabase/MCS/blob/sprint-1/Manual/ManualUsuario_MCS.pdf).
 
 ## Backlog da Sprint 1
 
