@@ -42,6 +42,12 @@ Sua interface web facilita a gestão de dados e dá autonomia aos usuários dess
   
   </details>
   
+   <details><summary>Modelo Físico</summary>
+  
+  <img src="">
+  
+  </details>
+  
 ![ALERTA](https://github.com/DolphinDatabase/MCS/blob/sprint-1/Imagens/Alerta.svg) 
 Para acessar a documentação completa do projeto, clique [aqui](#).
 
