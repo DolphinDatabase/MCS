@@ -123,7 +123,7 @@ Create table Solucao(
   </details>
   
 ![ALERTA](https://github.com/DolphinDatabase/MCS/blob/sprint-1/Imagens/Alerta.svg) 
-Para acessar a documentação completa do projeto, clique [aqui](#).
+Para acessar a documentação completa do projeto, clique [aqui](https://github.com/DolphinDatabase/MCS/blob/sprint-1/Documenta%C3%A7%C3%A3o/SPRINT1/Documentacao_MCS.pdf).
 
 ## Funcionalidades desenvolvidas 
 
