@@ -32,13 +32,13 @@ Sua interface web facilita a gestão de dados e dá autonomia aos usuários dess
   
   <details><summary>Modelo Conceitual</summary>
   
-  <img src="https://github.com/DolphinDatabase/MCS/blob/main/Documenta%C3%A7%C3%A3o/SPRINT1/Modelos_Banco/conceitual.png">
+  <img src="https://github.com/DolphinDatabase/MCS/blob/sprint-1/Documenta%C3%A7%C3%A3o/SPRINT1/Modelos_Banco/conceitual.png">
  
   </details>
   
   <details><summary>Modelo Relacional</summary>
   
-  <img src="https://github.com/DolphinDatabase/MCS/blob/main/Documenta%C3%A7%C3%A3o/SPRINT1/Modelos_Banco/logico.png">
+  <img src="https://github.com/DolphinDatabase/MCS/blob/sprint-1/Documenta%C3%A7%C3%A3o/SPRINT1/Modelos_Banco/logico.png">
   
   </details>
   
@@ -148,7 +148,7 @@ Para acessar nossos *Wireframes*, clique [aqui](https://www.figma.com/file/OL07H
  
 Para acessar o vídeo[^1] de demonstração da aplicação em uso, clique [aqui](https://youtu.be/omSyXxA3AYI):
 
-[<img src="https://github.com/DolphinDatabase/MCS/blob/main/Imagens/MCS(youtube).png" width="65%" height="65%">](# "MCS vídeo Demonstração")
+[<img src="https://github.com/DolphinDatabase/MCS/blob/sprint-1/Imagens/MCS(youtube).png" width="65%" height="65%">](# "MCS vídeo Demonstração")
 
 ## Manual do Usuário
 
