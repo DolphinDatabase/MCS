@@ -95,7 +95,7 @@ Para acessar o manual do usuário, clique [aqui](Manual/ManualUsuario_MCS.pdf).
 - [X] Criar Relatórios
 
 
-![ALERTA](Imagens/Alerta.svg) Para mais informações das funcionalidades entregues, acesse as [releases](#).
+![ALERTA](Imagens/Alerta.svg) Para mais informações das funcionalidades entregues, acesse as [releases](https://github.com/DolphinDatabase/MCS/releases/tag/Sprint1).
 
 ## Ilustração das Funcionalidades
 
