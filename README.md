@@ -36,6 +36,48 @@ Sua interface web facilita a gestão de dados e dá autonomia aos usuários dess
 
 ## Pré-requisitos e como executar a aplicação
 
+<details><summary>Pré-requisitos</summary>
+ 
+* Instalação [Java](https://docs.oracle.com/en/java/javase/11/install/installation-jdk-microsoft-windows-platforms.html#GUID-E3C75F92-D3B2-421D-A9BE-933C15F7CD1B)
+* IDE - sugestão [Eclipse](https://www.eclipse.org/downloads/) 
+
+</details>
+
+<details><summary>Back-end</summary>
+
+```bash 
+# via PowerShell
+$ git clone https://github.com/DolphinDatabase/MCS/tree/main
+
+cd backend
+mvn clean install
+mvn spring-boot:run
+cd ..
+```
+</details>
+
+<details><summary>Front-end</summary>
+  
+```bash
+# via PowerShell
+
+cd frontend
+yarn install
+yarn dev
+```
+
+</details>
+
+Com os pré-requisitos prontos,
+*acesse no navegador o endereço:
+http://localhost:5173*
+
+**IMPORTANTE:**
+
+*E-mail:* adm@email.com
+ 
+*Senha:* 123456
+
 ![ALERTA](Imagens/Alerta.svg) 
 Para acessar o manual do usuário, clique [aqui](Manual/ManualUsuario_MCS.pdf).
 
