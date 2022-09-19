@@ -1,9 +1,5 @@
 package com.cms.backend.service;
 
-import java.util.List;
-import java.util.Set;
-import java.util.stream.Collectors;
-
 import org.modelmapper.ModelMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -22,30 +18,28 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
 import com.cms.backend.SummaryModel.ResponseSummaryModel;
-import com.cms.backend.SummaryModel.UserSummaryModel;
-import com.cms.backend.entity.Role;
-import com.cms.backend.entity.User;
-import com.cms.backend.repository.UserRepository;
+import com.cms.backend.SummaryModel.SolutionSummaryModel;
+import com.cms.backend.entity.Solution;
+import com.cms.backend.repository.SolutionRepository;
 
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 @RestController
-@RequestMapping("/user")
-public class UserService {
+@RequestMapping("/solution")
+public class SolutionService {
     
     @Autowired
-    private UserRepository uRepository;
+    private SolutionRepository sRepository;
 
     @Autowired
     private ModelMapper modelMapper;
 
-    Logger logger = LoggerFactory.getLogger(UserService.class);
+    Logger logger = LoggerFactory.getLogger(SolutionService.class);
 
-    @GetMapping
-    public ResponseEntity<ResponseSummaryModel> listUsers(){
+    @PostMapping
+    public ResponseEntity<ResponseSummaryModel> createSolution(@RequestBody Solution solution){
         ResponseSummaryModel res = new ResponseSummaryModel();
         try{
-            List<UserSummaryModel> all = uRepository.findAll().stream().map(this::toUserSummaryModel).collect(Collectors.toList());
-            res.setAll(200, true, "List All Users", all);
+            res.setAll(200, true, "New Solution Created", toSolutionSummaryModel(sRepository.save(solution)));
             logger.info(res.getMessage());
             return ResponseEntity.status(HttpStatus.OK).body(res);
         }catch(Exception err){
@@ -56,15 +50,15 @@ public class UserService {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<ResponseSummaryModel> findUser(@PathVariable Long id){
+    public ResponseEntity<ResponseSummaryModel> findSolution(@PathVariable Long id){
         ResponseSummaryModel res = new ResponseSummaryModel();
         try{
-            User user = uRepository.findById(id).orElseThrow(()->new ResponseStatusException(HttpStatus.NOT_FOUND));
-            res.setAll(200, true, "User "+id+" Found", toUserSummaryModel(user));
+            Solution solution = sRepository.findById(id).orElseThrow(()->new ResponseStatusException(HttpStatus.NOT_FOUND));
+            res.setAll(200, true, "Solution "+id+" Found", toSolutionSummaryModel(solution));
             logger.info(res.getMessage());
             return ResponseEntity.status(HttpStatus.OK).body(res);
         }catch(ResponseStatusException err){
-            res.setAll(404, false, "User "+id+" Not Found", null);
+            res.setAll(404, false, "Solution "+id+" Not Found", null);
             logger.info(res.getMessage());
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(res);
         }catch(Exception err){
@@ -74,38 +68,17 @@ public class UserService {
         }
     }
 
-    @PostMapping
-    public ResponseEntity<ResponseSummaryModel> createUser(@RequestBody User user){
-        ResponseSummaryModel res = new ResponseSummaryModel();
-        try{
-            if(filterRoles(user.getRoles())!=null && user.getRoles().size()>1){
-                res.setAll(401, false, "Unauthorized roles", null);
-                logger.warn(res.getMessage());
-                return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(res);
-            }
-            res.setAll(200, true, "New User Created", toUserSummaryModel(uRepository.save(user)));
-            logger.info(res.getMessage());
-            return ResponseEntity.status(HttpStatus.OK).body(res);
-        }catch(Exception err){
-            res.setAll(500, false, err.getMessage(), null);
-            logger.error(res.getMessage());
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(res);
-        }
-    }
-
     @PutMapping("/{id}")
-    public ResponseEntity<ResponseSummaryModel> updateUser(@PathVariable Long id, @RequestBody User user){
+    public ResponseEntity<ResponseSummaryModel> updateSolution(@PathVariable Long id, @RequestBody Solution solution){
         ResponseSummaryModel res = new ResponseSummaryModel();
         try{
-            User u = uRepository.findById(id).orElseThrow(()->new ResponseStatusException(HttpStatus.NOT_FOUND));
-            u.setName(user.getName());
-            u.setEmail(user.getEmail());
-            u.setPassword(user.getPassword());
-            res.setAll(200, true, "User "+id+" Updated", toUserSummaryModel(uRepository.save(u)));
+            Solution s = sRepository.findById(id).orElseThrow(()->new ResponseStatusException(HttpStatus.NOT_FOUND));
+            s.setDescription(solution.getDescription());
+            res.setAll(200, true, "Solution "+id+" Updated", toSolutionSummaryModel(sRepository.save(s)));
             logger.info(res.getMessage());
             return ResponseEntity.status(HttpStatus.OK).body(res);
         }catch(ResponseStatusException err){
-            res.setAll(404, false, "User "+id+" Not Found", null);
+            res.setAll(404, false, "Solution "+id+" Not Found", null);
             logger.info(res.getMessage());
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(res);
         }
@@ -117,16 +90,16 @@ public class UserService {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<ResponseSummaryModel> deleteUser(@PathVariable Long id){
+    public ResponseEntity<ResponseSummaryModel> deleteSolution(@PathVariable Long id){
         ResponseSummaryModel res = new ResponseSummaryModel();
         try{
-            User u = uRepository.findById(id).orElseThrow(()->new ResponseStatusException(HttpStatus.NOT_FOUND));
-            uRepository.delete(u);
-            res.setAll(200, true, "User "+id+" Deleted",null);
+            Solution s = sRepository.findById(id).orElseThrow(()->new ResponseStatusException(HttpStatus.NOT_FOUND));
+            sRepository.delete(s);
+            res.setAll(200, true, "Solution "+id+" Deleted",null);
             logger.info(res.getMessage());
             return ResponseEntity.status(HttpStatus.OK).body(res);
         }catch(ResponseStatusException err){
-            res.setAll(404, false, "User "+id+" Not Found", null);
+            res.setAll(404, false, "Solution "+id+" Not Found", null);
             logger.info(res.getMessage());
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(res);
         }
@@ -137,12 +110,8 @@ public class UserService {
         }
     }
 
-    private UserSummaryModel toUserSummaryModel(User user){
-        return modelMapper.map(user,UserSummaryModel.class);
-    }
-
-    private Role filterRoles(Set<Role> roles){
-        return roles.stream().filter(role->role.getNivel().equals("ROLE_CLT")).findAny().orElse(null);
+    private SolutionSummaryModel toSolutionSummaryModel(Solution solution){
+        return modelMapper.map(solution,SolutionSummaryModel.class);
     }
 
 }

@@ -7,11 +7,9 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-public class RequirementSummaryModel {
+public class SolutionSummaryModel {
     
     private Long id;
-    private String name;
     private String description;
-    private Integer quantity;
 
 }

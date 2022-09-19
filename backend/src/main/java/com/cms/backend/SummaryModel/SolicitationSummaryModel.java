@@ -16,8 +16,11 @@ public class SolicitationSummaryModel {
     
     private Long id;
     private String name;
+    private String description;
     private Date date;
     private Status status;
-    private Set<RequirementSummaryModel> requirements;
+    private LocationSummaryModel location;
+    private UserSummaryModel user;
+    private Set<ProblemSummaryModel> problems; 
 
 }

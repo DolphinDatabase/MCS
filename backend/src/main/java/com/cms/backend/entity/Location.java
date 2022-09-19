@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 import lombok.Getter;
@@ -41,4 +42,9 @@ public class Location {
     @Column(name = "loc_uf")
     private String uf;
 
+    @Column(name = "loc_num")
+    private Long num;
+
+    @OneToOne(mappedBy = "location")
+    private Solicitation solicitation;
 }

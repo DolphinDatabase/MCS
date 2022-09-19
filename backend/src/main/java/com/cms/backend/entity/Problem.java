@@ -2,49 +2,47 @@ package com.cms.backend.entity;
 
 import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
-import javax.persistence.JoinColumn;
+
+import com.cms.backend.util.Nivel;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name = "Usuario")
+@Table(name = "Problema")
 @Getter
 @Setter
 @NoArgsConstructor
-public class User {
+public class Problem {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "usr_id")
+    @Column(name = "prb_id")
     private Long id;
 
-    @Column(name = "usr_nome")
+    @Column(name = "prb_nome")
     private String name;
-    
-    @Column(name = "usr_email")
-    private String email;
-    
-    @Column(name = "usr_senha")
-    private String password;
 
-    @OneToMany(mappedBy = "user")
+    @Enumerated(EnumType.STRING)
+    @Column(name = "prb_nvl")
+    private Nivel nivel;
+
+    @OneToMany(mappedBy = "problem", cascade = CascadeType.REMOVE)
+    private Set<Solution> solutions;
+
+    @ManyToMany(mappedBy = "problems")
     private Set<Solicitation> solicitations;
-
-    @ManyToMany
-    @JoinTable(name = "Usuario_Nivel", 
-    joinColumns = @JoinColumn(name = "usr_id"), 
-    inverseJoinColumns = @JoinColumn(name = "nvl_id"))
-    private Set<Role> roles;
 
 }

@@ -14,28 +14,22 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name = "Requisito")
+@Table(name = "Solucao")
 @Getter
 @Setter
 @NoArgsConstructor
-public class Requirement {
+public class Solution {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "req_id")
+    @Column(name = "slc_id")
     private Long id;
 
-    @Column(name = "req_nome")
-    private String name;
-
-    @Column(name = "req_desricaoc")
+    @Column(name = "slc_descricao")
     private String description;
 
-    @Column(name = "req_quantidade")
-    private Integer quantity;
-
     @ManyToOne
-    @JoinColumn(name = "req_chd",nullable = false)
-    private Solicitation solicitation;
+    @JoinColumn(name = "prb_id")
+    private Problem problem;
 
 }
