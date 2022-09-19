@@ -1,0 +1,8 @@
+#frontend
+frontend/node_modules
+frontend/.vscode
+frontend/.gitpod.yml
+
+#backend
+backend/target
+backend/.vscode

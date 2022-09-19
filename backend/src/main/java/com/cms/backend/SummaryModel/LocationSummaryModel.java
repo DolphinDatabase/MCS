@@ -16,5 +16,6 @@ public class LocationSummaryModel {
     private String complemento;
     private String logradouro;
     private String uf;
+    private Long num;
 
 }

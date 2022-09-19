@@ -9,6 +9,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -18,6 +19,7 @@ import com.cms.backend.SummaryModel.RoleSummaryModel;
 import com.cms.backend.entity.Role;
 import com.cms.backend.repository.RoleRepository;
 
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 @RestController
 @RequestMapping("/role")
 public class RoleService {
@@ -28,7 +30,7 @@ public class RoleService {
     @Autowired
     private ModelMapper modelMapper;
 
-    Logger logger = LoggerFactory.getLogger(UserService.class);
+    Logger logger = LoggerFactory.getLogger(RoleService.class);
 
     @GetMapping
     public ResponseEntity<ResponseSummaryModel> listRoles(){

@@ -9,6 +9,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.JoinColumn;
 
@@ -36,6 +37,9 @@ public class User {
     
     @Column(name = "usr_senha")
     private String password;
+
+    @OneToMany(mappedBy = "user")
+    private Set<Solicitation> solicitations;
 
     @ManyToMany
     @JoinTable(name = "Usuario_Nivel", 

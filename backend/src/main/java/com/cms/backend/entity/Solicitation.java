@@ -3,6 +3,7 @@ package com.cms.backend.entity;
 import java.util.Date;
 import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
@@ -10,7 +11,11 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.PrePersist;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
@@ -38,6 +43,9 @@ public class Solicitation {
     @Column(name = "chd_nome")
     private String name;
 
+    @Column(name = "chd_descricao")
+    private String description;
+
     @Temporal(TemporalType.TIMESTAMP)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Column(name = "chd_data")
@@ -47,8 +55,19 @@ public class Solicitation {
     @Column(name = "chd_status")
     private Status status;
 
-    @OneToMany(mappedBy = "solicitation")
-    private Set<Requirement> requirements;
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "loc_id", referencedColumnName = "loc_id")
+    private Location location;
+
+    @ManyToOne
+    @JoinColumn(name = "usr_id", nullable = false)
+    private User user;
+
+    @ManyToMany
+    @JoinTable(name = "Chamado_Problema",
+    joinColumns = @JoinColumn(name = "chd_id"),
+    inverseJoinColumns = @JoinColumn(name = "prb_id"))
+    private Set<Problem> problems;    
 
     @PrePersist
     public void OnCreate(){
