@@ -138,7 +138,7 @@ Para acessar a documentação completa do projeto, clique [aqui](https://github.
 - [X] Gerar Orçamentos
 - [X] Criar Relatórios
 
-![ALERTA](https://github.com/DolphinDatabase/MCS/blob/sprint-1/Imagens/Alerta.svg) Para mais informações das funcionalidades entregues, acesse a [release](#).
+![ALERTA](https://github.com/DolphinDatabase/MCS/blob/sprint-1/Imagens/Alerta.svg) Para mais informações das funcionalidades entregues, acesse a [release](https://github.com/DolphinDatabase/MCS/releases/tag/Sprint1).
 
 ## Ilustração das funcionalidades
 
