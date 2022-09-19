@@ -32,7 +32,7 @@ Sua interface web facilita a gestão de dados e dá autonomia aos usuários dess
 
 ## Documentação
 
-![ALERTA](Imagens/Alerta.svg) Para acessar a documentação completa do projeto, clique [aqui](#).
+![ALERTA](Imagens/Alerta.svg) Para acessar a documentação completa do projeto, clique [aqui](Documentação/SPRINT1/Documentacao_MCS.pdf).
 
 ## Pré-requisitos e como executar a aplicação
 
