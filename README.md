@@ -124,13 +124,13 @@ Para acessar o vídeo[^1] de demonstração da aplicação em uso, clique [aqui]
 - [X] ![STORY](Imagens/Story.svg) Soluções
 - [X] ![STORY](Imagens/Story.svg) Relatório
 - [ ] ![EPIC](Imagens/Epic.svg) **SPRINT 2:**  Análises
-- [X] ![STORY](Imagens/Story.svg) Melhorias no Orçamento
-- [X] ![STORY](Imagens/Story.svg) Edição de problemas
-- [X] ![STORY](Imagens/Story.svg) Exclusão de soluções
-- [X] ![STORY](Imagens/Story.svg) Gerenciamento de estoque
-- [X] ![STORY](Imagens/Story.svg) Agendamento de serviços
-- [X] ![STORY](Imagens/Story.svg) Análise de falhas
-- [X] ![STORY](Imagens/Story.svg) Análise de chamados
+- [ ] ![STORY](Imagens/Story.svg) Melhorias no Orçamento
+- [ ] ![STORY](Imagens/Story.svg) Edição de problemas
+- [ ] ![STORY](Imagens/Story.svg) Exclusão de soluções
+- [ ] ![STORY](Imagens/Story.svg) Gerenciamento de estoque
+- [ ] ![STORY](Imagens/Story.svg) Agendamento de serviços
+- [ ] ![STORY](Imagens/Story.svg) Análise de falhas
+- [ ] ![STORY](Imagens/Story.svg) Análise de chamados
 
 ## Roadmap
 
