@@ -146,9 +146,9 @@ Para acessar nossos *Wireframes*, clique [aqui](https://www.figma.com/file/OL07H
  
 ## Demonstração
  
-Para acessar o vídeo[^1] de demonstração da aplicação em uso, clique [aqui](#):
+Para acessar o vídeo[^1] de demonstração da aplicação em uso, clique [aqui](https://youtu.be/omSyXxA3AYI):
 
-[<img src="https://github.com/DolphinDatabase/MCS/blob/sprint-1/Imagens/MCS(youtube).png" width="65%" height="65%">](# "MCS vídeo Demonstração")
+[<img src="https://github.com/DolphinDatabase/MCS/blob/main/Imagens/MCS(youtube).png" width="65%" height="65%">](# "MCS vídeo Demonstração")
 
 ## Manual do Usuário
 
