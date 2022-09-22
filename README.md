@@ -72,11 +72,31 @@ Com os pré-requisitos prontos,
 *acesse no navegador o endereço:
 http://localhost:5173*
 
-**IMPORTANTE:**
+**LOGIN:**
+
+<details><summary>Administrador</summary>
 
 *E-mail:* adm@email.com
  
 *Senha:* 123456
+
+</details>
+
+<details><summary>Suporte</summary>
+
+*E-mail:* sup@email.com
+
+*Senha:* 123456
+
+</details>
+
+<details><summary>Cliente</summary>
+
+*E-mail:* cli@email.com
+
+*Senha:* 123456
+
+</details>
 
 ![ALERTA](Imagens/Alerta.svg) 
 Para acessar o manual do usuário, clique [aqui](Manual/ManualUsuario_MCS.pdf).
