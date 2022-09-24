@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/DolphinDatabase/MCS/blob/sprint-1/Imagens/MCS(logo).png" />
+  <img src="https://github.com/DolphinDatabase/MCS/blob/sprint-2/Imagens/Logo.png"/>
 </p>
 
 ![Badge](https://img.shields.io/badge/STATUS-EM_ANDAMENTO-yellow?style=flat-square&logo=)
