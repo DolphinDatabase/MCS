@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="Imagens/LogotipoO.png"/>
+  <img src="Imagens/LogotipoMCS.png"/>
 </p>
 
 ![Badge](https://img.shields.io/badge/STATUS-EM_ANDAMENTO-yellow?style=flat-square&logo=)
