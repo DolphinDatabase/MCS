@@ -148,24 +148,19 @@ Para acessar nossos *Wireframes*, clique [aqui](https://www.figma.com/file/OL07H
  
 Para acessar o vídeo[^1] de demonstração da aplicação em uso, clique [aqui](https://youtu.be/omSyXxA3AYI):
 
-[<img src="https://github.com/DolphinDatabase/MCS/blob/sprint-2/Imagens/MCS_Youtube.png" width="60%" height="60%">](# "MCS vídeo Demonstração")
+[<img src="https://github.com/DolphinDatabase/MCS/blob/sprint-2/Imagens/MCS_Youtube.png" width="65%" height="65%">](# "MCS vídeo Demonstração")
 
 ## Manual do Usuário
 
 Para acessar o manual do usuário, clique [aqui](https://github.com/DolphinDatabase/MCS/blob/sprint-1/Manual/ManualUsuario_MCS.pdf).
 
-## Backlog da Sprint 1
+## Backlog da Sprint 2
 
-- [x] ![EPIC](https://github.com/DolphinDatabase/MCS/blob/sprint-1/Imagens/Epic.svg) **SPRINT 1:**  Base da ferrramenta
-- [X] ![STORY](https://github.com/DolphinDatabase/MCS/blob/sprint-1/Imagens/Story.svg) Cadastro de usuários
-- [X] ![STORY](https://github.com/DolphinDatabase/MCS/blob/sprint-1/Imagens/Story.svg) Edição de usuários
-- [X] ![STORY](https://github.com/DolphinDatabase/MCS/blob/sprint-1/Imagens/Story.svg) Exclusão de usuários
-- [X] ![STORY](https://github.com/DolphinDatabase/MCS/blob/sprint-1/Imagens/Story.svg) Visualização de usuários
-- [X] ![STORY](https://github.com/DolphinDatabase/MCS/blob/sprint-1/Imagens/Story.svg) Chamados
-- [X] ![STORY](https://github.com/DolphinDatabase/MCS/blob/sprint-1/Imagens/Story.svg) Problemas do Chamado
-- [X] ![STORY](https://github.com/DolphinDatabase/MCS/blob/sprint-1/Imagens/Story.svg) Gerenciamento do orçamento
-- [X] ![STORY](https://github.com/DolphinDatabase/MCS/blob/sprint-1/Imagens/Story.svg) Soluções
-- [X] ![STORY](https://github.com/DolphinDatabase/MCS/blob/sprint-1/Imagens/Story.svg) Relatório
+- [x] ![EPIC](https://github.com/DolphinDatabase/MCS/blob/sprint-1/Imagens/Epic.svg) **SPRINT 2:**  Análise
+- [X] ![STORY](https://github.com/DolphinDatabase/MCS/blob/sprint-1/Imagens/Story.svg) Melhorias no orçamento
+- [X] ![STORY](https://github.com/DolphinDatabase/MCS/blob/sprint-1/Imagens/Story.svg) Gerenciamento de falhas/ soluções
+- [X] ![STORY](https://github.com/DolphinDatabase/MCS/blob/sprint-1/Imagens/Story.svg) Gerenciamento de estoque
+- [X] ![STORY](https://github.com/DolphinDatabase/MCS/blob/sprint-1/Imagens/Story.svg) Análise de dados
 
 ## Story Cards
 
@@ -262,6 +257,7 @@ Para acessar nosso *Burndown*, clique [aqui](https://dolphin-database.atlassian.
 
 <a href="https://github.com/beamedeiros" target="_blank"><img src="https://github.com/DolphinDatabase/MCS/blob/sprint-1/Imagens/Team/BeatrizMedeiros.png" height="65" width="65" align="left" target="_blank" ></a>
 <a href="https://github.com/pdrMottaS" target="_blank"><img src="https://github.com/DolphinDatabase/MCS/blob/sprint-1/Imagens/Team/PedroMotta.png" height="65" width="65" align="left" target="_blank" ></a>
+<a href="https://github.com/FelipeFariaVerde" target="_blank"><img src="Imagens/Team/FelipeFaria.png" height="65" width="65" align="left" target="_blank" ></a>
 <a href="https://github.com/Borgarelli" target="_blank"><img src="https://github.com/DolphinDatabase/MCS/blob/sprint-1/Imagens/Team/Kau%C3%A3Borgarelli.png" height="65" width="65" align="left" target="_blank" ></a>
  <br/>
 <br></br>
