@@ -170,78 +170,37 @@ Para acessar o manual do usuário, clique [aqui](https://github.com/DolphinDatab
 
 ## User Story
   
-<details><summary>Story 1 - Cadastro de Usuários</summary>
+<details><summary>Story 10 - Melhorias no Orçamento</summary>
 
 | Como | Eu quero | Para que |
 | ------- | ------- | ------- |
-| Usuário administrador do sistema. | Cadastrar usuários. | Seja possivel identificar o seu nível e o que faz. |
+| Usuário cliente do sistema. | Visualizar o orçamento previsto para o chamado. | Possa solicitar o serviço. |
   
 </details>
 
-<details><summary>Story 2 - Edição de Usuários</summary>
+<details><summary>Story 11 - Gerenciamento de Falhas/ Soluções</summary>
   
 | Como | Eu quero | Para que |
 | ------- | ------- | ------- |
-| Usuário dministrador do sistema. | Editar usuários já cadastrados. | Seja possível atualizar seus dados. |
-  
-</details>
-
-
-<details><summary>Story 3 - Exclusão de Usuário</summary>
-  
-| Como | Eu quero | Para que |
-| ------- | ------- | ------- |
-| Usuário administrador do sistema. | Excluir usuários. | Exista a possibilidade de retirar do sistema usuários que não fazem mais uso da ferramenta. |
+| Usuário suporte do sistema. | Editar e excluir as falhas conhecidas. | Seja possível manter os dados atualizados. |
   
 </details>
 
 
-<details><summary>Story 4 - Visualização de Usuários</summary>
+<details><summary>Story 12 - Gerenciamento de Estoque</summary>
   
 | Como | Eu quero | Para que |
 | ------- | ------- | ------- |
-| Usuário administrador do sistema. | Visualizar os usuários. | haja um gerenciamento. |
-  
-</details>
-
-<details><summary>Story 5 - Chamados</summary>
-  
-| Como | Eu quero | Para que |
-| ------- | ------- | ------- |
-| Usuário do sistema. | Adicionar um novo chamado. | Seja possível dar andamento às necessidades dos clientes. |
-  
-</details>
-
-<details><summary>Story 6 - Problemas do Chamado</summary>
-  
-| Como | Eu quero | Para que |
-| ------- | ------- | ------- |
-| Usuário suporte/ administrador do sistema. | Adicionar problemas encontrados em um chamado. | Seja possível identificar soluções. |
-  
-</details>
-
-<details><summary>Story 7 - Gerenciamento de Orçamento</summary>
-  
-| Como | Eu quero | Para que |
-| ------- | ------- | ------- |
-| Usuário financeiro do sistema. | Criar um orçamento baseado nos chamados e seus requisitos. | O orçamento possa ser encaminhado para o cliente. |
+| Usuário administrador do sistema. | Gerenciar materiais em estoque. | Possa ser usado nos chamados. |
   
 </details>
 
 
-<details><summary>Story 8 - Soluções</summary>
+<details><summary>Story 13 - Análise de Dados</summary>
   
 | Como | Eu quero | Para que |
 | ------- | ------- | ------- |
-| Usuário suporte/ administrador do sistema. | Adicionar soluções para problemas. | As soluções de prolemas conhecidos fiquem salvas. |
-
-</details>
-
-<details><summary>Story 9 - Relatório</summary>
-  
-| Como | Eu quero | Para que |
-| ------- | ------- | ------- |
-| Usuário suporte/ administrador do sistema. | Poder registrar soluções para os problemas encontrados durante os chamados. | Seja possível facilitar e agilizar possíveis futuros chamados. |
+| Usuário do sistema. | Ter acesso a estatísticas de chamados. | Possa ser possível ter mais controle sobre serviços. |
   
 </details>
 
