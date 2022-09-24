@@ -1,0 +1,73 @@
+Create table Niveis(
+	nvl_id Number (6),
+	nvl_niveis Varchar (10),
+	constraint pk_nvl Primary key (nvl_id)
+);
+
+Create Usuario(
+	user_id Number (6),
+	user_senha Number (16),
+	user_email Varchar (50),
+	user_nome Varchar (60),
+	user_nivel Number (6),
+	constraint pk_usuario Primary key (user_id),
+	constraint fk_user_nvl foreign key (user_nivel) references Niveis (nvl_id)
+);
+
+Create table Localizacao(
+	loc_id Number (8),
+	loc_cep Number (9),
+	loc_cidade Varchar (60),
+	loc_bairro Varchar (60),
+	loc_complemento Varchar (60),
+	loc_uf Varchar (60),
+	loc_num Number (20),
+	constraint pk_local Primary key (loc_id)
+);
+
+Create table Chamado(
+	chama_id Number (9),
+	chama_status Number (1) constraint ck_chama_status Check (chama_status in (0,1)),
+	chama_data_inico date default System,
+	chama_data_termino date default System,
+	chama_descricao text,
+	chama_usuario Number (6),
+	chama_localizacao Number (6),
+	constraint pk_chama Primary key (chama_id),
+	constraint fk_chama_usuario foreign key (chama_usuario) references Usuario (user_id),
+	constraint fk_chama_localizacao foreign key (chama_localizacao) references Localizacao (loc_id)
+);
+
+Create table Orcamento(
+	orc_id Number (6),
+	orc_desc Text,
+	orc_total Number (8,2),
+	orc_chama Number (8),
+	contraint pk_orc Primary key (orc_id),
+	constraint fk_orc_chama foreign key (orc_chama) references Chamado (chama_id)
+);
+
+
+Create table Problema(
+	prob_id Number (6),
+	prob_nome Varchar (60),
+	prob_descricao Text,
+	constraint pk_prob Primary key (prob_id)
+);
+
+Create table chamado/problema(
+	CP_id Number (6),
+	CP_chamado Number (6),
+	CP_problema Number (6),
+	constraint pk_CP Primary key (CP_id),
+	constraint fk_CP_chamado foreign key (CP_chamado) references Chamado (chama_id),
+	constraint fk_CP_problema foreign key (CP_problema) references Problema (prob_id)
+);
+
+Create table Solucao(
+	soluc_id Number (6),
+	soluc_nome Varchar (60),
+	soluc_prob Number (6),
+	constraint pk_soluc Primary key (soluc_id),
+	constraint fk_soluc_prob foreign key (soluc_prob) references Problema (prob_id)
+);
