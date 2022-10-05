@@ -119,7 +119,7 @@ Para acessar o manual do usuário, clique [aqui](Manual/ManualUsuario_MCS.pdf).
 
 ## Ilustração das Funcionalidades
 
-Para acessar nossos *Wireframes*, clique [aqui](https://www.figma.com/file/OL07HIxLkiXBkHdiCrxey5/MCS?node-id=0%3A1).
+Para acessar nossos *Wireframes*, clique [aqui](https://www.figma.com/file/MM0pLqbdpFde9cqt9upsWx/MCS-Dolphin?node-id=0%3A1).
 
 ## Demonstração
 
