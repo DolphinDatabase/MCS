@@ -82,22 +82,6 @@ http://localhost:5173*
 
 </details>
 
-<details><summary>Suporte</summary>
-
-*E-mail:* sup@email.com
-
-*Senha:* 123456
-
-</details>
-
-<details><summary>Cliente</summary>
-
-*E-mail:* cli@email.com
-
-*Senha:* 123456
-
-</details>
-
 ![ALERTA](Imagens/Alerta.svg) 
 Para acessar o manual do usuário, clique [aqui](Manual/ManualUsuario_MCS.pdf).
 
