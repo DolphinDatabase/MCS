@@ -102,7 +102,7 @@ Para acessar o manual do usuário, clique [aqui](Manual/ManualUsuario_MCS.pdf).
 - [X] Adição de Falhas e Soluções no Chamado
 - [X] Adição de Equipamentos no Chamado
 - [X] Adição de Orçamento no Chamado
-- [X] Gerar Orçamentos
+- [X] Criação de Orçamento
 
 ![ALERTA](Imagens/Alerta.svg) Para mais informações das funcionalidades entregues, acesse as [releases](https://github.com/DolphinDatabase/MCS/releases/tag/Sprint1).
 
@@ -132,11 +132,11 @@ Para acessar o vídeo[^1] de demonstração da aplicação em uso, clique [aqui]
 - [X] ![STORY](Imagens/Story.svg) Gerenciamento do orçamento
 - [X] ![STORY](Imagens/Story.svg) Soluções
 - [X] ![STORY](Imagens/Story.svg) Relatório
-- [ ] ![EPIC](Imagens/Epic.svg) **SPRINT 2:**  Análise
-- [ ] ![STORY](Imagens/Story.svg) Melhorias no orçamento
-- [ ] ![STORY](Imagens/Story.svg) Gerenciamento de falhas/ soluções
-- [ ] ![STORY](Imagens/Story.svg) Gerenciamento de estoque
-- [ ] ![STORY](Imagens/Story.svg) Análise de dados
+- [X] ![EPIC](Imagens/Epic.svg) **SPRINT 2:**  Análise
+- [X] ![STORY](Imagens/Story.svg) Melhorias no orçamento
+- [X] ![STORY](Imagens/Story.svg) Gerenciamento de falhas/ soluções
+- [X] ![STORY](Imagens/Story.svg) Gerenciamento de estoque
+- [X] ![STORY](Imagens/Story.svg) Análise de dados
 
 ## Roadmap
 
