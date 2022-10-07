@@ -131,12 +131,18 @@ Para acessar a documentação completa do projeto, clique [aqui](https://github.
 - [X] Visualização de Usuários
 - [X] Edição de Usuários
 - [X] Exclusão de Usuários
+- [X] Cadastro de Equipamentos
+- [X] Visualização de Equipamentos
+- [X] Edição de Equipamentos
+- [X] Exclusão de Equipamentos
+- [X] Cadastro de Falhas e Soluções
+- [X] Visualização de Falhas e Soluções
+- [X] Exclusão de Falhas e Soluções
 - [X] Criação de Chamados
-- [X] Adição de Problemas
-- [X] Adição de Soluções
-- [X] Identificação de Soluções
-- [X] Gerar Orçamentos
-- [X] Criar Relatórios
+- [X] Adição de Falhas e Soluções no Chamado
+- [X] Adição de Equipamentos no Chamado
+- [X] Adição de Orçamento no Chamado
+- [X] Criação de Orçamento
 
 ![ALERTA](https://github.com/DolphinDatabase/MCS/blob/sprint-1/Imagens/Alerta.svg) Para mais informações das funcionalidades entregues, acesse a [release](https://github.com/DolphinDatabase/MCS/releases/tag/Sprint1).
 
