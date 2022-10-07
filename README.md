@@ -91,13 +91,18 @@ Para acessar o manual do usuário, clique [aqui](Manual/ManualUsuario_MCS.pdf).
 - [X] Visualização de Usuários
 - [X] Edição de Usuários
 - [X] Exclusão de Usuários
+- [X] Cadastro de Equipamentos
+- [X] Visualização de Equipamentos
+- [X] Edição de Equipamentos
+- [X] Exclusão de Equipamentos
+- [X] Cadastro de Falhas e Soluções
+- [X] Visualização de Falhas e Soluções
+- [X] Exclusão de Falhas e Soluções
 - [X] Criação de Chamados
-- [X] Adição de Problemas
-- [X] Adição de Soluções
-- [X] Identificação de Soluções
+- [X] Adição de Falhas e Soluções no Chamado
+- [X] Adição de Equipamentos no Chamado
+- [X] Adição de Orçamento no Chamado
 - [X] Gerar Orçamentos
-- [X] Criar Relatórios
-
 
 ![ALERTA](Imagens/Alerta.svg) Para mais informações das funcionalidades entregues, acesse as [releases](https://github.com/DolphinDatabase/MCS/releases/tag/Sprint1).
 
