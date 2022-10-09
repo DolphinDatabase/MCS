@@ -83,7 +83,7 @@ http://localhost:5173*
 </details>
 
 ![ALERTA](Imagens/Alerta.svg) 
-Para acessar o manual do usuário, clique [aqui](Manual/MCS Manual do Usuário - sprint02.pdf).
+Para acessar o manual do usuário, clique [aqui](Manual/MCS_ManualdoUsuário.pdf).
 
 ## Funcionalidades desenvolvidas
 
@@ -118,7 +118,7 @@ Para acessar o vídeo[^1] de demonstração da aplicação em uso, clique [aqui]
 
 ## Manual do Usuário
 
-![ALERTA](Imagens/Alerta.svg) Para acessar o manual do usuário, clique [aqui](Manual/MCS Manual do Usuário - sprint02.pdf).
+![ALERTA](Imagens/Alerta.svg) Para acessar o manual do usuário, clique [aqui](Manual/MCS_ManualdoUsuário.pdf).
 
 ## Backlog do Produto
 
