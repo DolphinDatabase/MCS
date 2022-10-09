@@ -57,6 +57,8 @@ Create Usuario(
 	user_email Varchar (50),
 	user_nome Varchar (60),
 	user_nivel Number (6),
+	user_cpf Varchar (12),
+	user_cnpj Varchar (15),
 	constraint pk_usuario Primary key (user_id),
 	constraint fk_user_nvl foreign key (user_nivel) references Niveis (nvl_id)
 );
@@ -69,7 +71,18 @@ Create table Localizacao(
 	loc_complemento Varchar (60),
 	loc_uf Varchar (60),
 	loc_num Number (20),
+	loc_ende Varchar (50),
 	constraint pk_local Primary key (loc_id)
+);
+
+Create table Equipamento(
+	equip_id Number (6),
+	equip_num Varchar (12),
+	equip_modelo Varchar (50),
+	equip_desc Text,
+	equip_data date default System,
+	equip_quant Number (20),
+	constraint pk_equip Primary Key (equip_id)
 );
 
 Create table Chamado(
@@ -80,43 +93,59 @@ Create table Chamado(
 	chama_descricao text,
 	chama_usuario Number (6),
 	chama_localizacao Number (6),
+	chama_equip Number (6),
 	constraint pk_chama Primary key (chama_id),
 	constraint fk_chama_usuario foreign key (chama_usuario) references Usuario (user_id),
-	constraint fk_chama_localizacao foreign key (chama_localizacao) references Localizacao (loc_id)
+	constraint fk_chama_localizacao foreign key (chama_localizacao) references Localizacao (loc_id),
+	constraint fk_chama_equip foreign key (chama_equip) references Equipamento (equip_id)
 );
 
 Create table Orcamento(
 	orc_id Number (6),
-	orc_desc Text,
-	orc_total Number (8,2),
+	orc_obs Text,
+	orc_valor Number (8,2),
 	orc_chama Number (8),
+	orc_data date default System,
 	contraint pk_orc Primary key (orc_id),
 	constraint fk_orc_chama foreign key (orc_chama) references Chamado (chama_id)
 );
 
 
-Create table Problema(
-	prob_id Number (6),
-	prob_nome Varchar (60),
-	prob_descricao Text,
-	constraint pk_prob Primary key (prob_id)
+Create table Falhas(
+	falha_id Number (6),
+	falha_nome Varchar (60),
+	falha_nivel Varchar constraint ck_falha_nivel Check (falha_nivel in('Baixa', 'Média', 'Alta')),
+	constraint pk_falha Primary key (falha_id)
 );
 
-Create table chamado/problema(
-	CP_id Number (6),
-	CP_chamado Number (6),
-	CP_problema Number (6),
-	constraint pk_CP Primary key (CP_id),
-	constraint fk_CP_chamado foreign key (CP_chamado) references Chamado (chama_id),
-	constraint fk_CP_problema foreign key (CP_problema) references Problema (prob_id)
+Create table chamado/falha(
+	CF_id Number (6),
+	CF_chamado Number (6),
+	CF_medidas Varchar (80),
+	CF_problema Number (6),
+	constraint pk_CF Primary key (CF_id),
+	constraint fk_CF_chamado foreign key (CF_chamado) references Chamado (chama_id),
+	constraint fk_CF_problema foreign key (CF_problema) references Problema (prob_id)
 );
 
 Create table Solucao(
 	soluc_id Number (6),
 	soluc_nome Varchar (60),
-	soluc_prob Number (6),
 	constraint pk_soluc Primary key (soluc_id),
-	constraint fk_soluc_prob foreign key (soluc_prob) references Problema (prob_id)
+);
+
+Create table falhas/solucoes(
+	FS_id Number (6),
+	FS_falha_id Number (6),
+	FS_soluc_id Number (6),
+	FS_falha Number (20),
+	FS_desc Text,
+	FS_prioridade Varchar (10) constraint ck_FS_prioridade Check (FS_prioridade in ('Baixa', 'Média', 'Alta')),
+	FS_data date default System,
+	constraint pk_FS Primary key (FS_id),
+	constraint fk_FS_falha_id foreign key (FS_falha_id) references Falhas (falha_id),
+	constraint fk_FS_soluc_id foreign key (FS_soluc_id) references Solucoes (soluc_id)
+);
 );
   ```
   
