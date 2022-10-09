@@ -32,13 +32,13 @@ Sua interface web facilita a gestão de dados e dá autonomia aos usuários dess
   
   <details><summary>Modelo Conceitual</summary>
   
-  <img src="https://github.com/DolphinDatabase/MCS/blob/sprint-1/Documenta%C3%A7%C3%A3o/SPRINT1/Modelos_Banco/conceitual.png">
+  <img src="https://github.com/DolphinDatabase/MCS/blob/sprint-2/Documenta%C3%A7%C3%A3o/SPRINT2/Modelos_Banco/conceitual.png">
  
   </details>
   
   <details><summary>Modelo Relacional</summary>
   
-  <img src="https://github.com/DolphinDatabase/MCS/blob/sprint-1/Documenta%C3%A7%C3%A3o/SPRINT1/Modelos_Banco/logico.png">
+  <img src="https://github.com/DolphinDatabase/MCS/blob/sprint-2/Documenta%C3%A7%C3%A3o/SPRINT2/Modelos_Banco/logico.png">
   
   </details>
   
