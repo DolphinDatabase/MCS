@@ -209,7 +209,7 @@ Para acessar o manual do usuário, clique [aqui](https://github.com/DolphinDatab
 
 | Como | Eu quero | Para que |
 | ------- | ------- | ------- |
-| Usuário cliente do sistema. | Visualizar o orçamento previsto para o chamado. | Possa solicitar o serviço. |
+| Usuário cliente do sistema. | Visualizar o orçamento previsto para o chamado. | Possa solicitar e concluir o serviço. |
   
 </details>
 
@@ -217,7 +217,7 @@ Para acessar o manual do usuário, clique [aqui](https://github.com/DolphinDatab
   
 | Como | Eu quero | Para que |
 | ------- | ------- | ------- |
-| Usuário suporte do sistema. | Editar e excluir as falhas conhecidas. | Seja possível manter os dados atualizados. |
+| Usuário administrador e suporte do sistema. | Editar e excluir as falhas específicas e conhecidas. | Seja possível adicioná-las e gerenciá-las nos chamados. |
   
 </details>
 
@@ -226,7 +226,7 @@ Para acessar o manual do usuário, clique [aqui](https://github.com/DolphinDatab
   
 | Como | Eu quero | Para que |
 | ------- | ------- | ------- |
-| Usuário administrador do sistema. | Gerenciar materiais em estoque. | Possa ser usado nos chamados. |
+| Usuário administrador e suporte do sistema. | Gerenciar materiais no estoque. | Possam ser utilizados nos chamados. |
   
 </details>
 
