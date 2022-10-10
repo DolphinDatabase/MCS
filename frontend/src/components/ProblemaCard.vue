@@ -17,7 +17,7 @@
 </template>
 <script>
 import {ElCard,ElTag} from 'element-plus'
-import CardList from './CardList.vue'
+import CardList from './content/CardList.vue'
 import nivel from '../utils/nivel'
 export default {
     name:"ProblemaCard",

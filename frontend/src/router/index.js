@@ -5,7 +5,9 @@ import Usuarios from '../views/Usuarios.vue'
 import Chamados from '../views/Chamados.vue'
 import ChamadoDetail from '../views/ChamadoDetail.vue'
 import Orcamento from '../views/Orcamento.vue'
+import Estoque from '../views/Estoque.vue'
 import store from '../store'
+import Falhas from '../views/Falhas.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -51,6 +53,21 @@ const router = createRouter({
       path: '/orcamento',
       name: 'orcamento',
       component: Orcamento,
+      meta:{
+        auth:true
+      }
+    },{
+      path: '/estoque',
+      name: 'estoque',
+      component: Estoque,
+      meta:{
+        auth:true
+      }
+    },
+    {
+      path: '/falhas',
+      name: 'falhas',
+      component: Falhas,
       meta:{
         auth:true
       }

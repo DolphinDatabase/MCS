@@ -15,6 +15,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.PrePersist;
 import javax.persistence.Table;
@@ -59,15 +60,22 @@ public class Solicitation {
     @JoinColumn(name = "loc_id", referencedColumnName = "loc_id")
     private Location location;
 
+    @OneToOne
+    @JoinColumn(name = "orc_id", referencedColumnName = "orc_id")
+    private Budget budget;
+
     @ManyToOne
     @JoinColumn(name = "usr_id", nullable = false)
-    private User user;
+    private Usuario user;
 
+    @OneToMany(mappedBy = "solicitation")
+    private Set<SolicitationProblem> problems;
+    
     @ManyToMany
-    @JoinTable(name = "Chamado_Problema",
+    @JoinTable(name = "Chamado_Estoque",
     joinColumns = @JoinColumn(name = "chd_id"),
-    inverseJoinColumns = @JoinColumn(name = "prb_id"))
-    private Set<Problem> problems;    
+    inverseJoinColumns = @JoinColumn(name = "est_nserie"))
+    private Set<Material> materials;
 
     @PrePersist
     public void OnCreate(){

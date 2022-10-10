@@ -9,6 +9,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -33,11 +34,12 @@ public class RoleService {
     Logger logger = LoggerFactory.getLogger(RoleService.class);
 
     @GetMapping
+    @PreAuthorize("hasRole('ADM')")
     public ResponseEntity<ResponseSummaryModel> listRoles(){
         ResponseSummaryModel res = new ResponseSummaryModel();
         try{
             List<RoleSummaryModel> all = rRepository.findAll().stream().map(this::toRoleSummaryModel).collect(Collectors.toList());
-            res.setAll(200, true, "List All Roles", all);
+            res.setAll(200, true, "Todos os níveis listados", all);
             logger.info(res.getMessage());
             return ResponseEntity.status(HttpStatus.OK).body(res);
         }catch(Exception err){
