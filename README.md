@@ -137,6 +137,10 @@ Para acessar o vídeo[^1] de demonstração da aplicação em uso, clique [aqui]
 - [X] ![STORY](Imagens/Story.svg) Gerenciamento de falhas/ soluções
 - [X] ![STORY](Imagens/Story.svg) Gerenciamento de estoque
 - [X] ![STORY](Imagens/Story.svg) Análise de dados
+- [ ] ![EPIC](Imagens/Epic.svg) **SPRINT 3:**  Mapeamento
+- [ ] ![STORY](Imagens/Story.svg) Responsável pelo chamado
+- [ ] ![STORY](Imagens/Story.svg) Data de serviço
+- [ ] ![STORY](Imagens/Story.svg) Mapeamento gráfico
 
 ## Roadmap
 
