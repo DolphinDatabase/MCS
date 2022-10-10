@@ -2,13 +2,13 @@ const status={
     OPEN:{
         label:"Aberto",
         class:"open",
-        type:"warning",
+        type:"danger",
         value:"OPEN"
     },
     IN_PROGRESS:{
-        label:"Em Análise",
+        label:"Em andamento",
         class:"andamento",
-        type:"primary",
+        type:"warning",
         value:"IN_PROGRESS"
     },
     FINISHED:{

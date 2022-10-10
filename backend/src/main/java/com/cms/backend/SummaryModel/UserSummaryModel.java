@@ -14,6 +14,7 @@ public class UserSummaryModel {
     private Long id;
     private String name;
     private String email;
+    private String document;
     private String password;
     private Set<RoleSummaryModel> roles;
 

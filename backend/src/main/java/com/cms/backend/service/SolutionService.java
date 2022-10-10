@@ -6,6 +6,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -36,10 +37,11 @@ public class SolutionService {
     Logger logger = LoggerFactory.getLogger(SolutionService.class);
 
     @PostMapping
+    @PreAuthorize("hasRole('SUP')")
     public ResponseEntity<ResponseSummaryModel> createSolution(@RequestBody Solution solution){
         ResponseSummaryModel res = new ResponseSummaryModel();
         try{
-            res.setAll(200, true, "New Solution Created", toSolutionSummaryModel(sRepository.save(solution)));
+            res.setAll(200, true, "Nova Solução criada", toSolutionSummaryModel(sRepository.save(solution)));
             logger.info(res.getMessage());
             return ResponseEntity.status(HttpStatus.OK).body(res);
         }catch(Exception err){
@@ -50,15 +52,16 @@ public class SolutionService {
     }
 
     @GetMapping("/{id}")
+    @PreAuthorize("isAuthenticated()")
     public ResponseEntity<ResponseSummaryModel> findSolution(@PathVariable Long id){
         ResponseSummaryModel res = new ResponseSummaryModel();
         try{
             Solution solution = sRepository.findById(id).orElseThrow(()->new ResponseStatusException(HttpStatus.NOT_FOUND));
-            res.setAll(200, true, "Solution "+id+" Found", toSolutionSummaryModel(solution));
+            res.setAll(200, true, "Solução "+id+" encontrada", toSolutionSummaryModel(solution));
             logger.info(res.getMessage());
             return ResponseEntity.status(HttpStatus.OK).body(res);
         }catch(ResponseStatusException err){
-            res.setAll(404, false, "Solution "+id+" Not Found", null);
+            res.setAll(404, false, "Solução "+id+" não encontrada", null);
             logger.info(res.getMessage());
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(res);
         }catch(Exception err){
@@ -69,16 +72,17 @@ public class SolutionService {
     }
 
     @PutMapping("/{id}")
+    @PreAuthorize("hasRole('SUP')")
     public ResponseEntity<ResponseSummaryModel> updateSolution(@PathVariable Long id, @RequestBody Solution solution){
         ResponseSummaryModel res = new ResponseSummaryModel();
         try{
             Solution s = sRepository.findById(id).orElseThrow(()->new ResponseStatusException(HttpStatus.NOT_FOUND));
             s.setDescription(solution.getDescription());
-            res.setAll(200, true, "Solution "+id+" Updated", toSolutionSummaryModel(sRepository.save(s)));
+            res.setAll(200, true, "Solução "+id+" atualizada", toSolutionSummaryModel(sRepository.save(s)));
             logger.info(res.getMessage());
             return ResponseEntity.status(HttpStatus.OK).body(res);
         }catch(ResponseStatusException err){
-            res.setAll(404, false, "Solution "+id+" Not Found", null);
+            res.setAll(404, false, "Solução "+id+" não encontrada", null);
             logger.info(res.getMessage());
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(res);
         }
@@ -90,16 +94,17 @@ public class SolutionService {
     }
 
     @DeleteMapping("/{id}")
+    @PreAuthorize("hasRole('SUP')")
     public ResponseEntity<ResponseSummaryModel> deleteSolution(@PathVariable Long id){
         ResponseSummaryModel res = new ResponseSummaryModel();
         try{
             Solution s = sRepository.findById(id).orElseThrow(()->new ResponseStatusException(HttpStatus.NOT_FOUND));
             sRepository.delete(s);
-            res.setAll(200, true, "Solution "+id+" Deleted",null);
+            res.setAll(200, true, "Solução "+id+" deletada",null);
             logger.info(res.getMessage());
             return ResponseEntity.status(HttpStatus.OK).body(res);
         }catch(ResponseStatusException err){
-            res.setAll(404, false, "Solution "+id+" Not Found", null);
+            res.setAll(404, false, "Solução "+id+" não encontrada", null);
             logger.info(res.getMessage());
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(res);
         }

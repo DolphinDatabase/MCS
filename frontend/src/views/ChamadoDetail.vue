@@ -1,187 +1,127 @@
-<template>
-    <div id="page">
-        <SideBar/>
-        <main-card>
-            <MainHeader/>
-            <div id="detalhes">
-                <header>
-                    <div>
-                        <span class="tittle">
-                            <h2>{{chamado.name}}</h2>
-                            <el-tag :type="status[chamado.status].type" effect="plain" round>{{status[chamado.status].label}}</el-tag>
-                        </span>
-                        <p>{{chamado.user.name}}</p>
-                        <p>{{chamado.location.logradouro}}, Nº {{chamado.location.num}}, {{chamado.location.bairro}}</p>
-                    </div>
-                    <div>
-                        <p>{{dateDifference(chamado.date)}} dia(s) atras</p>
-                        <el-button v-if="(this.auth.roles[0].id == 2 && this.chamado.status == 'OPEN')" @click="this.orcamentoModal = true" type="primary">Gerar Orçamento</el-button>
-                    </div>
-                </header>
-                <hr/>
-                <div id="problemas">
-                    <header>
-                        <h2>Problemas encontrados</h2>
-                        <el-icon v-if="this.auth.roles[0].id == 2" class="icon" style="" color="#000" @click="this.modal = true" :size="18">
-                            <Plus />
-                        </el-icon>
-                    </header>
-                    <ProblemaCard ref="problemaCard"/>
-                </div>
-            </div>
-        </main-card>
+<template>  
+  <BasePage>
+    <Title title="Falhas e soluções do Chamado">
+      <ElButton v-if="this.$store.getters.getAuth.role=='ROLE_SUP'" type="primary" @click="this.newModal = true">
+        Adicionar
+      </ElButton>
+    </Title>
+    <TableCollapse :index="{name:'Falha',num:'Número de soluções',nivel:'Prioridade'}" :tableData="this.problemas">
+      <template v-slot="{data}">
+        <div style="padding:0 2rem">
+          <h5>Soluções</h5>
+          <ul>
+            <li v-for="solucao in data.solutions" :key="solucao.id">{{solucao.description}}</li>
+          </ul>
+        </div>
+        <div style="padding:0 2rem;margin-top:1rem">
+          <h5>Dimensões da falha</h5>
+          <p>{{data.width}}x{{data.height}}x{{data.depth}}mm</p>
+        </div>
+      </template>
+    </TableCollapse>
+  </BasePage>
+  <el-dialog v-model="this.newModal" title="Cadastrar Falhas e Soluções" width="40%" :before-close="handleClose">
+    <div>
+      <div id="step">
+        <span :style="(this.formType==0)?'color:#0024FF':''" @click="this.formType=0">Falha Conhecida</span>
+        <span :style="(this.formType==1)?'color:#0024FF':''" @click="this.formType=1">Nova Falha</span>
+      </div>
+      <ProblemForm ref="problemForm" :type="this.formType" @submit="(form)=>handleSubmit(form)"/>
     </div>
-    <el-dialog v-model="this.modal" title="Novo Problema" width="40%" @close='closeModal' align-center>
-      <ProblemaForm ref="problemaForm"/>
-      <template #footer>
-        <span class="dialog-footer">
-          <el-button @click="closeModal">Cancelar</el-button>
-          <el-button type="primary" @click="submitProblem()">Cadastrar</el-button>
-        </span>
-      </template>
-    </el-dialog>
-    <el-dialog v-model="this.orcamentoModal" title="Gerar Orçamento" width="40%" align-center>
-      <h3>Encaminhar o chamado para análise ?</h3>
-      <template #footer>
-        <span class="dialog-footer">
-          <el-button @click="this.orcamentoModal = false">Cancelar</el-button>
-          <el-button type="primary" @click="gerarOrcamento()">OK</el-button>
-        </span>
-      </template>
-    </el-dialog>
+    <template #footer>
+      <span class="dialog-footer">
+        <el-button @click="this.newModal = false">Cancelar</el-button>
+        <el-button type="primary" @click="this.$refs.problemForm.verifyForm()">Salvar</el-button>
+      </span>
+    </template>
+  </el-dialog>
 </template>
 <script>
-import MainHeader from '../components/MainHeader.vue'
-import MainCard from '../components/MainCard.vue'
-import SideBar from '../components/SideBar.vue'
-import {ElButton,ElTag,ElDialog} from 'element-plus'
-import ProblemaCard from '../components/ProblemaCard.vue'
-import ProblemaForm from '../components/ProblemaForm.vue'
-import status from '../utils/status'
-import dateDifference from '../utils/dateDifference'
-export default {
+  import BasePage from '../components/layout/BasePage.vue'
+  import Title from '../components/content/Title.vue'
+  import TableCollapse from '../components/TableCollapse.vue'
+  import ProblemForm from '../components/form/ProblemForm.vue'
+  import {ElButton} from 'element-plus'
+  export default{
     name:"ChamadoDetail",
     components:{
-        SideBar,
-        MainCard,
-        MainHeader,
-        ElButton,
-        ElTag,
-        ProblemaCard,
-        ElDialog,
-        ProblemaForm
+      BasePage,
+      Title,
+      ElButton,
+      TableCollapse,
+      ProblemForm
     },
     data(){
-        return{
-            chamado:this.$store.getters.getChamadoByid(this.$route.params.id),
-            modal:false,
-            status:status,
-            auth:this.$store.getters.getAuth,
-            orcamentoModal:false
-        }
+      return{
+        problemas:[],
+        newModal:false,
+        formType:0
+      }
+    },
+    created(){
+      console.log(this.$route.params.id)
+      const chamado = this.$store.getters.getChamadoByid(this.$route.params.id)
+      chamado.problems.forEach(p => {
+        this.problemas.push({
+          id:p.problem.id,
+          name:p.problem.name,
+          nivel:p.problem.nivel,
+          width: p.width,
+          height: p.height,
+          depth: p.depth,
+          num:(p.problem.solutions.length==0||p.problem.solutions.length==null)?0:p.problem.solutions.length,
+          solutions:p.problem.solutions,
+        })
+      });
+      console.log(this.problemas)
     },
     methods:{
-        closeModal(){
-            this.$refs.problemaForm.displayForm = false
-            this.$refs.problemaForm.form.solutions = [{description:''}]
-            this.modal = false
-        },
-        async submitProblem(){
-            var problema = {}
-            if(this.$refs.problemaForm.problema == null){
-                problema = this.$refs.problemaForm.form
-            }else{
-                problema = {id:this.$refs.problemaForm.problema}
-            }
-            await this.$store.dispatch("addProblema",{idChamado:this.chamado.id,problema:problema})
-            await this.$store.dispatch("listChamado")
-            this.$refs.problemaCard.problemas = this.$store.getters.getChamadoByid(this.$route.params.id).problems
-            this.closeModal()
-        },
-        dateDifference:dateDifference,
-        async gerarOrcamento(){
-            this.chamado.status = "IN_PROGRESS"
-            await this.$store.dispatch("updateChamado",this.chamado)
-            this.orcamentoModal = false
+      async handleSubmit(form){
+        const data = {
+          solicitation:{
+            id:this.$route.params.id
+          },
+          problem:{
+              id:null
+          },
+          width:form.width,
+          height:form.height,
+          depth:form.depth
         }
-    },
-    mounted(){
-        this.$refs.problemaCard.problemas = this.chamado.problems
+        if(form.known==null){
+          const problemData={
+            name:form.name,
+            nivel:form.nivel,
+            solutions:form.solutions
+          }
+          const p = await this.$store.dispatch("createProblem",problemData)
+          console.log(p)
+          data.problem.id = p.id
+          this.problemas.push(p)
+        }else{
+          const k = this.$store.getters.getProblemaById(form.known)
+          this.problemas.push(k)
+          data.problem.id = form.known
+        }
+        this.$store.dispatch("linkProblema",data)
+        this.newModal = false
+      }
     }
-}
+  }
 </script>
 <style scoped>
-    #page{
-        height: 100%;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+#step{
+  background-color: #F3F7FF;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  gap: 5rem;
+  padding: 0.8rem;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
 
-    #detalhes{
-        margin-left: 80px;
-    }
-
-    #detalhes header{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        align-items: center;
-        justify-content: space-between;
-        margin-bottom: 10px;
-    }
-
-     #problemas header{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin: 15px 15px 15px 0;
-    }
-
-    #problemas header h2{
-        color: #000;
-        font-size: 20px;
-    }
-
-    #problemas header button{
-        cursor: pointer;
-        color: #000;
-        border: 1px solid #000;
-        background-color: #fff;
-        padding: 3px 3px 0 2px;
-        border-radius: 8px;
-    }
-
-    .tittle{
-        display: flex;
-    }
-
-    .tittle h2{
-        font-size: 20px;  
-        margin-right: 20px;
-    }
-
-    #detalhes header div{
-        font-size: 14px;        
-    }
-
-    #detalhes header div:last-child{
-        display: flex;
-        height: 100%;
-        align-items: end;
-        justify-content: space-between;
-        flex-direction: column;
-    }
-
-    .el-icon{
-    cursor: pointer;
-    color: #000;
-    transition: 0.4s;
-  }
-
-  .el-icon:hover{
-    color: #0815A3;
-    transition: 0.4s;
-  }
-
+#step span{
+  cursor: pointer;
+}
 </style>

@@ -10,7 +10,6 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
@@ -42,7 +41,7 @@ public class Problem {
     @OneToMany(mappedBy = "problem", cascade = CascadeType.REMOVE)
     private Set<Solution> solutions;
 
-    @ManyToMany(mappedBy = "problems")
-    private Set<Solicitation> solicitations;
+    @OneToMany(mappedBy = "problem")
+    private Set<SolicitationProblem> solicitations;
 
 }

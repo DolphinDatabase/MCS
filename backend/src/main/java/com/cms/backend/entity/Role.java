@@ -19,7 +19,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-public class Role {
+public class Role{
  
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -30,6 +30,6 @@ public class Role {
     private String nivel;
     
     @ManyToMany(mappedBy = "roles")
-    private Set<User> users;
+    private Set<Usuario> users;
 
 }

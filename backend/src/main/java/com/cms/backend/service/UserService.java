@@ -10,6 +10,9 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -24,7 +27,7 @@ import org.springframework.web.server.ResponseStatusException;
 import com.cms.backend.SummaryModel.ResponseSummaryModel;
 import com.cms.backend.SummaryModel.UserSummaryModel;
 import com.cms.backend.entity.Role;
-import com.cms.backend.entity.User;
+import com.cms.backend.entity.Usuario;
 import com.cms.backend.repository.UserRepository;
 
 @CrossOrigin(origins = "*", allowedHeaders = "*")
@@ -40,12 +43,15 @@ public class UserService {
 
     Logger logger = LoggerFactory.getLogger(UserService.class);
 
+    private PasswordEncoder encoder = new BCryptPasswordEncoder();
+
     @GetMapping
+    @PreAuthorize("hasRole('ADM')")
     public ResponseEntity<ResponseSummaryModel> listUsers(){
         ResponseSummaryModel res = new ResponseSummaryModel();
         try{
             List<UserSummaryModel> all = uRepository.findAll().stream().map(this::toUserSummaryModel).collect(Collectors.toList());
-            res.setAll(200, true, "List All Users", all);
+            res.setAll(200, true, "Todos os usuários listados", all);
             logger.info(res.getMessage());
             return ResponseEntity.status(HttpStatus.OK).body(res);
         }catch(Exception err){
@@ -56,15 +62,16 @@ public class UserService {
     }
 
     @GetMapping("/{id}")
+    @PreAuthorize("isAuthenticated()")
     public ResponseEntity<ResponseSummaryModel> findUser(@PathVariable Long id){
         ResponseSummaryModel res = new ResponseSummaryModel();
         try{
-            User user = uRepository.findById(id).orElseThrow(()->new ResponseStatusException(HttpStatus.NOT_FOUND));
-            res.setAll(200, true, "User "+id+" Found", toUserSummaryModel(user));
+            Usuario user = uRepository.findById(id).orElseThrow(()->new ResponseStatusException(HttpStatus.NOT_FOUND));
+            res.setAll(200, true, "Usuário "+id+" Encontrado", toUserSummaryModel(user));
             logger.info(res.getMessage());
             return ResponseEntity.status(HttpStatus.OK).body(res);
         }catch(ResponseStatusException err){
-            res.setAll(404, false, "User "+id+" Not Found", null);
+            res.setAll(404, false, "Usuário "+id+" não encontrado", null);
             logger.info(res.getMessage());
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(res);
         }catch(Exception err){
@@ -75,15 +82,17 @@ public class UserService {
     }
 
     @PostMapping
-    public ResponseEntity<ResponseSummaryModel> createUser(@RequestBody User user){
+    @PreAuthorize("hasRole('ADM')")
+    public ResponseEntity<ResponseSummaryModel> createUser(@RequestBody Usuario user){
         ResponseSummaryModel res = new ResponseSummaryModel();
         try{
             if(filterRoles(user.getRoles())!=null && user.getRoles().size()>1){
-                res.setAll(401, false, "Unauthorized roles", null);
+                res.setAll(401, false, "Níveis não autorizados", null);
                 logger.warn(res.getMessage());
                 return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(res);
             }
-            res.setAll(200, true, "New User Created", toUserSummaryModel(uRepository.save(user)));
+            user.setPassword(encoder.encode(user.getDocument()));
+            res.setAll(200, true, "Novo Usuário criado", toUserSummaryModel(uRepository.save(user)));
             logger.info(res.getMessage());
             return ResponseEntity.status(HttpStatus.OK).body(res);
         }catch(Exception err){
@@ -94,18 +103,18 @@ public class UserService {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<ResponseSummaryModel> updateUser(@PathVariable Long id, @RequestBody User user){
+    @PreAuthorize("hasRole('ADM')")
+    public ResponseEntity<ResponseSummaryModel> updateUser(@PathVariable Long id, @RequestBody Usuario user){
         ResponseSummaryModel res = new ResponseSummaryModel();
         try{
-            User u = uRepository.findById(id).orElseThrow(()->new ResponseStatusException(HttpStatus.NOT_FOUND));
+            Usuario u = uRepository.findById(id).orElseThrow(()->new ResponseStatusException(HttpStatus.NOT_FOUND));
             u.setName(user.getName());
             u.setEmail(user.getEmail());
-            u.setPassword(user.getPassword());
-            res.setAll(200, true, "User "+id+" Updated", toUserSummaryModel(uRepository.save(u)));
+            res.setAll(200, true, "Usuário "+id+" atualizado", toUserSummaryModel(uRepository.save(u)));
             logger.info(res.getMessage());
             return ResponseEntity.status(HttpStatus.OK).body(res);
         }catch(ResponseStatusException err){
-            res.setAll(404, false, "User "+id+" Not Found", null);
+            res.setAll(404, false, "Usuário "+id+" não atualizado", null);
             logger.info(res.getMessage());
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(res);
         }
@@ -117,16 +126,17 @@ public class UserService {
     }
 
     @DeleteMapping("/{id}")
+    @PreAuthorize("hasRole('ADM')")
     public ResponseEntity<ResponseSummaryModel> deleteUser(@PathVariable Long id){
         ResponseSummaryModel res = new ResponseSummaryModel();
         try{
-            User u = uRepository.findById(id).orElseThrow(()->new ResponseStatusException(HttpStatus.NOT_FOUND));
+            Usuario u = uRepository.findById(id).orElseThrow(()->new ResponseStatusException(HttpStatus.NOT_FOUND));
             uRepository.delete(u);
-            res.setAll(200, true, "User "+id+" Deleted",null);
+            res.setAll(200, true, "Usuário "+id+" deletado",null);
             logger.info(res.getMessage());
             return ResponseEntity.status(HttpStatus.OK).body(res);
         }catch(ResponseStatusException err){
-            res.setAll(404, false, "User "+id+" Not Found", null);
+            res.setAll(404, false, "Usuário "+id+" não encontrado", null);
             logger.info(res.getMessage());
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(res);
         }
@@ -137,12 +147,12 @@ public class UserService {
         }
     }
 
-    private UserSummaryModel toUserSummaryModel(User user){
+    private UserSummaryModel toUserSummaryModel(Usuario user){
         return modelMapper.map(user,UserSummaryModel.class);
     }
 
     private Role filterRoles(Set<Role> roles){
-        return roles.stream().filter(role->role.getNivel().equals("ROLE_CLT")).findAny().orElse(null);
+        return roles.stream().filter(role->role.getId().equals(Long.valueOf(3))).findAny().orElse(null);
     }
 
 }

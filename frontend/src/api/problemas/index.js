@@ -2,16 +2,28 @@ import http from '../index'
 
 const problemaFunctions = {
     async create(data){
-        const req = await http.post("/problem",data)
-        return req.data.data
-    },
-    async link(idChamado,idProblema){
-        const req = await http.put("/solicitation/"+idChamado+"/addProblem",{id:idProblema})
-        return req.data.data
+        try{
+            const req = await http.post("/problem",data)
+            return req.data
+        }catch(err){
+            return err.response.data
+        }
     },
     async list(){
-        const req = await http.get("/problem")
-        return req.data.data
+        try{
+            const req = await http.get("/problem")
+            return req.data
+        }catch(err){
+            return err.response.data
+        }
+    },
+    async delete(id){
+        try{
+            const req = await http.delete("/problem/"+id)
+            return req.data.status
+        }catch(err) {
+            return err.response.data
+        }
     }
 }
 

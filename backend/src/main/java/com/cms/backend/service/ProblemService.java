@@ -11,6 +11,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -27,6 +28,7 @@ import com.cms.backend.SummaryModel.ResponseSummaryModel;
 import com.cms.backend.entity.Problem;
 import com.cms.backend.entity.Solution;
 import com.cms.backend.repository.ProblemRepository;
+import com.cms.backend.repository.SolicitationProblemRepository;
 import com.cms.backend.repository.SolutionRepository;
 
 @CrossOrigin(origins = "*", allowedHeaders = "*")
@@ -41,17 +43,21 @@ public class ProblemService {
     private SolutionRepository sRepository;
 
     @Autowired
+    private SolicitationProblemRepository spRepository;
+
+    @Autowired
     private ModelMapper modelMapper;
 
     Logger logger = LoggerFactory.getLogger(SolutionService.class);
 
     @PostMapping
+    @PreAuthorize("isAuthenticated()")
     public ResponseEntity<ResponseSummaryModel> createProblem(@RequestBody Problem problem){
         ResponseSummaryModel res = new ResponseSummaryModel();
         try{
             Problem n = pRepository.save(problem);
             addSolutions(n, problem.getSolutions());
-            res.setAll(200, true, "New Problem Created", toProblemSummaryModel(n));
+            res.setAll(200, true, "Novo Problema criado", toProblemSummaryModel(n));
             logger.info(res.getMessage());
             return ResponseEntity.status(HttpStatus.OK).body(res);
         }catch(Exception err){
@@ -62,11 +68,12 @@ public class ProblemService {
     }
 
     @GetMapping
+    @PreAuthorize("isAuthenticated()")
     public ResponseEntity<ResponseSummaryModel> listProblem(){
         ResponseSummaryModel res = new ResponseSummaryModel();
         try{
             List<ProblemSummaryModel> all = pRepository.findAll().stream().map(this::toProblemSummaryModel).collect(Collectors.toList());
-            res.setAll(200, true, "List All Problems", all);
+            res.setAll(200, true, "Todos os Problemas listados", all);
             logger.info(res.getMessage());
             return ResponseEntity.status(HttpStatus.OK).body(res);
         }catch(Exception err){
@@ -77,15 +84,16 @@ public class ProblemService {
     }
 
     @GetMapping("/{id}")
+    @PreAuthorize("isAuthenticated()")
     public ResponseEntity<ResponseSummaryModel> findProblem(@PathVariable Long id){
         ResponseSummaryModel res = new ResponseSummaryModel();
         try{
             Problem problem = pRepository.findById(id).orElseThrow(()->new ResponseStatusException(HttpStatus.NOT_FOUND));
-            res.setAll(200, true, "Problem "+id+" Found", toProblemSummaryModel(problem));
+            res.setAll(200, true, "Problema "+id+" encontrado", toProblemSummaryModel(problem));
             logger.info(res.getMessage());
             return ResponseEntity.status(HttpStatus.OK).body(res);
         }catch(ResponseStatusException err){
-            res.setAll(404, false, "Solution "+id+" Not Found", null);
+            res.setAll(404, false, "Problema "+id+" não encontrado", null);
             logger.info(res.getMessage());
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(res);
         }catch(Exception err){
@@ -96,6 +104,7 @@ public class ProblemService {
     }
 
     @PutMapping("/{id}")
+    @PreAuthorize("isAuthenticated()")
     public ResponseEntity<ResponseSummaryModel> updateProblem(@PathVariable Long id, @RequestBody Problem problem){
         ResponseSummaryModel res = new ResponseSummaryModel();
         try{
@@ -103,11 +112,11 @@ public class ProblemService {
             p.setName(problem.getName());
             p.setNivel(problem.getNivel());
             addSolutions(p, problem.getSolutions());
-            res.setAll(200, true, "Problem "+id+" Updated", toProblemSummaryModel(pRepository.save(p)));
+            res.setAll(200, true, "Problem "+id+" atualizado", toProblemSummaryModel(pRepository.save(p)));
             logger.info(res.getMessage());
             return ResponseEntity.status(HttpStatus.OK).body(res);
         }catch(ResponseStatusException err){
-            res.setAll(404, false, "Problem "+id+" Not Found", null);
+            res.setAll(404, false, "Problem "+id+" não encontrado", null);
             logger.info(res.getMessage());
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(res);
         }
@@ -119,19 +128,21 @@ public class ProblemService {
     }
 
     @DeleteMapping("/{id}")
+    @PreAuthorize("isAuthenticated()")
     public ResponseEntity<ResponseSummaryModel> deleteProblem(@PathVariable Long id){
         ResponseSummaryModel res = new ResponseSummaryModel();
         try{
             Problem p = pRepository.findById(id).orElseThrow(()->new ResponseStatusException(HttpStatus.NOT_FOUND));
             p.getSolicitations().forEach(s->{
-                s.getProblems().remove(p);
+                s.setProblem(null);
+                spRepository.delete(s);
             });
             pRepository.delete(p);
-            res.setAll(200, true, "Problem "+id+" Deleted",null);
+            res.setAll(200, true, "Problem "+id+" deletado",null);
             logger.info(res.getMessage());
             return ResponseEntity.status(HttpStatus.OK).body(res);
         }catch(ResponseStatusException err){
-            res.setAll(404, false, "Problem "+id+" Not Found", null);
+            res.setAll(404, false, "Problem "+id+" não encontrado", null);
             logger.info(res.getMessage());
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(res);
         }
