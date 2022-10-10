@@ -104,7 +104,7 @@ Para acessar o manual do usuário, clique [aqui](Manual/MCS_ManualdoUsuário.pdf
 - [X] Adição de Orçamento no Chamado
 - [X] Criação de Orçamento
 
-![ALERTA](Imagens/Alerta.svg) Para mais informações das funcionalidades entregues, acesse as [releases](https://github.com/DolphinDatabase/MCS/releases/tag/Sprint1).
+![ALERTA](Imagens/Alerta.svg) Para mais informações das funcionalidades entregues, acesse as [releases](https://github.com/DolphinDatabase/MCS/releases/tag/Sprint2).
 
 ## Ilustração das Funcionalidades
 
