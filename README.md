@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="Imagens/MCS(logotipo).png"/>
+  <img src="Imagens/LogotipoMCS.png"/>
 </p>
 
 ![Badge](https://img.shields.io/badge/STATUS-EM_ANDAMENTO-yellow?style=flat-square&logo=)
@@ -72,14 +72,18 @@ Com os pré-requisitos prontos,
 *acesse no navegador o endereço:
 http://localhost:5173*
 
-**IMPORTANTE:**
+**LOGIN:**
+
+<details><summary>Administrador</summary>
 
 *E-mail:* adm@email.com
  
 *Senha:* 123456
 
+</details>
+
 ![ALERTA](Imagens/Alerta.svg) 
-Para acessar o manual do usuário, clique [aqui](Manual/ManualUsuario_MCS.pdf).
+Para acessar o manual do usuário, clique [aqui](Manual/MCS_ManualdoUsuário.pdf).
 
 ## Funcionalidades desenvolvidas
 
@@ -87,29 +91,34 @@ Para acessar o manual do usuário, clique [aqui](Manual/ManualUsuario_MCS.pdf).
 - [X] Visualização de Usuários
 - [X] Edição de Usuários
 - [X] Exclusão de Usuários
+- [X] Cadastro de Equipamentos
+- [X] Visualização de Equipamentos
+- [X] Edição de Equipamentos
+- [X] Exclusão de Equipamentos
+- [X] Cadastro de Falhas e Soluções
+- [X] Visualização de Falhas e Soluções
+- [X] Exclusão de Falhas e Soluções
 - [X] Criação de Chamados
-- [X] Adição de Problemas
-- [X] Adição de Soluções
-- [X] Identificação de Soluções
-- [X] Gerar Orçamentos
-- [X] Criar Relatórios
+- [X] Adição de Falhas e Soluções no Chamado
+- [X] Adição de Equipamentos no Chamado
+- [X] Adição de Orçamento no Chamado
+- [X] Criação de Orçamento
 
-
-![ALERTA](Imagens/Alerta.svg) Para mais informações das funcionalidades entregues, acesse as [releases](https://github.com/DolphinDatabase/MCS/releases/tag/Sprint1).
+![ALERTA](Imagens/Alerta.svg) Para mais informações das funcionalidades entregues, acesse as [releases](https://github.com/DolphinDatabase/MCS/releases/tag/Sprint2).
 
 ## Ilustração das Funcionalidades
 
-Para acessar nossos *Wireframes*, clique [aqui](https://www.figma.com/file/OL07HIxLkiXBkHdiCrxey5/MCS?node-id=0%3A1).
+Para acessar nossos *Wireframes*, clique [aqui](https://www.figma.com/file/MM0pLqbdpFde9cqt9upsWx/MCS-Dolphin?node-id=0%3A1).
 
 ## Demonstração
 
 Para acessar o vídeo[^1] de demonstração da aplicação em uso, clique [aqui](https://youtu.be/omSyXxA3AYI):
 
-[<img src="Imagens/MCS(youtube).png" width="65%" height="65%">](https://youtu.be/omSyXxA3AYI "MCS vídeo Demonstração")
+[<img src="Imagens/MCS_Youtube.png" width="60%" height="60%">](https://youtu.be/omSyXxA3AYI "MCS vídeo Demonstração")
 
 ## Manual do Usuário
 
-![ALERTA](Imagens/Alerta.svg) Para acessar o manual do usuário, clique [aqui](Manual/ManualUsuario_MCS.pdf).
+![ALERTA](Imagens/Alerta.svg) Para acessar o manual do usuário, clique [aqui](Manual/MCS_ManualdoUsuário.pdf).
 
 ## Backlog do Produto
 
@@ -123,14 +132,15 @@ Para acessar o vídeo[^1] de demonstração da aplicação em uso, clique [aqui]
 - [X] ![STORY](Imagens/Story.svg) Gerenciamento do orçamento
 - [X] ![STORY](Imagens/Story.svg) Soluções
 - [X] ![STORY](Imagens/Story.svg) Relatório
-- [ ] ![EPIC](Imagens/Epic.svg) **SPRINT 2:**  Análises
-- [ ] ![STORY](Imagens/Story.svg) Melhorias no Orçamento
-- [ ] ![STORY](Imagens/Story.svg) Edição de problemas
-- [ ] ![STORY](Imagens/Story.svg) Exclusão de soluções
-- [ ] ![STORY](Imagens/Story.svg) Gerenciamento de estoque
-- [ ] ![STORY](Imagens/Story.svg) Agendamento de serviços
-- [ ] ![STORY](Imagens/Story.svg) Análise de falhas
-- [ ] ![STORY](Imagens/Story.svg) Análise de chamados
+- [X] ![EPIC](Imagens/Epic.svg) **SPRINT 2:**  Análise
+- [X] ![STORY](Imagens/Story.svg) Melhorias no orçamento
+- [X] ![STORY](Imagens/Story.svg) Gerenciamento de falhas/ soluções
+- [X] ![STORY](Imagens/Story.svg) Gerenciamento de estoque
+- [X] ![STORY](Imagens/Story.svg) Análise de dados
+- [ ] ![EPIC](Imagens/Epic.svg) **SPRINT 3:**  Mapeamento
+- [ ] ![STORY](Imagens/Story.svg) Responsável pelo chamado
+- [ ] ![STORY](Imagens/Story.svg) Data de serviço
+- [ ] ![STORY](Imagens/Story.svg) Mapeamento gráfico
 
 ## Roadmap
 
@@ -146,7 +156,7 @@ Para acessar nosso *Burndown*, clique [aqui](https://dolphin-database.atlassian.
 | -------| --------- |
 | 15/08 a 19/08 | Kick-off. |
 | 28/08 a 18/09 | [Sprint 1](Sprints/SPRINT1.md). |
-| 19/09 a 09/10 | [Sprint 2](#). |
+| 19/09 a 09/10 | [Sprint 2](Sprints/SPRINT2.md). |
 | 13/10 a 06/11 | [Sprint 3](#). |
 | 07/11 a 27/11 | [Sprint 4](#). |
 | 08/12 às 19h | Feira de Soluções. |
@@ -199,6 +209,7 @@ Para acessar nosso *Burndown*, clique [aqui](https://dolphin-database.atlassian.
 
 <a href="https://github.com/beamedeiros" target="_blank"><img src="Imagens/Team/BeatrizMedeiros.png" height="65" width="65" align="left" target="_blank" ></a>
 <a href="https://github.com/pdrMottaS" target="_blank"><img src="Imagens/Team/PedroMotta.png" height="65" width="65" align="left" target="_blank" ></a>
+<a href="https://github.com/FelipeFariaVerde" target="_blank"><img src="Imagens/Team/FelipeFaria.png" height="65" width="65" align="left" target="_blank" ></a>
 <a href="https://github.com/Borgarelli" target="_blank"><img src="Imagens/Team/KauãBorgarelli.png" height="65" width="65" align="left" target="_blank" ></a>
  <br/>
 <br></br>
