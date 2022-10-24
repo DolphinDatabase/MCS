@@ -198,12 +198,6 @@ Para acessar nosso *Burndown*, clique [aqui](https://dolphin-database.atlassian.
 
 </details>
 
-<details><summary>Plataforma</summary>
-
-<a href="https://www.docker.com">![Docker](https://img.shields.io/badge/Docker-gray?style=flat-square&logo=docker)</a>
-
-</details>
-
 
 ## Team
 
