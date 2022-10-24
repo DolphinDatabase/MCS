@@ -157,7 +157,7 @@ Para acessar nosso *Burndown*, clique [aqui](https://dolphin-database.atlassian.
 | 15/08 a 19/08 | Kick-off. |
 | 28/08 a 18/09 | [Sprint 1](Sprints/SPRINT1.md). |
 | 19/09 a 09/10 | [Sprint 2](Sprints/SPRINT2.md). |
-| 13/10 a 06/11 | [Sprint 3](#). |
+| 13/10 a 06/11 | [Sprint 3](Sprints/SPRINT3.md). |
 | 07/11 a 27/11 | [Sprint 4](#). |
 | 08/12 às 19h | Feira de Soluções. |
 
@@ -209,7 +209,6 @@ Para acessar nosso *Burndown*, clique [aqui](https://dolphin-database.atlassian.
 
 <a href="https://github.com/beamedeiros" target="_blank"><img src="Imagens/Team/BeatrizMedeiros.png" height="65" width="65" align="left" target="_blank" ></a>
 <a href="https://github.com/pdrMottaS" target="_blank"><img src="Imagens/Team/PedroMotta.png" height="65" width="65" align="left" target="_blank" ></a>
-<a href="https://github.com/FelipeFariaVerde" target="_blank"><img src="Imagens/Team/FelipeFaria.png" height="65" width="65" align="left" target="_blank" ></a>
 <a href="https://github.com/Borgarelli" target="_blank"><img src="Imagens/Team/KauãBorgarelli.png" height="65" width="65" align="left" target="_blank" ></a>
  <br/>
 <br></br>
