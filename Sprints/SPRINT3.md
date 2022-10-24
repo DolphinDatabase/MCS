@@ -251,7 +251,6 @@ Para acessar nosso *Burndown*, clique [aqui](https://dolphin-database.atlassian.
 
 <a href="https://github.com/beamedeiros" target="_blank"><img src="https://github.com/DolphinDatabase/MCS/blob/sprint-2/Imagens/Team/BeatrizMedeiros.png" height="65" width="65" align="left" target="_blank" ></a>
 <a href="https://github.com/pdrMottaS" target="_blank"><img src="https://github.com/DolphinDatabase/MCS/blob/sprint-2/Imagens/Team/PedroMotta.png" height="65" width="65" align="left" target="_blank" ></a>
-<a href="https://github.com/FelipeFariaVerde" target="_blank"><img src="https://github.com/DolphinDatabase/MCS/blob/sprint-2/Imagens/Team/FelipeFaria.png" height="65" width="65" align="left" target="_blank" ></a>
 <a href="https://github.com/Borgarelli" target="_blank"><img src="https://github.com/DolphinDatabase/MCS/blob/sprint-2/Imagens/Team/Kau%C3%A3Borgarelli.png" height="65" width="65" align="left" target="_blank" ></a>
  <br/>
 <br></br>
