@@ -189,14 +189,13 @@ Para acessar o vídeo[^1] de demonstração da aplicação em uso, clique [aqui]
 
 Para acessar o manual do usuário, clique [aqui](https://github.com/DolphinDatabase/MCS/blob/sprint-2/Manual/MCS_ManualdoUsu%C3%A1rio.pdf).
 
-## Backlog da Sprint 2
+## Backlog da Sprint 3
 
-- [x] ![EPIC](https://github.com/DolphinDatabase/MCS/blob/sprint-1/Imagens/Epic.svg) **SPRINT 2:**  Análise
-- [X] ![STORY](https://github.com/DolphinDatabase/MCS/blob/sprint-1/Imagens/Story.svg) Melhorias no orçamento
-- [X] ![STORY](https://github.com/DolphinDatabase/MCS/blob/sprint-1/Imagens/Story.svg) Gerenciamento de falhas/ soluções
-- [X] ![STORY](https://github.com/DolphinDatabase/MCS/blob/sprint-1/Imagens/Story.svg) Gerenciamento de estoque
-- [X] ![STORY](https://github.com/DolphinDatabase/MCS/blob/sprint-1/Imagens/Story.svg) Análise de dados
-
+- [x] ![EPIC](https://github.com/DolphinDatabase/MCS/blob/sprint-3/Imagens/Epic.svg) **SPRINT 2:**  Mapeamento
+- [X] ![STORY](https://github.com/DolphinDatabase/MCS/blob/sprint-3/Imagens/Story.svg) Responsável pelo Serviço
+- [X] ![STORY](https://github.com/DolphinDatabase/MCS/blob/sprint-3/Imagens/Story.svg) Data de Serviço
+- [X] ![STORY](https://github.com/DolphinDatabase/MCS/blob/sprint-3/Imagens/Story.svg) Mapeamento Gráfico de Falhas
+	
 ## Story Cards
 
 <p align="center">
@@ -204,38 +203,30 @@ Para acessar o manual do usuário, clique [aqui](https://github.com/DolphinDatab
 </p>
 
 ## User Story
-  
-<details><summary>Story 10 - Melhorias no Orçamento</summary>
 
-| Como | Eu quero | Para que |
-| ------- | ------- | ------- |
-| Usuário cliente do sistema. | Visualizar o orçamento previsto para o chamado. | Possa solicitar e concluir o serviço. |
-  
-</details>
-
-<details><summary>Story 11 - Gerenciamento de Falhas/ Soluções</summary>
+<details><summary>Story 14 - Responsável pelo Serviço</summary>
   
 | Como | Eu quero | Para que |
 | ------- | ------- | ------- |
-| Usuário administrador e suporte do sistema. | Editar e excluir as falhas específicas e conhecidas. | Seja possível adicioná-las e gerenciá-las nos chamados. |
+| Usuário administrador e suporte do sistema. | Atribuir um responsável para a execução de serviço. | O cliente tenha ciência de quem realizará o serviço. |
   
 </details>
 
 
-<details><summary>Story 12 - Gerenciamento de Estoque</summary>
+<details><summary>Story 15 - Data de Serviço</summary>
   
 | Como | Eu quero | Para que |
 | ------- | ------- | ------- |
-| Usuário administrador e suporte do sistema. | Gerenciar materiais no estoque. | Possam ser utilizados nos chamados. |
+| Usuário administrador e suporte do sistema. | Adicionar a data de execução do serviço. | Além do controle da agenda de serviço, o cliente fique ciente de quando será realizado. |
   
 </details>
 
 
-<details><summary>Story 13 - Análise de Dados</summary>
+<details><summary>Story 16 - Mapeamento Gráfico de Falhas</summary>
   
 | Como | Eu quero | Para que |
 | ------- | ------- | ------- |
-| Usuário do sistema. | Ter acesso a estatísticas de chamados. | Possa ser possível ter mais controle sobre serviços. |
+| Usuário suporte do sistema. | Mapear falhas de forma gráfica. | O cliente possa vizualizá-las. |
   
 </details>
 
