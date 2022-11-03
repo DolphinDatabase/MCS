@@ -13,7 +13,7 @@
  * [Ilustração das funcionalidades](#ilustração-das-funcionalidades)
  * [Demonstração](#demonstração)
  * [Manual do Usuário](#manual-do-usuário)
- * [Backlog da Sprint 2](#backlog-da-sprint-2) 
+ * [Backlog da Sprint 3](#backlog-da-sprint-3) 
  * [Story Cards](#story-cards)  
  * [User Story](#user-story)   
  * [Roadmap](#roadmap)
@@ -151,8 +151,8 @@ Create table falhas/solucoes(
   
   </details>
   
-![ALERTA](https://github.com/DolphinDatabase/MCS/blob/sprint-1/Imagens/Alerta.svg) 
-Para acessar a documentação completa do projeto, clique [aqui](https://github.com/DolphinDatabase/MCS/blob/sprint-1/Documenta%C3%A7%C3%A3o/SPRINT1/Documentacao_MCS.pdf).
+![ALERTA](https://github.com/DolphinDatabase/MCS/blob/sprint-3/Imagens/Alerta.svg) 
+Para acessar a documentação completa do projeto, clique [aqui](https://github.com/DolphinDatabase/MCS/blob/sprint-3/Documenta%C3%A7%C3%A3o/SPRINT3/Documentacao_MCS.pdf).
 
 ## Funcionalidades desenvolvidas 
 
@@ -172,8 +172,14 @@ Para acessar a documentação completa do projeto, clique [aqui](https://github.
 - [X] Adição de Equipamentos no Chamado
 - [X] Adição de Orçamento no Chamado
 - [X] Criação de Orçamento
+- [X] Adição de Responsável pelo Serviço
+- [X] Adição de Data de Serviço
+- [X] Upload de Imagem (Silhueta)
+- [X] Adição de Silhuetas Já Conhecidas
+- [X] Adição de Anomalias nas Silhuetas
 
-![ALERTA](https://github.com/DolphinDatabase/MCS/blob/sprint-1/Imagens/Alerta.svg) Para mais informações das funcionalidades entregues, acesse a [release](https://github.com/DolphinDatabase/MCS/releases/tag/Sprint2).
+
+![ALERTA](https://github.com/DolphinDatabase/MCS/blob/sprint-3/Imagens/Alerta.svg) Para mais informações das funcionalidades entregues, acesse a [release](https://github.com/DolphinDatabase/MCS/releases/tag/Sprint3).
 
 ## Ilustração das funcionalidades
 
@@ -183,15 +189,15 @@ Para acessar nossos *Wireframes*, clique [aqui](https://www.figma.com/file/MM0pL
  
 Para acessar o vídeo[^1] de demonstração da aplicação em uso, clique [aqui](https://youtu.be/omSyXxA3AYI):
 
-[<img src="https://github.com/DolphinDatabase/MCS/blob/sprint-2/Imagens/MCS_Youtube.png" width="65%" height="65%">](# "MCS vídeo Demonstração")
+[<img src="https://github.com/DolphinDatabase/MCS/blob/sprint-3/Imagens/MCS_Youtube.png" width="65%" height="65%">](# "MCS vídeo Demonstração")
 
 ## Manual do Usuário
 
-Para acessar o manual do usuário, clique [aqui](https://github.com/DolphinDatabase/MCS/blob/sprint-2/Manual/MCS_ManualdoUsu%C3%A1rio.pdf).
+Para acessar o manual do usuário, clique [aqui](https://github.com/DolphinDatabase/MCS/blob/sprint-3/Manual/MCS_ManualdoUsu%C3%A1rio.pdf).
 
 ## Backlog da Sprint 3
 
-- [x] ![EPIC](https://github.com/DolphinDatabase/MCS/blob/sprint-3/Imagens/Epic.svg) **SPRINT 2:**  Mapeamento
+- [x] ![EPIC](https://github.com/DolphinDatabase/MCS/blob/sprint-3/Imagens/Epic.svg) **SPRINT 3:**  Mapeamento
 - [X] ![STORY](https://github.com/DolphinDatabase/MCS/blob/sprint-3/Imagens/Story.svg) Responsável pelo Serviço
 - [X] ![STORY](https://github.com/DolphinDatabase/MCS/blob/sprint-3/Imagens/Story.svg) Data de Serviço
 - [X] ![STORY](https://github.com/DolphinDatabase/MCS/blob/sprint-3/Imagens/Story.svg) Mapeamento Gráfico de Falhas
