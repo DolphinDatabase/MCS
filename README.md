@@ -103,8 +103,13 @@ Para acessar o manual do usuário, clique [aqui](Manual/MCS_ManualdoUsuário.pdf
 - [X] Adição de Equipamentos no Chamado
 - [X] Adição de Orçamento no Chamado
 - [X] Criação de Orçamento
+- [X] Adição de Responsável pelo Serviço
+- [X] Adição de Data de Serviço
+- [X] Upload de Imagem (Silhueta)
+- [X] Adição de Silhuetas Já Conhecidas
+- [X] Adição de Anomalias nas Silhuetas
 
-![ALERTA](Imagens/Alerta.svg) Para mais informações das funcionalidades entregues, acesse as [releases](https://github.com/DolphinDatabase/MCS/releases/tag/Sprint2).
+![ALERTA](Imagens/Alerta.svg) Para mais informações das funcionalidades entregues, acesse as [releases](https://github.com/DolphinDatabase/MCS/releases/tag/Sprint3).
 
 ## Ilustração das Funcionalidades
 
@@ -194,7 +199,7 @@ Para acessar nosso *Burndown*, clique [aqui](https://dolphin-database.atlassian.
 
 <details><summary>SGBD</summary>
 
-<a href="https://www.oracle.com/br/downloads/">![Oracle](https://img.shields.io/badge/Oracle-red?style=flat-square&logo=oracle)</a>
+<a href="https://www.oracle.com/br/downloads/">![Oracle Cloud](https://img.shields.io/badge/Oracle-red?style=flat-square&logo=oracle)</a>
 
 </details>
 
