@@ -146,6 +146,7 @@ Para acessar o vídeo[^1] de demonstração da aplicação em uso, clique [aqui]
 - [X] ![STORY](Imagens/Story.svg) Responsável pelo chamado
 - [X] ![STORY](Imagens/Story.svg) Data de serviço
 - [X] ![STORY](Imagens/Story.svg) Mapeamento gráfico
+- [ ] ![EPIC](Imagens/Epic.svg) **SPRINT 4:**  Melhorias
 
 ## Roadmap
 
