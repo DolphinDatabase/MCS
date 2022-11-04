@@ -32,20 +32,20 @@ Sua interface web facilita a gestão de dados e dá autonomia aos usuários dess
   
   <details><summary>Modelo Conceitual</summary>
   
-  <img src="https://github.com/DolphinDatabase/MCS/blob/sprint-2/Documenta%C3%A7%C3%A3o/SPRINT2/Modelos_Banco/conceitual.png">
+  <img src="https://github.com/DolphinDatabase/MCS/blob/sprint-3/Documenta%C3%A7%C3%A3o/SPRINT3/Modelos_Banco/conceitual.png">
  
   </details>
   
   <details><summary>Modelo Relacional</summary>
   
-  <img src="https://github.com/DolphinDatabase/MCS/blob/sprint-2/Documenta%C3%A7%C3%A3o/SPRINT2/Modelos_Banco/logico.png">
+  <img src="https://github.com/DolphinDatabase/MCS/blob/sprint-3/Documenta%C3%A7%C3%A3o/SPRINT3/Modelos_Banco/logico.png">
   
   </details>
   
-   <details><summary>Modelo Físico</summary>
+  <details><summary>Modelo Físico</summary>
   
-  ```bash
-  Create table Niveis(
+ ```bash
+ Create table Niveis(
 	nvl_id Number (6),
 	nvl_niveis Varchar (10),
 	constraint pk_nvl Primary key (nvl_id)
@@ -80,9 +80,8 @@ Create table Equipamento(
 	equip_num Varchar (12),
 	equip_modelo Varchar (50),
 	equip_desc Text,
-	equip_data date default System,
-	equip_quant Number (20),
-	constraint pk_equip Primary Key (equip_id)
+	constraint pk_equip Primary Key (equip_id),
+	constraint uk_num Unique Key (equip_num)
 );
 
 Create table Chamado(
@@ -100,16 +99,34 @@ Create table Chamado(
 	constraint fk_chama_equip foreign key (chama_equip) references Equipamento (equip_id)
 );
 
+Create table Mapeamento(
+	map_id Number (9),
+	map_nome Varchar (160),
+	map_link Varchar (200),
+	constraint pk_map Primary key (map_id)
+);
+
+Create table Layer(
+	layer_id Number (6),
+ 	layer_x Bigint,
+	layer_y Bigint,
+	layer_color varchar (60),
+	layer_chama Number (9),
+	layer_map Number (9),
+	layer_size Varchar (250),
+	constraint pk_layer Primary key (layer_id),
+	constraint fk_layer_chama Foreign key (layer_chama) references Chamado (chama_id),
+	constraint fk_layer_map Foreign key (layer_map) references Mapeamento (map_id)
+);
+
 Create table Orcamento(
 	orc_id Number (6),
 	orc_obs Text,
 	orc_valor Number (8,2),
 	orc_chama Number (8),
-	orc_data date default System,
 	contraint pk_orc Primary key (orc_id),
 	constraint fk_orc_chama foreign key (orc_chama) references Chamado (chama_id)
 );
-
 
 Create table Falhas(
 	falha_id Number (6),
@@ -139,15 +156,17 @@ Create table falhas/solucoes(
 	FS_falha_id Number (6),
 	FS_soluc_id Number (6),
 	FS_falha Number (20),
+	FS_layer_id Number (6),
 	FS_desc Text,
-	FS_prioridade Varchar (10) constraint ck_FS_prioridade Check (FS_prioridade in ('Baixa', 'Média', 'Alta')),
+	FS_prioridade Varchar (10)
+constraint ck_FS_prioridade Check (FS_prioridade in ('Baixa', 'Média', 'Alta')),
 	FS_data date default System,
 	constraint pk_FS Primary key (FS_id),
 	constraint fk_FS_falha_id foreign key (FS_falha_id) references Falhas (falha_id),
-	constraint fk_FS_soluc_id foreign key (FS_soluc_id) references Solucoes (soluc_id)
+	constraint fk_FS_soluc_id foreign key (FS_soluc_id) references Solucoes (soluc_id),
+	constraint fk_FS_layer foreign key (FS_layer_id) references Layer
 );
-);
-  ```
+ ```
   
   </details>
   
