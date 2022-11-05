@@ -32,20 +32,20 @@ Sua interface web facilita a gestão de dados e dá autonomia aos usuários dess
   
   <details><summary>Modelo Conceitual</summary>
   
-  <img src="https://github.com/DolphinDatabase/MCS/blob/sprint-3/Documenta%C3%A7%C3%A3o/SPRINT3/Modelos_Banco/conceitual.png">
+  <img src="https://github.com/DolphinDatabase/MCS/blob/sprint-3/Documenta%C3%A7%C3%A3o/SPRINT3/Modelos_Banco/Conceitual.png">
  
   </details>
   
   <details><summary>Modelo Relacional</summary>
   
-  <img src="https://github.com/DolphinDatabase/MCS/blob/sprint-3/Documenta%C3%A7%C3%A3o/SPRINT3/Modelos_Banco/logico.png">
+  <img src="https://github.com/DolphinDatabase/MCS/blob/sprint-3/Documenta%C3%A7%C3%A3o/SPRINT3/Modelos_Banco/L%C3%B3gico.png">
   
   </details>
   
   <details><summary>Modelo Físico</summary>
   
  ```bash
- Create table Niveis(
+Create table Niveis(
 	nvl_id Number (6),
 	nvl_niveis Varchar (10),
 	constraint pk_nvl Primary key (nvl_id)
@@ -106,6 +106,7 @@ Create table Mapeamento(
 	constraint pk_map Primary key (map_id)
 );
 
+
 Create table Layer(
 	layer_id Number (6),
  	layer_x Bigint,
@@ -117,6 +118,7 @@ Create table Layer(
 	constraint pk_layer Primary key (layer_id),
 	constraint fk_layer_chama Foreign key (layer_chama) references Chamado (chama_id),
 	constraint fk_layer_map Foreign key (layer_map) references Mapeamento (map_id)
+	
 );
 
 Create table Orcamento(
@@ -132,6 +134,7 @@ Create table Falhas(
 	falha_id Number (6),
 	falha_nome Varchar (60),
 	falha_nivel Varchar constraint ck_falha_nivel Check (falha_nivel in('Baixa', 'Média', 'Alta')),
+	falha_cor Varchar (30)
 	constraint pk_falha Primary key (falha_id)
 );
 
@@ -166,6 +169,7 @@ constraint ck_FS_prioridade Check (FS_prioridade in ('Baixa', 'Média', 'Alta'))
 	constraint fk_FS_soluc_id foreign key (FS_soluc_id) references Solucoes (soluc_id),
 	constraint fk_FS_layer foreign key (FS_layer_id) references Layer
 );
+
  ```
   
   </details>
