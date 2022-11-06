@@ -92,6 +92,7 @@ export default{
         },
         async deleteFalhas(){
             await this.$store.dispatch("deleteProblema",this.selected.id)
+            await this.$store.dispatch("listProblema")
             const data = this.$store.getters.getAllProblemas
             data.forEach(f => {
                 f.num = f.solutions.length

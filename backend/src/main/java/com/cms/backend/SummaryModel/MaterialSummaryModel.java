@@ -11,6 +11,5 @@ public class MaterialSummaryModel {
     private Long num;
     private String model;
     private String description;
-    private Long quantity;
-    private Long inventory;
+    private Boolean inventory;
 }

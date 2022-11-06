@@ -44,6 +44,9 @@ public class Usuario{
     @OneToMany(mappedBy = "user")
     private Set<Solicitation> solicitations;
 
+    @OneToMany(mappedBy = "responsible")
+    private Set<Solicitation> responsibles;
+
     @ManyToMany
     @JoinTable(name = "Usuario_Nivel", 
     joinColumns = @JoinColumn(name = "usr_id"), 

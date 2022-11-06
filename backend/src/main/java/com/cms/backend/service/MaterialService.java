@@ -77,7 +77,7 @@ public class MaterialService {
     }
 
     @PostMapping
-    @PreAuthorize("isAuthenticated()")
+    @PreAuthorize("hasAnyRole('ADM','SUP')")
     public ResponseEntity<ResponseSummaryModel> createMaterial(@RequestBody Material Material){
         ResponseSummaryModel res = new ResponseSummaryModel();
         try{
@@ -100,7 +100,6 @@ public class MaterialService {
             Material m = materialRepository.findById(id).orElseThrow(()->new ResponseStatusException(HttpStatus.NOT_FOUND));
             m.setModel(material.getModel());
             m.setDescription(material.getDescription());
-            m.setQuantity(material.getQuantity());
             m.setInventory(material.getInventory());
             res.setAll(200, true, "Material "+id+" atualizado", toMaterialSummaryModel(materialRepository.save(m)));
             logger.info(res.getMessage());

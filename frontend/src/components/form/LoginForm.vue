@@ -1,7 +1,7 @@
 <template>
     <el-form id="loginForm" label-position="top" ref="loginForm" :model="this.form" :rules="this.rules">
         <el-form-item class="email" label="E-mail" prop="login">
-            <el-input class="senha" v-model="form.login" />
+            <el-input class="email" v-model="form.login" autofocus />
         </el-form-item>
         <el-form-item class="email" label="Senha" prop="password" style="margin-bottom:0">
             <el-input class="senha" v-model="form.password" type="password" />

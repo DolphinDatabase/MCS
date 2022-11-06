@@ -9,11 +9,6 @@
                     <el-input v-model="form.num" />
                 </el-form-item>
             </el-col>
-            <el-col :span="12">
-                <el-form-item label="Quantidade" prop="quantity">
-                    <el-input v-model="form.quantity"/>
-                </el-form-item>
-            </el-col>
         </el-row>
         <el-form-item label="Descrição" prop="description">
             <el-input v-model="form.description" :rows="2" type="textarea"/>
@@ -35,8 +30,7 @@ export default {
         return{
             form:{
                 num:null,
-                modelo:null,
-                quantity:null,
+                model:null,
                 description:null,
             },
             rules:{
@@ -48,11 +42,6 @@ export default {
                     required:true,
                     message:'Insira o modelo',
                     trigger: 'change'
-                },
-                quantity:{ 
-                    required: true, 
-                    message: 'Insira a quantidade', 
-                    // type: Number 
                 },
                 description:{
                     required:false,

@@ -8,17 +8,17 @@
             </el-form-item>
             <el-row :gutter="20">
                 <el-col :span="8">
-                    <el-form-item label="Comprimeto" prop="width">
+                    <el-form-item label="Comprimeto (mm)" prop="width">
                         <el-input v-model="form.width" type="number"/>
                     </el-form-item>
                 </el-col>
                 <el-col :span="8">
-                    <el-form-item label="Altura" prop="height">
+                    <el-form-item label="Altura (mm)" prop="height">
                         <el-input v-model="form.height" type="number"/>
                     </el-form-item>
                 </el-col>
                 <el-col :span="8">
-                    <el-form-item label="Profundidado" prop="depth">
+                    <el-form-item label="Profundidado (mm)" prop="depth">
                         <el-input v-model="form.depth" type="number"/>
                     </el-form-item>
                 </el-col>
@@ -41,17 +41,17 @@
             </el-row>
             <el-row :gutter="20">
                 <el-col :span="8">
-                    <el-form-item label="Comprimeto" prop="width">
+                    <el-form-item label="Comprimeto (mm)" prop="width">
                         <el-input v-model="form.width" type="number"/>
                     </el-form-item>
                 </el-col>
                 <el-col :span="8">
-                    <el-form-item label="Altura" prop="height">
+                    <el-form-item label="Altura (mm)" prop="height">
                         <el-input v-model="form.height" type="number"/>
                     </el-form-item>
                 </el-col>
                 <el-col :span="8">
-                    <el-form-item label="Profundidado" prop="depth">
+                    <el-form-item label="Profundidade (mm)" prop="depth">
                         <el-input v-model="form.depth" type="number"/>
                     </el-form-item>
                 </el-col>
@@ -152,6 +152,16 @@ export default {
                 this.form['solutions'] = this.solucoes
                 this.$emit('submit',this.form)
             })
+        },
+        reset(){
+            this.form = {
+                known:null,
+                nivel:null,
+                name:null,
+                width:null,
+                height:null,
+                depth:null
+            }
         }
     },
     async created(){

@@ -30,7 +30,7 @@
       </span>
     </template>
   </el-dialog>
-  <RelatorioModal v-if="this.relatorioModal" :data="relatorio" @close="updatePage()"/>
+  <RelatorioModal v-if="this.relatorioModal" :data="relatorio" @close="updatePage()" @cancel="this.relatorioModal=false" @finish="(ch)=>finishChamado(ch)"/>
 </template>
 <script>
   import BasePage from '../components/layout/BasePage.vue'
@@ -71,6 +71,8 @@
         }
         await this.$store.dispatch("addChamado",data)
         this.chamados = this.$store.getters.getAllChamados
+        this.formStep = 0
+        this.$refs.chamadoForm.reset()
         this.newModal = false
       },
       setRelatorio(chamado){
@@ -80,6 +82,12 @@
       async updatePage(){
         this.updateData()
         this.relatorioModal=false
+      },
+      async finishChamado(ch){
+        ch.date = null
+        ch.status = "FINISHED"
+        await this.$store.dispatch("updateChamado",ch)
+        this.updatePage()
       },
       async updateData(){
         await this.$store.dispatch("listChamados")  
