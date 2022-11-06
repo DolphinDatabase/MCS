@@ -159,7 +159,7 @@ Para acessar nosso *Roadmap*, clique [aqui](https://dolphin-database.atlassian.n
 
 ## Gráfico de Burndown
 
-Para acessar nosso *Burndown*, clique [aqui](https://dolphin-database.atlassian.net/jira/software/projects/MCS/boards/4/reports/burndown)
+Para acessar nosso *Burndown*, clique [aqui](https://docs.google.com/spreadsheets/d/1vpQcUu1juZS8FrYtSsswkTVR81DtXTfCM-VG5vSXsbA/edit?usp=sharing)
 
 ## Cronograma do API
  
