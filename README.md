@@ -108,6 +108,7 @@ Para acessar o manual do usuário, clique [aqui](Manual/MCS_ManualdoUsuário.pdf
 - [X] Upload de Imagem (Silhueta)
 - [X] Adição de Silhuetas Já Conhecidas
 - [X] Adição de Anomalias nas Silhuetas
+- [X] Visualização de Anomalias nas Silhuetas
 
 ![ALERTA](Imagens/Alerta.svg) Para mais informações das funcionalidades entregues, acesse as [releases](https://github.com/DolphinDatabase/MCS/releases/tag/Sprint3).
 
