@@ -32,13 +32,13 @@ Sua interface web facilita a gestão de dados e dá autonomia aos usuários dess
   
   <details><summary>Modelo Conceitual</summary>
   
-  <img src="https://github.com/DolphinDatabase/MCS/blob/sprint-3/Documenta%C3%A7%C3%A3o/SPRINT3/Modelos_Banco/Conceitual.png">
+  <img src="https://github.com/DolphinDatabase/MCS/blob/sprint-3/Documenta%C3%A7%C3%A3o/SPRINT3/Modelos_Banco/conceitual.png">
  
   </details>
   
   <details><summary>Modelo Relacional</summary>
   
-  <img src="https://github.com/DolphinDatabase/MCS/blob/sprint-3/Documenta%C3%A7%C3%A3o/SPRINT3/Modelos_Banco/L%C3%B3gico.png">
+  <img src="https://github.com/DolphinDatabase/MCS/blob/sprint-3/Documenta%C3%A7%C3%A3o/SPRINT3/Modelos_Banco/logico.png">
   
   </details>
   
@@ -115,6 +115,7 @@ Create table Layer(
 	layer_chama Number (9),
 	layer_map Number (9),
 	layer_size Varchar (250),
+	layer_tipo Varchar (250),
 	constraint pk_layer Primary key (layer_id),
 	constraint fk_layer_chama Foreign key (layer_chama) references Chamado (chama_id),
 	constraint fk_layer_map Foreign key (layer_map) references Mapeamento (map_id)
@@ -169,7 +170,6 @@ constraint ck_FS_prioridade Check (FS_prioridade in ('Baixa', 'Média', 'Alta'))
 	constraint fk_FS_soluc_id foreign key (FS_soluc_id) references Solucoes (soluc_id),
 	constraint fk_FS_layer foreign key (FS_layer_id) references Layer
 );
-
  ```
   
   </details>
