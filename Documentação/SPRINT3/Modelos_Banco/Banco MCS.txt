@@ -68,6 +68,7 @@ Create table Layer(
 	layer_chama Number (9),
 	layer_map Number (9),
 	layer_size Varchar (250),
+	layer_tipo Varchar (250),
 	constraint pk_layer Primary key (layer_id),
 	constraint fk_layer_chama Foreign key (layer_chama) references Chamado (chama_id),
 	constraint fk_layer_map Foreign key (layer_map) references Mapeamento (map_id)

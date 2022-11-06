@@ -32,7 +32,7 @@ Sua interface web facilita a gestão de dados e dá autonomia aos usuários dess
 
 ## Documentação
 
-![ALERTA](Imagens/Alerta.svg) Para acessar a documentação completa do projeto, clique [aqui](Documentação/SPRINT3/Documentação_MCS.pdf).
+![ALERTA](Imagens/Alerta.svg) Para acessar a documentação completa do projeto, clique [aqui](Documentação/SPRINT3/MCS_Documentação.pdf).
 
 ## Pré-requisitos e como executar a aplicação
 
@@ -159,7 +159,7 @@ Para acessar nosso *Roadmap*, clique [aqui](https://dolphin-database.atlassian.n
 
 ## Gráfico de Burndown
 
-Para acessar nosso *Burndown*, clique [aqui](https://dolphin-database.atlassian.net/jira/software/projects/MCS/boards/4/reports/burndown)
+Para acessar nosso *Burndown*, clique [aqui](https://docs.google.com/spreadsheets/d/1vpQcUu1juZS8FrYtSsswkTVR81DtXTfCM-VG5vSXsbA/edit?usp=sharing)
 
 ## Cronograma do API
  

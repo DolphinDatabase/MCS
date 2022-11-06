@@ -175,7 +175,7 @@ constraint ck_FS_prioridade Check (FS_prioridade in ('Baixa', 'Média', 'Alta'))
   </details>
   
 ![ALERTA](https://github.com/DolphinDatabase/MCS/blob/sprint-3/Imagens/Alerta.svg) 
-Para acessar a documentação completa do projeto, clique [aqui](https://github.com/DolphinDatabase/MCS/blob/sprint-3/Documenta%C3%A7%C3%A3o/SPRINT3/Documenta%C3%A7%C3%A3o_MCS.pdf).
+Para acessar a documentação completa do projeto, clique [aqui](https://github.com/DolphinDatabase/MCS/blob/sprint-3/Documenta%C3%A7%C3%A3o/SPRINT3/MCS_Documenta%C3%A7%C3%A3o.pdf).
 
 ## Funcionalidades desenvolvidas 
 
@@ -213,7 +213,7 @@ Para acessar nossos *Wireframes*, clique [aqui](https://www.figma.com/file/MM0pL
  
 Para acessar o vídeo[^1] de demonstração da aplicação em uso, clique [aqui](https://youtu.be/AMuy8FwWIlU):
 
-[<img src="https://github.com/DolphinDatabase/MCS/blob/sprint-3/Imagens/MCS_Youtube.png" width="65%" height="65%">](# "MCS vídeo Demonstração")
+[<img src="https://github.com/DolphinDatabase/MCS/blob/sprint-3/Imagens/MCS_Youtube.png" width="65%" height="65%">](https://youtu.be/AMuy8FwWIlU "MCS vídeo Demonstração")
 
 ## Manual do Usuário
 
