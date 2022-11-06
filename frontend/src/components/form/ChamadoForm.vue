@@ -162,6 +162,21 @@ export default {
             .then(()=>{
                 this.$emit('submit',{indentificacao:this.formIdentificacao,localizacao:this.formLocalizacao})
             })
+        },
+        reset(){
+            this.formIdentificacao={
+                name:'',
+                description:'',
+            }
+            this.formLocalizacao={
+                cep:'',
+                bairro:'',
+                cidade:'',
+                complemento:'',
+                logradouro:'',
+                uf:'',
+                num:null
+            }
         }
     },
     created(){

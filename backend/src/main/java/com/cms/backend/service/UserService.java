@@ -46,7 +46,7 @@ public class UserService {
     private PasswordEncoder encoder = new BCryptPasswordEncoder();
 
     @GetMapping
-    @PreAuthorize("hasRole('ADM')")
+    @PreAuthorize("hasAnyRole('ADM','SUP')")
     public ResponseEntity<ResponseSummaryModel> listUsers(){
         ResponseSummaryModel res = new ResponseSummaryModel();
         try{

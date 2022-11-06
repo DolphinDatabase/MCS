@@ -42,7 +42,15 @@ const chamadoFunctions = {
         }catch(err){
             return err.response.data
         }
-    }
+    },
+    async addService(data){
+        try{
+            const res = await http.put(`/solicitation/${data.chamado}/addService`,data.form)
+            return res.data
+        }catch(err){
+            return err.response.data
+        }
+    },
 }
 
 export default chamadoFunctions

@@ -28,12 +28,9 @@ public class Material {
 
     @Column(name = "est_descricao")
     private String description;
-
-    @Column(name = "est_quantidade")
-    private Long quantity;
     
     @Column(name = "est_estoque")
-    private Long inventory;
+    private Boolean inventory;
 
     @ManyToMany(mappedBy = "materials")
     private Set<Solicitation> solicitations;

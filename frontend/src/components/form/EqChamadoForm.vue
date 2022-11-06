@@ -3,30 +3,15 @@
         <el-row :gutter="20">
             <el-col :span="14">
                 <el-form-item label="Equipamentos" prop="modelo">
-                    <el-select v-model="form.modelo" :fit-input-width="true" placeholder="Escolha um equipamento" @change="()=>{this.selected = this.materials.find(ch=>ch.num==form.modelo);this.selected.fixed = this.selected.quantity}">
+                    <el-select v-model="form.modelo" :fit-input-width="true" placeholder="Escolha um equipamento" @change="()=>{this.selected = this.materials.find(ch=>ch.num==form.modelo);}">
                         <el-option label="Escolha um equipamento" disabled="false"/>
                         <el-option v-for="item in this.materials" :key="item.num" :label="item.model" :value="item.num"/>
                     </el-select>
                 </el-form-item>
             </el-col>
-            <el-col :span="10">
-                <el-form-item label="Quantidade para uso" prop="num">
-                    <el-input-number v-model="form.num" :min="1" :max="this.selected.fixed" @change="changeQuantity()" />
-                </el-form-item>
-            </el-col>
         </el-row>
     </el-form>
     <section v-if="form.modelo!=null">
-        <div 
-        id="quantidade">
-            <div>
-                <h2>Quantidade de Equipamentos no Estoque</h2>
-            </div>
-            <div class="info">
-                <p>Quantidade Total: {{this.selected.inventory}}</p>
-                <p>Quantidade Disponível: {{this.selected.quantity}}</p>
-            </div>
-        </div>
         <div id="descricao">
             <h2>Descrição</h2>
             <p>{{(this.selected.description!=null||this.selected.description!='')?this.selected.description:'-'}}</p>
@@ -52,7 +37,6 @@ export default {
                 inventory: null, 
                 model: null,
                 num: null,
-                quantity: null,
             },
             form:{
                 num:null,
@@ -77,9 +61,6 @@ export default {
             .then(()=>{
                 this.$emit("submit",this.selected)
             })
-        },
-        changeQuantity(){
-            this.selected.quantity = this.selected.fixed-this.form.num
         },
         reset(){
             this.form={

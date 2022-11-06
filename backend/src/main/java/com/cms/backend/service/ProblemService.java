@@ -30,6 +30,7 @@ import com.cms.backend.entity.Solution;
 import com.cms.backend.repository.ProblemRepository;
 import com.cms.backend.repository.SolicitationProblemRepository;
 import com.cms.backend.repository.SolutionRepository;
+import com.cms.backend.util.Color;
 
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 @RestController
@@ -51,10 +52,11 @@ public class ProblemService {
     Logger logger = LoggerFactory.getLogger(SolutionService.class);
 
     @PostMapping
-    @PreAuthorize("isAuthenticated()")
+    @PreAuthorize("hasAnyRole('ADM','SUP')")
     public ResponseEntity<ResponseSummaryModel> createProblem(@RequestBody Problem problem){
         ResponseSummaryModel res = new ResponseSummaryModel();
         try{
+            problem.setColor(Color.randomHex());
             Problem n = pRepository.save(problem);
             addSolutions(n, problem.getSolutions());
             res.setAll(200, true, "Novo Problema criado", toProblemSummaryModel(n));
@@ -104,7 +106,7 @@ public class ProblemService {
     }
 
     @PutMapping("/{id}")
-    @PreAuthorize("isAuthenticated()")
+    @PreAuthorize("hasAnyRole('ADM','SUP')")
     public ResponseEntity<ResponseSummaryModel> updateProblem(@PathVariable Long id, @RequestBody Problem problem){
         ResponseSummaryModel res = new ResponseSummaryModel();
         try{
@@ -128,7 +130,7 @@ public class ProblemService {
     }
 
     @DeleteMapping("/{id}")
-    @PreAuthorize("isAuthenticated()")
+    @PreAuthorize("hasAnyRole('ADM','SUP')")
     public ResponseEntity<ResponseSummaryModel> deleteProblem(@PathVariable Long id){
         ResponseSummaryModel res = new ResponseSummaryModel();
         try{

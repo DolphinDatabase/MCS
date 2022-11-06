@@ -68,9 +68,13 @@
                                         Falhas e problemas
                                     </span>
                                 </template>
-                                <div id="collapseFalha" class="collapseContent">
-                                    <span>Número de falhas encontradas: {{(this.chamado.problems!=null)?this.chamado.problems.length:'0'}}</span>
+                                <div v-if="this.chamado.problems!=null&&this.chamado.problems.length>0" id="collapseFalha" class="collapseContent">
+                                    <span>Número de falhas encontradas: {{this.chamado.problems.length}}</span>
                                     <router-link :to="'/chamado/'+this.chamado.id">Mais detalhes</router-link>
+                                </div>
+                                <div v-else id="collapseFalha" class="collapseContent">
+                                    <span>Nenhuma falha encontrada</span>
+                                    <router-link v-if="this.$store.getters.getAuth.role!='ROLE_CLT'" :to="'/chamado/'+this.chamado.id">Adicionar</router-link>
                                 </div>
                             </el-collapse-item>
                             <el-collapse-item name="2">
@@ -81,7 +85,7 @@
                                 </template>
                                 <div id="collapseMaterial" class="collapseContent">
                                     <div v-if="this.$store.getters.getAuth.role=='ROLE_SUP'">
-                                    <div class="add" >
+                                    <div class="add" v-if="this.chamado.status!='FINISHED'">
                                         <el-button type="warning" @click="this.equipModal = true">
                                             Adicionar
                                         </el-button>
@@ -119,7 +123,7 @@
                                         </div>
                                     </div>
                                     <div v-else>
-                                        <div v-if="this.$store.getters.getAuth.role=='ROLE_ADM'">
+                                        <div v-if="this.$store.getters.getAuth.role=='ROLE_ADM'&&this.chamado.status!='FINISHED'">
                                             <div class="add" >
                                                 <el-button type="success" @click="this.budgetModal = true">
                                                     Adicionar
@@ -139,9 +143,45 @@
                                     </div>
                                 </div>
                             </el-collapse-item>
+                            <el-collapse-item name="4">
+                                <template #title>
+                                    <div style="color:#409EFF">
+                                        Administrativo
+                                    </div>
+                                </template>
+                                <div id="collapseAdministrativo" class="collapseContent">
+                                    <div id="administrativo" v-if="(this.chamado.service!=null&&this.chamado.service!='')&&(this.chamado.responsible!=null&&this.chamado.responsible!={})">
+                                        <h5>Data para execução do Serviço:</h5>
+                                        <p>{{new Date(this.chamado.service).getDate()+"/"+(new Date(this.chamado.service).getMonth()+1)+"/"+new Date(this.chamado.service).getFullYear()}}</p>
+                                        <h5>Responsável:</h5>
+                                        <p>{{this.chamado.responsible.name}}</p>
+                                    </div>
+                                    <div v-else>
+                                        <div v-if="(this.$store.getters.getAuth.role=='ROLE_ADM' || this.$store.getters.getAuth.role=='ROLE_SUP')&&this.chamado.status!='FINISHED'">
+                                            <div class="add" >
+                                                <el-button id="adm" type="success" @click="this.admModal = true">
+                                                    Adicionar
+                                                </el-button>
+                                            </div>
+                                            <div id="warning">
+                                                <img src="../assets/Icons/Info.svg" style="width: 12px; margin:3px 7px;"/>
+                                                <h2>Informações Pendentes, são elas: data e responsável por serviço.</h2>
+                                            </div>
+                                        </div>
+                                        <div v-else>
+                                            <div id="warning">
+                                                <img src="../assets/Icons/Info.svg" style="width: 12px; margin:3px 7px;"/>
+                                                <h2>Informações Pendentes, peça para um administrador preenche-las.</h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </el-collapse-item>
                         </el-collapse>
                     </section> 
                     <div id="groupButton"> 
+                        <el-button @click="this.$emit('cancel')">Cancelar</el-button>
+                        <el-button v-if="(this.$store.getters.getAuth.role=='ROLE_ADM' || this.$store.getters.getAuth.role=='ROLE_SUP')&&this.chamado.status!='FINISHED'" type="success" @click="this.$emit('finish',this.chamado)">Finalizar</el-button>
                         <el-button type="primary" @click="this.$emit('close')">Salvar</el-button>
                     </div>
                 </section>
@@ -156,6 +196,16 @@
             <span class="dialog-footer">
                 <el-button @click="this.budgetModal = false">Cancelar</el-button>
                 <el-button type="primary" @click="this.$refs.orcamentoForm.verifyForm()">Salvar</el-button>
+            </span>
+        </template>
+    </el-dialog>
+    <!--Adicionar Administrativo-->
+    <el-dialog v-model="this.admModal" title="Administrativo" width="40%">
+        <AdministrativoForm ref="administrativoForm" @submit="(form)=>addAdministrativo(form)"/>
+        <template #footer>
+            <span class="dialog-footer">
+                <el-button @click="this.admModal = false">Cancelar</el-button>
+                <el-button type="primary" @click="this.$refs.administrativoForm.verifyForm()">Salvar</el-button>
             </span>
         </template>
     </el-dialog>
@@ -175,6 +225,7 @@ import status from '../utils/status'
 import {ElTag, ElCollapse, ElCollapseItem,ElButton, ElDialog} from 'element-plus'
 import OrcamentoForm from '../components/form/OrcamentoForm.vue';
 import EqChamadoForm from './form/EqChamadoForm.vue';
+import AdministrativoForm from '../components/form/AdministrativoForm.vue';
 import {RouterLink} from 'vue-router'
 export default {
     name:"RelatorioModal",
@@ -186,6 +237,7 @@ export default {
         ElDialog,
         OrcamentoForm,
         EqChamadoForm,
+        AdministrativoForm,
         RouterLink
     },
     props:{
@@ -196,6 +248,7 @@ export default {
             statusData:status,
             equipModal:false,
             budgetModal:false,
+            admModal:false,
             chamado:this.data
         }
     },
@@ -206,9 +259,23 @@ export default {
             this.budgetModal = false
         },
         async addMaterial(form){
-            await this.$store.dispatch("addMaterial",{form:form,id:this.chamado.id})
+            await this.$store.dispatch("addMaterial",{form:form,chamado:this.chamado})
             this.chamado.materials.push(form)
             this.equipModal = false
+        },
+        async addAdministrativo(form){
+            const d = new Date(form.service)
+            const data = {
+               service:`${d.getFullYear()}-${(d.getMonth())+1}-${d.getDate()}`,
+               responsible:{
+                id:form.responsible 
+               }
+            }
+            console.log(data)
+            const res = await this.$store.dispatch("addService",{form:data,chamado:this.chamado.id})
+            this.chamado.service = res.service
+            this.chamado.responsible = res.responsible
+            this.admModal = false
         }
     }
 }
@@ -334,6 +401,9 @@ export default {
         font-weight: lighter;
     }
 
+    #adm{
+        background-color:#409EFF;
+    }
     .add {
         display: flex;
         align-items: center;

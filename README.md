@@ -32,7 +32,7 @@ Sua interface web facilita a gestão de dados e dá autonomia aos usuários dess
 
 ## Documentação
 
-![ALERTA](Imagens/Alerta.svg) Para acessar a documentação completa do projeto, clique [aqui](Documentação/SPRINT1/Documentacao_MCS.pdf).
+![ALERTA](Imagens/Alerta.svg) Para acessar a documentação completa do projeto, clique [aqui](Documentação/SPRINT3/Documentação_MCS.pdf).
 
 ## Pré-requisitos e como executar a aplicação
 
@@ -103,8 +103,14 @@ Para acessar o manual do usuário, clique [aqui](Manual/MCS_ManualdoUsuário.pdf
 - [X] Adição de Equipamentos no Chamado
 - [X] Adição de Orçamento no Chamado
 - [X] Criação de Orçamento
+- [X] Adição de Responsável pelo Serviço
+- [X] Adição de Data de Serviço
+- [X] Upload de Imagem (Silhueta)
+- [X] Adição de Silhuetas Já Conhecidas
+- [X] Adição de Anomalias nas Silhuetas
+- [X] Visualização de Anomalias nas Silhuetas
 
-![ALERTA](Imagens/Alerta.svg) Para mais informações das funcionalidades entregues, acesse as [releases](https://github.com/DolphinDatabase/MCS/releases/tag/Sprint2).
+![ALERTA](Imagens/Alerta.svg) Para mais informações das funcionalidades entregues, acesse as [releases](https://github.com/DolphinDatabase/MCS/releases/tag/Sprint3).
 
 ## Ilustração das Funcionalidades
 
@@ -112,9 +118,9 @@ Para acessar nossos *Wireframes*, clique [aqui](https://www.figma.com/file/MM0pL
 
 ## Demonstração
 
-Para acessar o vídeo[^1] de demonstração da aplicação em uso, clique [aqui](https://youtu.be/eKqY-ngvh3s):
+Para acessar o vídeo[^1] de demonstração da aplicação em uso, clique [aqui](https://youtu.be/AMuy8FwWIlU):
 
-[<img src="Imagens/MCS_Youtube.png" width="60%" height="60%">](https://youtu.be/eKqY-ngvh3s "MCS vídeo Demonstração")
+[<img src="Imagens/MCS_Youtube.png" width="60%" height="60%">](https://youtu.be/AMuy8FwWIlU "MCS vídeo Demonstração")
 
 ## Manual do Usuário
 
@@ -141,6 +147,11 @@ Para acessar o vídeo[^1] de demonstração da aplicação em uso, clique [aqui]
 - [X] ![STORY](Imagens/Story.svg) Responsável pelo chamado
 - [X] ![STORY](Imagens/Story.svg) Data de serviço
 - [X] ![STORY](Imagens/Story.svg) Mapeamento gráfico
+- [ ] ![EPIC](Imagens/Epic.svg) **SPRINT 4:**  Melhorias
+- [ ] ![STORY](Imagens/Story.svg) Correção de Possíveis Bugs
+- [ ] ![STORY](Imagens/Story.svg) Upload da Ferramenta Para Núvem
+- [ ] ![STORY](Imagens/Story.svg) Exibição dos Dados de Mapeamento (Gráfico)
+- [ ] ![STORY](Imagens/Story.svg) Melhoria do Mapeamento de Anomalias
 
 ## Roadmap
 
@@ -157,7 +168,7 @@ Para acessar nosso *Burndown*, clique [aqui](https://dolphin-database.atlassian.
 | 15/08 a 19/08 | Kick-off. |
 | 28/08 a 18/09 | [Sprint 1](Sprints/SPRINT1.md). |
 | 19/09 a 09/10 | [Sprint 2](Sprints/SPRINT2.md). |
-| 13/10 a 06/11 | [Sprint 3](#). |
+| 17/10 a 06/11 | [Sprint 3](Sprints/SPRINT3.md). |
 | 07/11 a 27/11 | [Sprint 4](#). |
 | 08/12 às 19h | Feira de Soluções. |
 
@@ -194,13 +205,7 @@ Para acessar nosso *Burndown*, clique [aqui](https://dolphin-database.atlassian.
 
 <details><summary>SGBD</summary>
 
-<a href="https://www.oracle.com/br/downloads/">![Oracle](https://img.shields.io/badge/Oracle-red?style=flat-square&logo=oracle)</a>
-
-</details>
-
-<details><summary>Plataforma</summary>
-
-<a href="https://www.docker.com">![Docker](https://img.shields.io/badge/Docker-gray?style=flat-square&logo=docker)</a>
+<a href="https://www.oracle.com/br/downloads/">![Oracle Cloud](https://img.shields.io/badge/Oracle-red?style=flat-square&logo=oracle)</a>
 
 </details>
 
@@ -209,7 +214,6 @@ Para acessar nosso *Burndown*, clique [aqui](https://dolphin-database.atlassian.
 
 <a href="https://github.com/beamedeiros" target="_blank"><img src="Imagens/Team/BeatrizMedeiros.png" height="65" width="65" align="left" target="_blank" ></a>
 <a href="https://github.com/pdrMottaS" target="_blank"><img src="Imagens/Team/PedroMotta.png" height="65" width="65" align="left" target="_blank" ></a>
-<a href="https://github.com/FelipeFariaVerde" target="_blank"><img src="Imagens/Team/FelipeFaria.png" height="65" width="65" align="left" target="_blank" ></a>
 <a href="https://github.com/Borgarelli" target="_blank"><img src="Imagens/Team/KauãBorgarelli.png" height="65" width="65" align="left" target="_blank" ></a>
  <br/>
 <br></br>

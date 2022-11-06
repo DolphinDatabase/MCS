@@ -38,6 +38,9 @@ public class Problem {
     @Column(name = "prb_nvl")
     private Nivel nivel;
 
+    @Column(name = "prb_cor")
+    private String color;
+
     @OneToMany(mappedBy = "problem", cascade = CascadeType.REMOVE)
     private Set<Solution> solutions;
 

@@ -5,7 +5,7 @@
                 Adicionar
             </ElButton>
         </Title>
-        <TableCollapse :index="{num:'Núm. de Série', model:'Modelo', quantity:'Total', inventory:'Disponível'}" :tableData="this.tableData">
+        <TableCollapse :index="{num:'Núm. de Série', model:'Modelo', inventory:'Disponível'}" :tableData="this.tableData">
             <template v-slot="{data}">
                 <div class="collapseContent">
                     <div>
@@ -47,9 +47,6 @@
         <el-form label-position="top" :model="this.editForm" ref="editForm">
             <el-form-item label="Modelo do Item">
                 <el-input v-model="this.editForm.model" />
-            </el-form-item>
-            <el-form-item label="Quantidade">
-                <el-input v-model="this.editForm.quantity"/>
             </el-form-item>
             <el-form-item label="Descrição">
                 <el-input v-model="this.editForm.description" :rows="2" type="textarea"/>
@@ -107,7 +104,6 @@ export default{
             },
             editForm:{
                 model:null,
-                quantity:null,
                 description:null
             }
         }
@@ -117,8 +113,7 @@ export default{
             const data = {
                 model:form.modelo,
                 num:form.num,
-                quantity:form.quantity,
-                inventory:form.quantity,
+                inventory:true,
                 description:form.description,
             }
             await this.$store.dispatch("createMaterials",data)
@@ -126,17 +121,14 @@ export default{
             this.newModal = false
             this.$refs.equipamentoForm.form = {
                 description: null,
-                inventory: null, 
                 model: null,
                 num: null,
-                quantity: null,
             }
         },
         async updateEquipamento(){
             const data = {
                 num:this.selected.num,
                 model:this.editForm.model,
-                quantity:this.editForm.quantity,
                 inventory:this.selected.inventory,
                 description:this.editForm.description
             }
@@ -158,7 +150,6 @@ export default{
             this.selected = data
             this.editForm = {
                 model:this.selected.model,
-                quantity:this.selected.quantity,
                 description:this.selected.description
             },
             this.editModal = true

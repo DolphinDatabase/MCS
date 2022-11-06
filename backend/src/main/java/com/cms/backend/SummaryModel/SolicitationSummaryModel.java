@@ -18,10 +18,13 @@ public class SolicitationSummaryModel {
     private String name;
     private String description;
     private Date date;
+    private Date service;
     private Status status;
     private LocationSummaryModel location;
     private UserSummaryModel user;
+    private UserSummaryModel responsible;
     private Set<SolicitationProblemSummaryModel> problems; 
+    private Set<SolicitationMappingSummaryModel> mappings; 
     private Set<MaterialSummaryModel> materials;
     private BudgetSummaryModel budget; 
 

@@ -1,7 +1,7 @@
 <template>
     <el-form label-position="top" ref="usuarioForm" :model="this.form" :rules="this.rules">
         <el-form-item label="Nome" prop="name">
-            <el-input v-model="form.name" />
+            <el-input v-model="form.name" autofocus />
         </el-form-item>
         <el-form-item label="E-mail" prop="email">
             <el-input v-model="form.email" />

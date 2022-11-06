@@ -15,6 +15,7 @@
 <script>
 import {ElTable,ElTableColumn} from 'element-plus'
 import nivel from '../utils/nivel'
+
 export default{
     name:"Table",
     data(){

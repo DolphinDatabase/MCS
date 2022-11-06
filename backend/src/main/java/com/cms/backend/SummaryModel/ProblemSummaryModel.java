@@ -10,9 +10,9 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 public class ProblemSummaryModel {
-
     private Long id;
     private String name;
     private String nivel;
+    private String color;
     private Set<SolutionSummaryModel> solutions;
 }
