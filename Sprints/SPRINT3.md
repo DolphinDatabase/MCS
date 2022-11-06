@@ -200,6 +200,7 @@ Para acessar a documentação completa do projeto, clique [aqui](https://github.
 - [X] Upload de Imagem (Silhueta)
 - [X] Adição de Silhuetas Já Conhecidas
 - [X] Adição de Anomalias nas Silhuetas
+- [X] Visualização de Anomalias nas Silhuetas
 
 
 ![ALERTA](https://github.com/DolphinDatabase/MCS/blob/sprint-3/Imagens/Alerta.svg) Para mais informações das funcionalidades entregues, acesse a [release](https://github.com/DolphinDatabase/MCS/releases/tag/Sprint3).
