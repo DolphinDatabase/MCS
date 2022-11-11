@@ -122,8 +122,9 @@ Para acessar o manual do usuário, clique [aqui](Manual/MCS_ManualdoUsuário.pdf
 - [X] Exportar Mapeamento (imagem)
 - [X] Editar e Limpar Mapeamento
 - [X] Adicionar Tamanho Físico por Layer
+- [X] Gráfico de Falhas no Chamado
 
-![ALERTA](Imagens/Alerta.svg) Para mais informações das funcionalidades entregues, acesse as [releases](https://github.com/DolphinDatabase/MCS/releases/tag/Sprint3).
+![ALERTA](Imagens/Alerta.svg) Para mais informações das funcionalidades entregues, acesse as [releases](https://github.com/DolphinDatabase/MCS/releases/tag/Sprint4).
 
 ## Ilustração das Funcionalidades
 
