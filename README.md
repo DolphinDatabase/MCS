@@ -2,7 +2,7 @@
   <img src="Imagens/LogotipoMCS.png"/>
 </p>
 
-![Badge](https://img.shields.io/badge/STATUS-EM_ANDAMENTO-yellow?style=flat-square&logo=)
+![Badge](https://img.shields.io/badge/STATUS-CONCLUÍDO-green?style=flat-square&logo=)
 
 
 ## Tabela de Conteúdos
