@@ -214,9 +214,9 @@ Para acessar a documentação completa do projeto, clique [aqui](https://github.
 - [X] Exportar Mapeamento (imagem)
 - [X] Editar e Limpar Mapeamento
 - [X] Adicionar Tamanho Físico por Layer
+- [X] Gráfico de Falhas no Chamado
 
-
-![ALERTA](https://github.com/DolphinDatabase/MCS/blob/sprint-3/Imagens/Alerta.svg) Para mais informações das funcionalidades entregues, acesse a [release](https://github.com/DolphinDatabase/MCS/releases/tag/Sprint3).
+![ALERTA](https://github.com/DolphinDatabase/MCS/blob/main/Imagens/Alerta.svg) Para mais informações das funcionalidades entregues, acesse a [release](https://github.com/DolphinDatabase/MCS/releases/tag/Sprint4).
 
 ## Ilustração das funcionalidades
 
