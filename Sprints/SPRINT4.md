@@ -232,12 +232,12 @@ Para acessar o vídeo[^1] de demonstração da aplicação em uso, clique [aqui]
 
 Para acessar o manual do usuário, clique [aqui](https://github.com/DolphinDatabase/MCS/blob/sprint-3/Manual/MCS_ManualdoUsu%C3%A1rio.pdf).
 
-## Backlog da Sprint 3
+## Backlog da Sprint 4
 
-- [x] ![EPIC](https://github.com/DolphinDatabase/MCS/blob/sprint-3/Imagens/Epic.svg) **SPRINT 3:**  Mapeamento
-- [X] ![STORY](https://github.com/DolphinDatabase/MCS/blob/sprint-3/Imagens/Story.svg) Responsável pelo Serviço
-- [X] ![STORY](https://github.com/DolphinDatabase/MCS/blob/sprint-3/Imagens/Story.svg) Data de Serviço
-- [X] ![STORY](https://github.com/DolphinDatabase/MCS/blob/sprint-3/Imagens/Story.svg) Mapeamento Gráfico de Falhas
+- [X] ![EPIC](https://github.com/DolphinDatabase/MCS/blob/main/Imagens/Epic.svg) **SPRINT 4:**  Melhorias
+- [X] ![STORY](https://github.com/DolphinDatabase/MCS/blob/main/Imagens/Story.svg) Melhorias no Mapeamento de Anomalias
+- [X] ![STORY](https://github.com/DolphinDatabase/MCS/blob/main/Imagens/Story.svg) Melhorias nas Tabelas
+- [X] ![STORY](https://github.com/DolphinDatabase/MCS/blob/main/Imagens/Story.svg) Melhorias no Relatório
 	
 ## Story Cards
 
