@@ -247,29 +247,29 @@ Para acessar o manual do usuário, clique [aqui](https://github.com/DolphinDatab
 
 ## User Story
 
-<details><summary>Story 14 - Responsável pelo Serviço</summary>
+<details><summary>Story 17 - Melhorias no Mapeamento</summary>
   
 | Como | Eu quero | Para que |
 | ------- | ------- | ------- |
-| Usuário administrador e suporte do sistema. | Atribuir um responsável para a execução de serviço. | O cliente tenha ciência de quem realizará o serviço. |
+| Usuário do sistema. | Editar e exportar o mapeamento de anomalias. | Seja possível ter mais precisão. |
   
 </details>
 
 
-<details><summary>Story 15 - Data de Serviço</summary>
+<details><summary>Story 18 - Melhorias no Relatório</summary>
   
 | Como | Eu quero | Para que |
 | ------- | ------- | ------- |
-| Usuário administrador e suporte do sistema. | Adicionar a data de execução do serviço. | Além do controle da agenda de serviço, o cliente fique ciente de quando será realizado. |
+| Usuário suporte e administrador do sistema. | Remover equipamentos não utilizados e editar orçamento, data e responsável pelo serviço. | Seja possível manter o relatório atualizado. |
   
 </details>
 
 
-<details><summary>Story 16 - Mapeamento Gráfico de Falhas</summary>
+<details><summary>Story 19 - Melhorias nas Tabelas</summary>
   
 | Como | Eu quero | Para que |
 | ------- | ------- | ------- |
-| Usuário suporte do sistema. | Mapear falhas de forma gráfica. | O cliente possa vizualizá-las. |
+| Usuário suporte e administrador. | Remover falhas e buscar nas tabelas. | A aplicação seja intuitiva e de fácil usabilidade. |
   
 </details>
 
