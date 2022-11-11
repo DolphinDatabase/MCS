@@ -25,18 +25,15 @@
 ## Descrição
 
 <p align="justify">
-Sistema ERP que visa gerenciar e controlar dados, afim de reduzir custos, facilitar tomadas de decisão, otimizar o tempo de atendimento de chamados e aprimorar o 
-solucionamento destes. É composta por níveis de usuários, onde o administrador terá controle sobre todas as funcionalidades existentes, dentre elas o cadastro, edição 
-e exclusão de outros usuários; o suporte ficará responsável pelo CRUD de falhas e soluções genéricas e CRUD de equipamentos; o cliente trará o problema para o suporte e, este ficará responsável por gerenciar o chamado e resolvê-los.
-A MCS (Management and Control System) trouxe de uma forma fácil e rápida o mais importante: o mapeamento gráfico de silhuetas.
-
-**Mapemamento gráfico** 
-consiste em durante ou após uma inspeção, o suporte conseguirá fazer o upload da silhueta e adicionar as falhas (específicas do chamado) encontradas em formas e 
-tamanhos diferentes para uma melhor identificação da posição e tamanho, facilitando na identificação de quantidade e quais materiais serão utilizados para a solução 
-dessas falhas e também no cálculo do orçamento.
-
-Sua interface web facilita a gestão de dados e dá autonomia aos usuários dessa aplicação para que possam atuar com desenvoltura dentro das permissões concedidas. 
-
+A MCS (Management and Control System) é um sistema ERP que visa gerenciar e controlar dados, afim de reduzir custos, facilitar tomadas de decisão, otimizar o tempo de atendimento de chamados e aprimorar o solucionamento destes. 
+É composta por níveis de usuários, onde o administrador terá controle sobre todas as funcionalidades existentes, dentre elas o cadastro, edição e exclusão de outros usuários; o suporte ficará responsável pelo CRUD de falhas e soluções genéricas e CRUD de equipamentos; o cliente trará o problema para o suporte e, este ficará responsável por gerenciar o chamado e resolvê-los.
+A MCS (Management and Control System) trouxe de uma forma fácil e rápida o mais importante: o mapeamento gráfico de anomalias nas silhuetas.
+<br/>
+O Mapemamento de anomalias consiste em durante ou após uma inspeção, o suporte conseguirá fazer o upload da silhueta e adicionar as falhas (específicas do chamado) 
+encontradas em formas e tamanhos diferentes para uma melhor identificação da posição e tamanho, facilitando na identificação de quantidade e quais materiais serão 
+utilizados para a solução dessas falhas e também no cálculo do orçamento.
+<br/>
+Sua interface web facilita a gestão de dados e dá autonomia aos usuários dessa aplicação para que possam atuar com desenvoltura dentro das permissões concedidas.
 
 ## Documentação
 
@@ -155,11 +152,11 @@ Para acessar o vídeo[^1] de demonstração da aplicação em uso, clique [aqui]
 - [X] ![STORY](Imagens/Story.svg) Responsável pelo chamado
 - [X] ![STORY](Imagens/Story.svg) Data de serviço
 - [X] ![STORY](Imagens/Story.svg) Mapeamento gráfico
-- [ ] ![EPIC](Imagens/Epic.svg) **SPRINT 4:**  Melhorias
-- [ ] ![STORY](Imagens/Story.svg) Correção de Possíveis Bugs
-- [ ] ![STORY](Imagens/Story.svg) Upload da Ferramenta Para Núvem
-- [ ] ![STORY](Imagens/Story.svg) Exibição dos Dados de Mapeamento (Gráfico)
-- [ ] ![STORY](Imagens/Story.svg) Melhoria do Mapeamento de Anomalias
+- [X] ![EPIC](Imagens/Epic.svg) **SPRINT 4:**  Melhorias
+- [X] ![STORY](Imagens/Story.svg) Correção de Possíveis Bugs
+- [X] ![STORY](Imagens/Story.svg) Upload da Ferramenta Para Núvem
+- [X] ![STORY](Imagens/Story.svg) Exibição dos Dados de Mapeamento (Gráfico)
+- [X] ![STORY](Imagens/Story.svg) Melhoria do Mapeamento de Anomalias
 
 ## Roadmap
 
