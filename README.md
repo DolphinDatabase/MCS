@@ -114,6 +114,14 @@ Para acessar o manual do usuário, clique [aqui](Manual/MCS_ManualdoUsuário.pdf
 - [X] Adição de Silhuetas Já Conhecidas
 - [X] Adição de Anomalias nas Silhuetas
 - [X] Visualização de Anomalias nas Silhuetas
+- [X] Editar Orçamento
+- [X] Excluir Equipamento do Chamado
+- [X] Editar Data de Serviço
+- [X] Editar Responsável pelo Serviço
+- [X] Campo de Busca em Tabelas
+- [X] Exportar Mapeamento (imagem)
+- [X] Editar e Limpar Mapeamento
+- [X] Adicionar Tamanho Físico por Layer
 
 ![ALERTA](Imagens/Alerta.svg) Para mais informações das funcionalidades entregues, acesse as [releases](https://github.com/DolphinDatabase/MCS/releases/tag/Sprint3).
 
