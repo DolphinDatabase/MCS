@@ -242,7 +242,7 @@ Para acessar o manual do usuário, clique [aqui](https://github.com/DolphinDatab
 ## Story Cards
 
 <p align="center">
-  <img src="https://github.com/DolphinDatabase/MCS/blob/sprint-3/Documenta%C3%A7%C3%A3o/SPRINT3/StoryCards/StoryCards.gif"/>
+  <img src="https://github.com/DolphinDatabase/MCS/blob/main/Documenta%C3%A7%C3%A3o/SPRINT4/StoryCards/StoryCards.gif"/>
 </p>
 
 ## User Story
