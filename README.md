@@ -161,10 +161,9 @@ Para acessar o vídeo[^1] de demonstração da aplicação em uso, clique [aqui]
 - [X] ![STORY](Imagens/Story.svg) Data de serviço
 - [X] ![STORY](Imagens/Story.svg) Mapeamento gráfico
 - [X] ![EPIC](Imagens/Epic.svg) **SPRINT 4:**  Melhorias
-- [X] ![STORY](Imagens/Story.svg) Correção de Possíveis Bugs
-- [X] ![STORY](Imagens/Story.svg) Upload da Ferramenta Para Núvem
-- [X] ![STORY](Imagens/Story.svg) Exibição dos Dados de Mapeamento (Gráfico)
-- [X] ![STORY](Imagens/Story.svg) Melhoria do Mapeamento de Anomalias
+- [X] ![STORY](Imagens/Story.svg) Melhorias no Mapeamento de Anomalias
+- [X] ![STORY](Imagens/Story.svg) Melhorias nas Tabelas
+- [X] ![STORY](Imagens/Story.svg) Melhorias no Relatório
 
 ## Roadmap
 
