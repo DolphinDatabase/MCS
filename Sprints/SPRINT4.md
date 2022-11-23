@@ -179,8 +179,8 @@ constraint ck_FS_prioridade Check (FS_prioridade in ('Baixa', 'Média', 'Alta'))
   
   </details>
   
-![ALERTA](https://github.com/DolphinDatabase/MCS/blob/sprint-3/Imagens/Alerta.svg) 
-Para acessar a documentação completa do projeto, clique [aqui](https://github.com/DolphinDatabase/MCS/blob/sprint-3/Documenta%C3%A7%C3%A3o/SPRINT3/MCS_Documenta%C3%A7%C3%A3o.pdf).
+![ALERTA](https://github.com/DolphinDatabase/MCS/blob/sprint-4/Imagens/Alerta.svg) 
+Para acessar a documentação completa do projeto, clique [aqui](https://github.com/DolphinDatabase/MCS/blob/sprint-4/Documenta%C3%A7%C3%A3o/SPRINT4/MCS_Documenta%C3%A7%C3%A3o.pdf).
 
 ## Funcionalidades desenvolvidas 
 
@@ -214,7 +214,6 @@ Para acessar a documentação completa do projeto, clique [aqui](https://github.
 - [X] Exportar Mapeamento (imagem)
 - [X] Editar e Limpar Mapeamento
 - [X] Adicionar Tamanho Físico por Layer
-- [X] Gráfico de Falhas no Chamado
 
 ![ALERTA](https://github.com/DolphinDatabase/MCS/blob/main/Imagens/Alerta.svg) Para mais informações das funcionalidades entregues, acesse a [release](https://github.com/DolphinDatabase/MCS/releases/tag/Sprint4).
 
