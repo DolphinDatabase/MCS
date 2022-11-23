@@ -229,7 +229,7 @@ Para acessar o vídeo[^1] de demonstração da aplicação em uso, clique [aqui]
 
 ## Manual do Usuário
 
-Para acessar o manual do usuário, clique [aqui](https://github.com/DolphinDatabase/MCS/blob/sprint-3/Manual/MCS_ManualdoUsu%C3%A1rio.pdf).
+Para acessar o manual do usuário, clique [aqui](https://github.com/DolphinDatabase/MCS/blob/sprint-4/Manual/MCS_ManualdoUsu%C3%A1rio.pdf).
 
 ## Backlog da Sprint 4
 
