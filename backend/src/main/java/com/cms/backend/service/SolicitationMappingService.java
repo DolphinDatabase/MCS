@@ -65,8 +65,10 @@ public class SolicitationMappingService {
         try{
             SolicitationMapping sm = smRepository.findById(id).orElseThrow(()->new ResponseStatusException(HttpStatus.NOT_FOUND));
             Set<Layer> nLayers = sm.getLayers().stream().collect(Collectors.toSet());
+            nLayers.forEach(l->{
+                lRepository.delete(l);
+            });
             layers.forEach(l->{
-                l.setX((Double)l.getX());
                 l.setSolicitationMapping(sm);
                 Layer layer = lRepository.save(l);
                 nLayers.add(layer);

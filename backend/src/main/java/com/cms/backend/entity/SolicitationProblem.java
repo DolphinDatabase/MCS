@@ -1,6 +1,5 @@
 package com.cms.backend.entity;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -31,14 +30,5 @@ public class SolicitationProblem{
     @ManyToOne
     @JoinColumn(name = "prb_id")
     private Problem problem;
-
-    @Column(name = "largura")
-    private Double width;
-
-    @Column(name = "altura")
-    private Double height;
-
-    @Column(name = "profundidade")
-    private Double depth;
 
 }

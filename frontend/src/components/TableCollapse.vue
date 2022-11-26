@@ -1,8 +1,13 @@
 <template>
-    <el-table :data="this.tableData" height="85%">
+    <el-table  :data="tableData.filter(data => !search || data.name.toLowerCase().includes(search.toLowerCase()))" height="85%">
         <el-table-column v-for="(item,index) in index" :key="index" :prop="index" :label="item">
             <template v-if="index=='nivel'" #default="scope">
                 <el-tag :type="nivels[scope.row.nivel].type">{{nivels[scope.row.nivel].label}}</el-tag>
+            </template>
+        </el-table-column>
+        <el-table-column>
+            <template #header>
+                <el-input v-model="search" size="medium" placeholder="Busca" />
             </template>
         </el-table-column>
         <el-table-column type="expand">
@@ -20,7 +25,8 @@ export default{
     name:"Table",
     data(){
         return{
-            nivels:nivel
+            nivels:nivel,
+            search: ''
         }
     },
     components:{

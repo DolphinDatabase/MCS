@@ -311,6 +311,11 @@ const store = createStore({
         },
     },
     mutations:{
+        clearLayers(state,data){
+            const chd = state.data.chamados.find(ch=>ch.id==data.chd)
+            const map = chd.mappings.find(m=>m.id==data.mapchd)
+            map.layers = []
+        },
         addLayers(state,data){
             const chd = state.data.chamados.find(ch=>ch.id==data.chd)
             const map = chd.mappings.find(m=>m.id==data.mapchd)

@@ -61,6 +61,9 @@ public class LayerService {
             l.setColor(layer.getColor());
             l.setSize(layer.getSize());
             l.setType(layer.getType());
+            l.setWidth(layer.getWidth());
+            l.setHeight(layer.getHeight());
+            l.setDepth(layer.getDepth());
             res.setAll(200, true, "Layer "+id+" atualizada", toLayerSummaryModel(lRepository.save(l)));
             logger.info(res.getMessage());
             return ResponseEntity.status(HttpStatus.OK).body(res);

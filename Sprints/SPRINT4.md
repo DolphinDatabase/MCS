@@ -1,8 +1,9 @@
 <p align="center">
-  <img src="https://github.com/DolphinDatabase/MCS/blob/sprint-2/Imagens/LogoMCS.png"/>
+  <img src="https://github.com/DolphinDatabase/MCS/blob/main/Imagens/LogoMCS.png"/>
 </p>
 
 ![Badge](https://img.shields.io/badge/STATUS-CONCLUÍDO-green?style=flat-square&logo=)
+
 
 ## Tabela de Conteúdos
 
@@ -12,7 +13,7 @@
  * [Ilustração das funcionalidades](#ilustração-das-funcionalidades)
  * [Demonstração](#demonstração)
  * [Manual do Usuário](#manual-do-usuário)
- * [Backlog da Sprint 3](#backlog-da-sprint-3) 
+ * [Backlog da Sprint 4](#backlog-da-sprint-4) 
  * [Story Cards](#story-cards)  
  * [User Story](#user-story)   
  * [Roadmap](#roadmap)
@@ -23,7 +24,12 @@
 ## Descrição
 <p align="justify">
 A MCS (Management and Control System) é um sistema ERP que visa gerenciar e controlar dados, afim de reduzir custos, facilitar tomadas de decisão, otimizar o tempo de atendimento de chamados e aprimorar o solucionamento destes. 
-É composta por níveis de usuários, onde o administrador terá controle sobre todas as funcionalidades existentes, dentre elas o cadastro, edição e exclusão de outros usuários; o cliente trará o problema para o suporte e, este ficará responsável por gerenciar chamados e resolvê-los.
+É composta por níveis de usuários, onde o administrador terá controle sobre todas as funcionalidades existentes, dentre elas o cadastro, edição e exclusão de outros usuários; o suporte ficará responsável pelo CRUD de falhas e soluções genéricas e CRUD de equipamentos; o cliente trará o problema para o suporte e, este ficará responsável por gerenciar o chamado e resolvê-los.
+A MCS (Management and Control System) trouxe de uma forma fácil e rápida o mais importante: o mapeamento gráfico de anomalias nas silhuetas.
+<br/>
+O Mapemamento de anomalias consiste em durante ou após uma inspeção, o suporte conseguirá fazer o upload da silhueta e adicionar as falhas (específicas do chamado) 
+encontradas em formas e tamanhos diferentes para uma melhor identificação da posição e tamanho, facilitando na identificação de quantidade e quais materiais serão 
+utilizados para a solução dessas falhas e também no cálculo do orçamento.
 <br/>
 Sua interface web facilita a gestão de dados e dá autonomia aos usuários dessa aplicação para que possam atuar com desenvoltura dentro das permissões concedidas.
   
@@ -173,8 +179,8 @@ constraint ck_FS_prioridade Check (FS_prioridade in ('Baixa', 'Média', 'Alta'))
   
   </details>
   
-![ALERTA](https://github.com/DolphinDatabase/MCS/blob/sprint-3/Imagens/Alerta.svg) 
-Para acessar a documentação completa do projeto, clique [aqui](https://github.com/DolphinDatabase/MCS/blob/sprint-3/Documenta%C3%A7%C3%A3o/SPRINT3/MCS_Documenta%C3%A7%C3%A3o.pdf).
+![ALERTA](https://github.com/DolphinDatabase/MCS/blob/sprint-4/Imagens/Alerta.svg) 
+Para acessar a documentação completa do projeto, clique [aqui](https://github.com/DolphinDatabase/MCS/blob/sprint-4/Documenta%C3%A7%C3%A3o/SPRINT4/MCS_Documenta%C3%A7%C3%A3o.pdf).
 
 ## Funcionalidades desenvolvidas 
 
@@ -200,9 +206,15 @@ Para acessar a documentação completa do projeto, clique [aqui](https://github.
 - [X] Adição de Silhuetas Já Conhecidas
 - [X] Adição de Anomalias nas Silhuetas
 - [X] Visualização de Anomalias nas Silhuetas
+- [X] Editar Orçamento
+- [X] Editar Data de Serviço
+- [X] Editar Responsável pelo Serviço
+- [X] Campo de Busca em Tabelas
+- [X] Exportar Mapeamento (imagem)
+- [X] Limpar Mapeamento
+- [X] Adicionar Tamanho Físico por Layer
 
-
-![ALERTA](https://github.com/DolphinDatabase/MCS/blob/sprint-3/Imagens/Alerta.svg) Para mais informações das funcionalidades entregues, acesse a [release](https://github.com/DolphinDatabase/MCS/releases/tag/Sprint3).
+![ALERTA](https://github.com/DolphinDatabase/MCS/blob/main/Imagens/Alerta.svg) Para mais informações das funcionalidades entregues, acesse a [release](https://github.com/DolphinDatabase/MCS/releases/tag/Sprint4).
 
 ## Ilustração das funcionalidades
 
@@ -210,52 +222,52 @@ Para acessar nossos *Wireframes*, clique [aqui](https://www.figma.com/file/MM0pL
  
 ## Demonstração
  
-Para acessar o vídeo[^1] de demonstração da aplicação em uso, clique [aqui](https://youtu.be/AMuy8FwWIlU):
+Para acessar o vídeo[^1] de demonstração da aplicação em uso, clique [aqui](https://youtu.be/M91pEmLUji8):
 
-[<img src="https://github.com/DolphinDatabase/MCS/blob/sprint-3/Imagens/MCS_Youtube.png" width="65%" height="65%">](https://youtu.be/AMuy8FwWIlU "MCS vídeo Demonstração")
+[<img src="https://github.com/DolphinDatabase/MCS/blob/sprint-3/Imagens/MCS_Youtube.png" width="65%" height="65%">](https://youtu.be/M91pEmLUji8 "MCS vídeo Demonstração")
 
 ## Manual do Usuário
 
-Para acessar o manual do usuário, clique [aqui](https://github.com/DolphinDatabase/MCS/blob/sprint-3/Manual/MCS_ManualdoUsu%C3%A1rio.pdf).
+Para acessar o manual do usuário, clique [aqui](https://github.com/DolphinDatabase/MCS/blob/sprint-4/Manual/MCS_ManualdoUsu%C3%A1rio.pdf).
 
-## Backlog da Sprint 3
+## Backlog da Sprint 4
 
-- [x] ![EPIC](https://github.com/DolphinDatabase/MCS/blob/sprint-3/Imagens/Epic.svg) **SPRINT 3:**  Mapeamento
-- [X] ![STORY](https://github.com/DolphinDatabase/MCS/blob/sprint-3/Imagens/Story.svg) Responsável pelo Serviço
-- [X] ![STORY](https://github.com/DolphinDatabase/MCS/blob/sprint-3/Imagens/Story.svg) Data de Serviço
-- [X] ![STORY](https://github.com/DolphinDatabase/MCS/blob/sprint-3/Imagens/Story.svg) Mapeamento Gráfico de Falhas
+- [X] ![EPIC](https://github.com/DolphinDatabase/MCS/blob/main/Imagens/Epic.svg) **SPRINT 4:**  Melhorias
+- [X] ![STORY](https://github.com/DolphinDatabase/MCS/blob/main/Imagens/Story.svg) Melhorias no Mapeamento de Anomalias
+- [X] ![STORY](https://github.com/DolphinDatabase/MCS/blob/main/Imagens/Story.svg) Melhorias nas Tabelas
+- [X] ![STORY](https://github.com/DolphinDatabase/MCS/blob/main/Imagens/Story.svg) Melhorias no Relatório
 	
 ## Story Cards
 
 <p align="center">
-  <img src="https://github.com/DolphinDatabase/MCS/blob/sprint-3/Documenta%C3%A7%C3%A3o/SPRINT3/StoryCards/StoryCards.gif"/>
+  <img src="https://github.com/DolphinDatabase/MCS/blob/main/Documenta%C3%A7%C3%A3o/SPRINT4/StoryCards/StoryCards.gif"/>
 </p>
 
 ## User Story
 
-<details><summary>Story 14 - Responsável pelo Serviço</summary>
+<details><summary>Story 17 - Melhorias no Mapeamento</summary>
   
 | Como | Eu quero | Para que |
 | ------- | ------- | ------- |
-| Usuário administrador e suporte do sistema. | Atribuir um responsável para a execução de serviço. | O cliente tenha ciência de quem realizará o serviço. |
+| Usuário do sistema. | Editar e exportar o mapeamento de anomalias. | Seja possível ter mais precisão. |
   
 </details>
 
 
-<details><summary>Story 15 - Data de Serviço</summary>
+<details><summary>Story 18 - Melhorias no Relatório</summary>
   
 | Como | Eu quero | Para que |
 | ------- | ------- | ------- |
-| Usuário administrador e suporte do sistema. | Adicionar a data de execução do serviço. | Além do controle da agenda de serviço, o cliente fique ciente de quando será realizado. |
+| Usuário suporte e administrador do sistema. | Remover equipamentos não utilizados e editar orçamento, data e responsável pelo serviço. | Seja possível manter o relatório atualizado. |
   
 </details>
 
 
-<details><summary>Story 16 - Mapeamento Gráfico de Falhas</summary>
+<details><summary>Story 19 - Melhorias nas Tabelas</summary>
   
 | Como | Eu quero | Para que |
 | ------- | ------- | ------- |
-| Usuário suporte do sistema. | Mapear falhas de forma gráfica. | O cliente possa vizualizá-las. |
+| Usuário suporte e administrador. | Remover falhas e buscar nas tabelas. | A aplicação seja intuitiva e de fácil usabilidade. |
   
 </details>
 

@@ -40,6 +40,15 @@ public class Layer {
     @Column(name = "lyr_forma")
     private String type;
 
+    @Column(name = "largura")
+    private Double width;
+
+    @Column(name = "altura")
+    private Double height;
+
+    @Column(name = "profundidade")
+    private Double depth;
+
     @ManyToOne
     @JoinColumn(name = "map_id")
     private SolicitationMapping solicitationMapping;

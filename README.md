@@ -2,7 +2,7 @@
   <img src="Imagens/LogotipoMCS.png"/>
 </p>
 
-![Badge](https://img.shields.io/badge/STATUS-EM_ANDAMENTO-yellow?style=flat-square&logo=)
+![Badge](https://img.shields.io/badge/STATUS-CONCLUÍDO-green?style=flat-square&logo=)
 
 
 ## Tabela de Conteúdos
@@ -26,7 +26,12 @@
 
 <p align="justify">
 A MCS (Management and Control System) é um sistema ERP que visa gerenciar e controlar dados, afim de reduzir custos, facilitar tomadas de decisão, otimizar o tempo de atendimento de chamados e aprimorar o solucionamento destes. 
-É composta por níveis de usuários, onde o administrador terá controle sobre todas as funcionalidades existentes, dentre elas o cadastro, edição e exclusão de outros usuários; o cliente trará o problema para o suporte e, este ficará responsável por gerenciar chamados e resolvê-los.
+É composta por níveis de usuários, onde o administrador terá controle sobre todas as funcionalidades existentes, dentre elas o cadastro, edição e exclusão de outros usuários; o suporte ficará responsável pelo CRUD de falhas e soluções genéricas e CRUD de equipamentos; o cliente trará o problema para o suporte e, este ficará responsável por gerenciar o chamado e resolvê-los.
+A MCS (Management and Control System) trouxe de uma forma fácil e rápida o mais importante: o mapeamento gráfico de anomalias nas silhuetas.
+<br/>
+O Mapemamento de anomalias consiste em durante ou após uma inspeção, o suporte conseguirá fazer o upload da silhueta e adicionar as falhas (específicas do chamado) 
+encontradas em formas e tamanhos diferentes para uma melhor identificação da posição e tamanho, facilitando na identificação de quantidade e quais materiais serão 
+utilizados para a solução dessas falhas e também no cálculo do orçamento.
 <br/>
 Sua interface web facilita a gestão de dados e dá autonomia aos usuários dessa aplicação para que possam atuar com desenvoltura dentro das permissões concedidas.
 
@@ -109,8 +114,15 @@ Para acessar o manual do usuário, clique [aqui](Manual/MCS_ManualdoUsuário.pdf
 - [X] Adição de Silhuetas Já Conhecidas
 - [X] Adição de Anomalias nas Silhuetas
 - [X] Visualização de Anomalias nas Silhuetas
+- [X] Editar Orçamento
+- [X] Editar Data de Serviço
+- [X] Editar Responsável pelo Serviço
+- [X] Campo de Busca em Tabelas
+- [X] Exportar Mapeamento (imagem)
+- [X] Limpar Mapeamento
+- [X] Adicionar Tamanho Físico por Layer
 
-![ALERTA](Imagens/Alerta.svg) Para mais informações das funcionalidades entregues, acesse as [releases](https://github.com/DolphinDatabase/MCS/releases/tag/Sprint3).
+![ALERTA](Imagens/Alerta.svg) Para mais informações das funcionalidades entregues, acesse as [releases](https://github.com/DolphinDatabase/MCS/releases/tag/Sprint4).
 
 ## Ilustração das Funcionalidades
 
@@ -118,9 +130,9 @@ Para acessar nossos *Wireframes*, clique [aqui](https://www.figma.com/file/MM0pL
 
 ## Demonstração
 
-Para acessar o vídeo[^1] de demonstração da aplicação em uso, clique [aqui](https://youtu.be/AMuy8FwWIlU):
+Para acessar o vídeo[^1] de demonstração da aplicação em uso, clique [aqui](https://youtu.be/M91pEmLUji8):
 
-[<img src="Imagens/MCS_Youtube.png" width="60%" height="60%">](https://youtu.be/AMuy8FwWIlU "MCS vídeo Demonstração")
+[<img src="Imagens/MCS_Youtube.png" width="60%" height="60%">](https://youtu.be/M91pEmLUji8 "MCS vídeo Demonstração")
 
 ## Manual do Usuário
 
@@ -147,11 +159,10 @@ Para acessar o vídeo[^1] de demonstração da aplicação em uso, clique [aqui]
 - [X] ![STORY](Imagens/Story.svg) Responsável pelo chamado
 - [X] ![STORY](Imagens/Story.svg) Data de serviço
 - [X] ![STORY](Imagens/Story.svg) Mapeamento gráfico
-- [ ] ![EPIC](Imagens/Epic.svg) **SPRINT 4:**  Melhorias
-- [ ] ![STORY](Imagens/Story.svg) Correção de Possíveis Bugs
-- [ ] ![STORY](Imagens/Story.svg) Upload da Ferramenta Para Núvem
-- [ ] ![STORY](Imagens/Story.svg) Exibição dos Dados de Mapeamento (Gráfico)
-- [ ] ![STORY](Imagens/Story.svg) Melhoria do Mapeamento de Anomalias
+- [X] ![EPIC](Imagens/Epic.svg) **SPRINT 4:**  Melhorias
+- [X] ![STORY](Imagens/Story.svg) Melhorias no Mapeamento de Anomalias
+- [X] ![STORY](Imagens/Story.svg) Melhorias nas Tabelas
+- [X] ![STORY](Imagens/Story.svg) Melhorias no Relatório
 
 ## Roadmap
 
@@ -169,7 +180,7 @@ Para acessar nosso *Burndown*, clique [aqui](https://docs.google.com/spreadsheet
 | 28/08 a 18/09 | [Sprint 1](Sprints/SPRINT1.md). |
 | 19/09 a 09/10 | [Sprint 2](Sprints/SPRINT2.md). |
 | 17/10 a 06/11 | [Sprint 3](Sprints/SPRINT3.md). |
-| 07/11 a 27/11 | [Sprint 4](#). |
+| 07/11 a 27/11 | [Sprint 4](Sprints/SPRINT4.md). |
 | 08/12 às 19h | Feira de Soluções. |
 
 ## Tecnologias

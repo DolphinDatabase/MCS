@@ -15,5 +15,8 @@ public class LayerSummaryModel {
     private String color;
     private Long size;
     private String type;
+    private Double width;
+    private Double height;
+    private Double depth;
 
 }

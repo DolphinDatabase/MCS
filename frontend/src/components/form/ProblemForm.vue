@@ -6,23 +6,6 @@
                     <el-option v-for="k in this.knows" :key="k.id" :value="k.id" :label="k.name"/>
                 </el-select>
             </el-form-item>
-            <el-row :gutter="20">
-                <el-col :span="8">
-                    <el-form-item label="Comprimeto (mm)" prop="width">
-                        <el-input v-model="form.width" type="number"/>
-                    </el-form-item>
-                </el-col>
-                <el-col :span="8">
-                    <el-form-item label="Altura (mm)" prop="height">
-                        <el-input v-model="form.height" type="number"/>
-                    </el-form-item>
-                </el-col>
-                <el-col :span="8">
-                    <el-form-item label="Profundidado (mm)" prop="depth">
-                        <el-input v-model="form.depth" type="number"/>
-                    </el-form-item>
-                </el-col>
-            </el-row>
         </div>
         <div v-if="this.type==1">
             <el-row :gutter="20">
@@ -36,23 +19,6 @@
                         <el-select v-model="form.nivel" :fit-input-width="true" placeholder="Prioridade">
                             <el-option v-for="(item,index) in this.nivelData" :key="index" :label="item.label" :value="index"/>
                         </el-select>
-                    </el-form-item>
-                </el-col>
-            </el-row>
-            <el-row :gutter="20">
-                <el-col :span="8">
-                    <el-form-item label="Comprimeto (mm)" prop="width">
-                        <el-input v-model="form.width" type="number"/>
-                    </el-form-item>
-                </el-col>
-                <el-col :span="8">
-                    <el-form-item label="Altura (mm)" prop="height">
-                        <el-input v-model="form.height" type="number"/>
-                    </el-form-item>
-                </el-col>
-                <el-col :span="8">
-                    <el-form-item label="Profundidade (mm)" prop="depth">
-                        <el-input v-model="form.depth" type="number"/>
                     </el-form-item>
                 </el-col>
             </el-row>
@@ -94,9 +60,6 @@ export default {
                 known:null,
                 nivel:null,
                 name:null,
-                width:null,
-                height:null,
-                depth:null
             },
             solucoes:[],
             rules:{
@@ -108,21 +71,6 @@ export default {
                 name:{
                     required:true,
                     message:'Insira a Falha',
-                    trigger: 'change'
-                },
-                width:{
-                    required:true,
-                    message:'Insira o comprimeto',
-                    trigger: 'change'
-                },
-                height:{
-                    required:true,
-                    message:'Insira a altura',
-                    trigger: 'change'
-                },
-                depth:{
-                    required:true,
-                    message:'Insira a profundidade',
                     trigger: 'change'
                 },
                 nivel:{
@@ -158,9 +106,6 @@ export default {
                 known:null,
                 nivel:null,
                 name:null,
-                width:null,
-                height:null,
-                depth:null
             }
         }
     },
