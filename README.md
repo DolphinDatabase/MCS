@@ -130,9 +130,9 @@ Para acessar nossos *Wireframes*, clique [aqui](https://www.figma.com/file/MM0pL
 
 ## Demonstração
 
-Para acessar o vídeo[^1] de demonstração da aplicação em uso, clique [aqui](https://youtu.be/AMuy8FwWIlU):
+Para acessar o vídeo[^1] de demonstração da aplicação em uso, clique [aqui](https://youtu.be/M91pEmLUji8):
 
-[<img src="Imagens/MCS_Youtube.png" width="60%" height="60%">](https://youtu.be/AMuy8FwWIlU "MCS vídeo Demonstração")
+[<img src="Imagens/MCS_Youtube.png" width="60%" height="60%">](https://youtu.be/M91pEmLUji8 "MCS vídeo Demonstração")
 
 ## Manual do Usuário
 
