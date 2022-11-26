@@ -28,16 +28,17 @@
         </section>
         <section id="anomalia" :style="(this.$store.getters.getAuth.role=='ROLE_CLT')?'width:100%':''">
             <h1>Mapeamentos do Chamado</h1>
-            <el-collapse accordion class="mapas">
-                <el-collapse-item v-for="item in this.mappings" :key="item.id" :name="item.id">
-                    <template #title>
-                        <section class="collapseTitle">
-                            <span>{{item.name}}</span>
-                            <span @click="this.$emit('openAnomalia',item.id)">Mais Detalhes</span>
-                        </section>
+            <el-table style="height:28rem" :data="this.mappings">
+                <el-table-column prop="name" label="Mapeamento"/>
+                <el-table-column align="right">
+                    <template #default="scope">
+                        <span class="tableSpan" @click="this.$emit('openAnomalia',scope.row.id)">
+                            Mais Detalhes
+                            <el-icon><ArrowRight /></el-icon>
+                        </span>
                     </template>
-                </el-collapse-item>
-            </el-collapse>
+                </el-table-column>
+            </el-table>
             <div class="groupButton"> 
                 <el-button @click="this.$emit('cancel')">Fechar</el-button>
             </div>
@@ -45,8 +46,9 @@
     </div>
 </template>
 <script>
-import {ElButton, ElInput, ElSelect, ElUpload, ElIcon, ElOption, ElCollapse,ElCollapseItem} from 'element-plus'
+import {ElButton, ElInput, ElSelect, ElUpload, ElIcon, ElOption, ElTable, ElTableColumn} from 'element-plus'
 import { UploadFilled } from '@element-plus/icons-vue'
+import {ArrowRight} from '@element-plus/icons-vue'
 import {RouterLink} from 'vue-router'
 import storage from '../../firebase/storage'
 import {getDownloadURL} from 'firebase/storage'
@@ -64,11 +66,13 @@ export default {
         TableCollapse,
         UploadFilled,
         ElOption,
-        ElCollapse,
-        ElCollapseItem
+        ElTable, 
+        ElTableColumn,
+        ArrowRight
     },
     props:{
-        data:Array
+        data:Array,
+        colors:Array
     },
     data(){
         return{
@@ -114,10 +118,26 @@ export default {
         }
     },
     async created(){
+        this.mappings=[]
         this.data.forEach(m=>{
+            const d = []
+            m.layers.forEach(l=>{
+                let f = d.find(x=>x[2]==l.color)
+                if(f==null){
+                    d.push([this.colors.find(c=>c.color==l.color).name,1,l.color])
+                }else{
+                    f[1]++
+                }
+            })
+            const chart = {data:[["Falha","Quantidade"]],options:{slices:{}}}
+            d.forEach((dt,i)=>{
+                chart.data.push([dt[0],dt[1]])
+                chart.options.slices[i]={color:dt[2]}
+            })
             this.mappings.push({
                 id:m.id,
-                name:m.mapping.name
+                name:m.mapping.name,
+                chart:chart
             })
         })
         await this.$store.dispatch("listMapeamentos")
@@ -138,24 +158,14 @@ export default {
         margin-bottom: 1.5rem;
     }
 
-    .mapas{
-        height: 25rem;
-        overflow: auto;
-        margin-bottom: 1rem;
-    }
-
-    .collapseTitle{
-        width:50%;
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .collapseTitle span:last-child{
+    .tableSpan{
+        display: inline-flex;
+        align-items: center;
         cursor: pointer;
         color: var(--color-light);
     }
 
-    .collapseTitle span:last-child:hover{
+    .tableSpan:hover{
         color: var(--color-primary-variant);
     }
 

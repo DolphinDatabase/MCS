@@ -16,10 +16,6 @@
             <li v-for="solucao in data.solutions" :key="solucao.id">{{solucao.description}}</li>
           </ul>
         </div>
-        <div style="padding:0 2rem;margin-top:1rem">
-          <h5>Dimensões da falha</h5>
-          <p>{{data.width}}x{{data.height}}x{{data.depth}}mm</p>
-        </div>
       </template>
     </TableCollapse>
   </BasePage>
@@ -75,9 +71,6 @@
             id:p.problem.id,
             name:p.problem.name,
             nivel:p.problem.nivel,
-            width: p.width,
-            height: p.height,
-            depth: p.depth,
             num:(p.problem.solutions.length==0||p.problem.solutions.length==null)?0:p.problem.solutions.length,
             solutions:p.problem.solutions,
           })
@@ -100,10 +93,7 @@
           solicitation:this.$store.getters.getChamadoByid(this.$route.params.id),
           problem:{
               id:null
-          },
-          width:form.width,
-          height:form.height,
-          depth:form.depth
+          }
         }
         if(form.known==null){
           const problemData={
@@ -121,9 +111,6 @@
             id:p.id,
             name:p.name,
             nivel:p.nivel,
-            width:form.width,
-            height:form.height,
-            depth:form.depth,
             num:(p.solutions.length==0||p.solutions.length==null)?0:p.solutions.length,
             solutions:p.solutions,
           })
@@ -137,9 +124,6 @@
             id:k.id,
             name:k.name,
             nivel:k.nivel,
-            width:form.width,
-            height:form.height,
-            depth:form.depth,
             num:(k.solutions.length==0||k.solutions.length==null)?0:k.solutions.length,
             solutions:k.solutions,
           })

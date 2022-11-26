@@ -2,7 +2,7 @@
     <div class="modal-mask">
       <div class="modal-wrapper">
         <div class="modal-container">
-            <Mapeamento v-if="this.step==0" :data="this.data.mapeamentos" @cancel="this.$emit('cancel')" @openAnomalia="(id)=>this.openAnomalia(id)"/>
+            <Mapeamento v-if="this.step==0" :data="this.data.mapeamentos" :colors="this.data.cores" @cancel="this.$emit('cancel')" @openAnomalia="(id)=>this.openAnomalia(id)"/>
             <Mapa v-if="this.step==1" :data="this.mapping" :colors="this.data.cores" @changeStep="(step)=>this.changeStep(step)"/>
         </div>
       </div>
@@ -58,7 +58,7 @@ export default {
 
     .modal-container {
         width: 85%;
-        height: 80%;
+        height: 85%;
         margin: 0px auto;
         background-color: #fff;
         border-radius: 2px;

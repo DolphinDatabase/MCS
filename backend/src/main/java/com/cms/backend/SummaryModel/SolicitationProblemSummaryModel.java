@@ -11,8 +11,5 @@ public class SolicitationProblemSummaryModel {
     
     private Long id;
     private ProblemSummaryModel problem;
-    private Double width;
-    private Double height;
-    private Double depth;
 
 }

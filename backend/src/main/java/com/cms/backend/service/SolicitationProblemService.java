@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -43,29 +42,6 @@ public class SolicitationProblemService {
             res.setAll(200, true, "SolicitationProblem "+sp.getProblem().getId()+" adicionado", toSolicitationProblemSummaryModel(spRepository.save(sp)));
             logger.info(res.getMessage());
             return ResponseEntity.status(HttpStatus.OK).body(res);
-        }catch(Exception err){
-            res.setAll(500, false, err.getMessage(), null);
-            logger.error(res.getMessage());
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(res);
-        }
-    }
-
-    @PutMapping("/{id}")
-    @PreAuthorize("hasRole('SUP')")
-    public ResponseEntity<ResponseSummaryModel> updateAddedProblem(@PathVariable Long id,@RequestBody SolicitationProblem solicitationProblem){
-        ResponseSummaryModel res = new ResponseSummaryModel();
-        try{
-            SolicitationProblem sp = spRepository.findById(id).orElseThrow(()->new ResponseStatusException(HttpStatus.NOT_FOUND));
-            sp.setWidth(solicitationProblem.getWidth());
-            sp.setHeight(solicitationProblem.getHeight());
-            sp.setDepth(solicitationProblem.getDepth());
-            res.setAll(200, true, "SolicitationProblem "+id+" atualizado", toSolicitationProblemSummaryModel(spRepository.save(sp)));
-            logger.info(res.getMessage());
-            return ResponseEntity.status(HttpStatus.OK).body(res);
-        }catch(ResponseStatusException err){
-            res.setAll(404, false, "SolicitationProblem "+id+" Not Found", null);
-            logger.error(res.getMessage());
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(res);
         }catch(Exception err){
             res.setAll(500, false, err.getMessage(), null);
             logger.error(res.getMessage());
