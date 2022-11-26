@@ -277,7 +277,7 @@ Para acessar nosso *Roadmap*, clique [aqui](https://dolphin-database.atlassian.n
 
 ## Gráfico de Burndown
 
-Para acessar nosso *Burndown*, clique [aqui](https://docs.google.com/spreadsheets/d/1vpQcUu1juZS8FrYtSsswkTVR81DtXTfCM-VG5vSXsbA/edit?usp=sharing).
+Para acessar nosso *Burndown*, clique [aqui](https://docs.google.com/spreadsheets/u/4/d/1-ALcuHKl5cMg0jqN8__-haiC5UYgjIOljdFmY1txpzg/htmlview#gid=0).
  
 ## Team
 
